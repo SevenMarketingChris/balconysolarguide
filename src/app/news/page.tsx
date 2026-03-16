@@ -10,6 +10,16 @@ export const metadata = {
 
 const articles = [
   {
+    slug: "plug-in-solar-now-legal-uk-2026",
+    date: "15 March 2026",
+    dateISO: "2026-03-15",
+    badge: "Breaking News",
+    badgeClass: "bg-red-500",
+    title: "Plug-In Solar Is Now Legal in the UK: Everything That Changes",
+    summary:
+      "The UK government has announced it is working to formally legalise plug-in balcony solar panels. We break down what was announced, what changes immediately, and what still needs to happen.",
+  },
+  {
     slug: "balcony-solar-legal-uk-2026",
     date: "15 March 2026",
     dateISO: "2026-03-15",

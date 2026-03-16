@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Plug-In Solar Kit UK Review — Curated Reviews & Specs | Balcony Solar Guide",
+  description: "We've curated the best independent reviews of the Plug-in Solar 600W kit — the DIY budget option using a Hoymiles micro-inverter. Is it worth it? Here's what real owners say.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";

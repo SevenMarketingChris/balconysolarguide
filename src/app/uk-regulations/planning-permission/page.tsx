@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Do You Need Planning Permission for Balcony Solar Panels? UK Guide | Balcony Solar Guide",
+  description: "For most UK homes, balcony solar falls under permitted development rights. Learn what applies to your property — including exceptions for listed buildings, conservation areas, and flats.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

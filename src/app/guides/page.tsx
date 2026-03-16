@@ -30,6 +30,23 @@ const guides = [
     description:
       "The legal picture has been shifting fast. We explain the current status, what changed in March 2026, G98 requirements, and what you actually need to do to stay compliant.",
     href: "/guides/is-balcony-solar-legal-uk",
+    badge: "Legal",
+  },
+  {
+    href: "/guides/balcony-solar-electrical-safety-uk",
+    emoji: "⚡",
+    title: "Is Balcony Solar Safe? UK Electrical Safety Explained",
+    description:
+      "An honest, technically credible guide to UK ring circuits, RCD types, anti-islanding protection, and what actually makes plug-in solar safe.",
+    badge: "Safety",
+  },
+  {
+    href: "/guides/balcony-solar-self-consumption-guide",
+    emoji: "📊",
+    title: "Self-Consumption: Why Your Payback Period May Be Longer Than You Think",
+    description:
+      "The honest guide to self-consumption rates by household type — from retired (90%) to commuter (35%) — with real worked payback examples.",
+    badge: "Savings",
   },
   {
     emoji: "🔩",
@@ -87,6 +104,46 @@ const guides = [
       "What micro-inverters do, why they beat string inverters for partial shade, the leading brands (Hoymiles, Deye, APsystems, Enphase), and what specs to look for.",
     href: "/guides/balcony-solar-inverter-types",
   },
+  {
+    href: "/guides/balcony-solar-seg-tariffs",
+    emoji: "💷",
+    title: "Smart Export Guarantee & Balcony Solar: Can You Get Paid?",
+    description:
+      "Why most balcony solar owners cannot currently claim SEG payments, the MCS barrier, current supplier rates, and what is expected to change.",
+    badge: "Tariffs",
+  },
+  {
+    href: "/guides/balcony-solar-housing-association",
+    emoji: "🏢",
+    title: "Balcony Solar for Housing Association & Council Tenants",
+    description:
+      "A step-by-step guide for the 4.1 million social housing tenants in England — how to request permission, what to say, and what to do if refused.",
+    badge: "Renters",
+  },
+  {
+    href: "/guides/balcony-solar-garden-office",
+    emoji: "🌿",
+    title: "Can You Use Balcony Solar to Power a Garden Office?",
+    description:
+      "Off-grid DC setups vs grid-connected plug-in solar for garden offices and sheds — what it can realistically power and recommended products.",
+    badge: "Off-Grid",
+  },
+  {
+    href: "/guides/balcony-solar-winter-performance-uk",
+    emoji: "❄️",
+    title: "Balcony Solar in Winter: What to Expect in the UK",
+    description:
+      "Month-by-month generation data for a 600W London system, the vertical mounting winter advantage, and year-round maintenance tips.",
+    badge: "Seasonal",
+  },
+  {
+    href: "/guides/microinverter-comparison-uk",
+    emoji: "🔌",
+    title: "Hoymiles vs APsystems vs Growatt: UK Microinverter Comparison",
+    description:
+      "A technical comparison of the main microinverter brands — gateway requirements, app quality, efficiency, warranty, and UK availability.",
+    badge: "Technical",
+  },
 ];
 
 export default function GuidesHubPage() {
@@ -111,7 +168,14 @@ export default function GuidesHubPage() {
               href={guide.href}
               className="group block bg-white border border-slate-200 rounded-xl p-6 hover:border-solar-400 hover:shadow-md transition-all duration-200"
             >
-              <div className="text-3xl mb-3">{guide.emoji}</div>
+              <div className="flex items-start justify-between mb-3">
+                <div className="text-3xl">{guide.emoji}</div>
+                {guide.badge && (
+                  <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-solar-100 text-solar-700 uppercase tracking-wide">
+                    {guide.badge}
+                  </span>
+                )}
+              </div>
               <h2 className="text-base font-semibold text-slate-900 mb-2 group-hover:text-solar-700 transition-colors">
                 {guide.title}
               </h2>

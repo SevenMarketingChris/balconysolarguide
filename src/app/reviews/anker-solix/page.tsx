@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Anker SOLIX Balcony Solar UK Review 2026 — Curated Reviews | Balcony Solar Guide",
+  description: "The best Anker SOLIX balcony solar reviews curated in one place. Real UK performance data, specs comparison, and where to buy.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";

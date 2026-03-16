@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "UK Balcony Solar Regulations 2026 — Complete Guide | Balcony Solar Guide",
+  description: "The definitive guide to UK plug-in solar regulations: planning permission, G98 DNO notification, building regulations, leasehold rules, and the government's March 2026 legalisation announcement.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

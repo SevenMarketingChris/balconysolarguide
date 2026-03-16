@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "EcoFlow STREAM vs Anker SOLIX: Which Balcony Solar System is Best for UK Homes?",
+  description: "A detailed head-to-head comparison of the EcoFlow STREAM and Anker SOLIX Solarbank 2. We've aggregated owner reviews, generation data, and expert assessments to help you decide.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";

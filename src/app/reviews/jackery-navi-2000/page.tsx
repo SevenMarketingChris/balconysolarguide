@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Jackery Solar Generator Navi 2000 UK Review — Curated Reviews | Balcony Solar Guide",
+  description: "Curated independent reviews of the Jackery Navi 2000 balcony solar system — including real-world UK performance from small balconies and Juliet balconies.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";

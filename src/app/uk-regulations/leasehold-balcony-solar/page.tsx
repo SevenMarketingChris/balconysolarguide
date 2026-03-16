@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Balcony Solar in Leasehold Flats UK — What You Need to Know | Balcony Solar Guide",
+  description: "Most UK flats are leasehold, adding complexity beyond planning permission. Learn how to check your lease, establish whether your balcony is demised to you, and request freeholder consent.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

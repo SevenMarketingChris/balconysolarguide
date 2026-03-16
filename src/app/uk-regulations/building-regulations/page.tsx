@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Building Regulations and BS 7671 for Balcony Solar UK | Balcony Solar Guide",
+  description: "Plug-in solar and UK wiring regulations explained clearly. Understand the grey area around BS 7671, why modern homes with RCBOs are well-protected, and what the BSI working group is developing.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

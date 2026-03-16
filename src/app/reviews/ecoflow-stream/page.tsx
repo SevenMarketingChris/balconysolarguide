@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "EcoFlow STREAM UK Review 2026 — Curated Reviews & Specs | Balcony Solar Guide",
+  description: "We've curated the best EcoFlow STREAM reviews from across the web. See real-world UK performance data, specs, pros and cons.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "The Renters' Rights Act 2025 and Balcony Solar — UK Renters' Guide | Balcony Solar Guide",
+  description: "How the Renters' Rights Act 2025 strengthens your position when requesting landlord permission for balcony solar. Covers Section 21 abolition, right to request improvements, and the new Ombudsman.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

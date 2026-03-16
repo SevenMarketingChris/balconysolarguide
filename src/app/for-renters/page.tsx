@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Balcony Solar for Renters UK — Your Complete Guide | Balcony Solar Guide",
+  description: "4.4 million UK private renters can benefit from portable balcony solar. It requires no structural changes, moves with you when you leave, and can save £150–£300 per year on electricity bills.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

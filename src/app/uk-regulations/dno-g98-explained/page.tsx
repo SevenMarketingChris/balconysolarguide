@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "G98 DNO Notification for Balcony Solar: Complete UK Guide | Balcony Solar Guide",
+  description: "Everything you need to know about G98 DNO notification before connecting balcony solar. Step-by-step process, timescales, and a full directory of every UK DNO with contact details.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 

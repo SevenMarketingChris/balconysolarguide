@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+
+export const metadata: Metadata = {
+  title: "UK Plug-in Solar Legalisation Timeline — Every Key Date | Balcony Solar Guide",
+  description: "A chronological tracker of every significant UK balcony solar regulatory event — from Germany's early moves to the UK government's landmark March 2026 announcement. Updated as events unfold.",
+};
 import InfoBox from "@/components/ui/InfoBox";
 import Link from "next/link";
 

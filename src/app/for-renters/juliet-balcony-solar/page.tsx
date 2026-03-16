@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Balcony Solar for Juliet Balconies UK — What Works and What Doesn't | Balcony Solar Guide",
+  description: "No full balcony floor? Juliet balconies can still host solar panels with the right system. An honest guide to options, generation expectations, and what to avoid — including glazed balustrades.",
+};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
