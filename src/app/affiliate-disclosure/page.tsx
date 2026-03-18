@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
@@ -122,9 +123,9 @@ export default function AffiliateDisclosurePage() {
           <p>
             If you have any questions about our affiliate relationships or how they affect the
             content on this site, please see our{" "}
-            <a href="/privacy" className="text-solar-600 underline">
+            <Link href="/privacy" className="text-solar-600 underline">
               Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             for contact information.
           </p>
         </div>

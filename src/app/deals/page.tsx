@@ -53,20 +53,6 @@ const deals = [
     pros: ["Lowest cost", "UK-based brand", "G98-compliant inverter", "Everything included"],
     cons: ["No app or monitoring", "No battery option", "DIY installation"],
   },
-  {
-    name: "Jackery Navi 2000",
-    badge: "Best for Small Balconies",
-    badgeClass: "bg-blue-600",
-    rrp: 699,
-    currentPrice: "~£699",
-    url: "https://www.amazon.co.uk/dp/B0CX1234XX?tag=balconysolar-21",
-    source: "Amazon UK",
-    wattage: "400W",
-    description:
-      "The Jackery Navi 2000 is purpose-built for smaller spaces — Juliet balconies, narrow terraces, or situations where you can only fit one or two smaller panels. It runs at 400W peak, which is genuinely useful even if it limits total generation. Jackery's build quality is excellent; they are better known for portable power stations, and this experience shows in the Navi's reliability. Compact inverter, sleek panel design, and a clean Jackery app for monitoring. A sensible choice if physical space is your binding constraint.",
-    pros: ["Compact — suits small balconies", "Excellent build quality", "Jackery app included", "Lightweight panels"],
-    cons: ["400W cap limits annual savings", "Higher per-watt cost than budget kits"],
-  },
 ];
 
 export default function DealsPage() {

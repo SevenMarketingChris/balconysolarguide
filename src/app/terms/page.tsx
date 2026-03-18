@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -93,9 +94,9 @@ export default function TermsPage() {
             This Site contains affiliate links to products and services. If you make a purchase
             through an affiliate link, we may receive a commission from the retailer. Full details
             are set out in our{" "}
-            <a href="/affiliate-disclosure" className="text-solar-600 underline">
+            <Link href="/affiliate-disclosure" className="text-solar-600 underline">
               Affiliate Disclosure
-            </a>
+            </Link>
             . The existence of affiliate relationships does not affect the editorial independence
             of our reviews and recommendations, as described in the disclosure.
           </p>
@@ -201,9 +202,9 @@ export default function TermsPage() {
           <h2>8. Privacy</h2>
           <p>
             Your use of this Site is also governed by our{" "}
-            <a href="/privacy" className="text-solar-600 underline">
+            <Link href="/privacy" className="text-solar-600 underline">
               Privacy Policy
-            </a>
+            </Link>
             , which is incorporated into these Terms by reference. By using the Site, you consent
             to the data practices described in our Privacy Policy.
           </p>

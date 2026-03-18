@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -69,7 +70,7 @@ export default function BeginnersGuidePage() {
           <p>
             The critical thing to understand is that the system doesn't charge a battery (unless you add one separately
             — more on that in our{" "}
-            <a href="/guides/balcony-solar-battery-storage">battery storage guide</a>) and it doesn't export surplus
+            <Link href="/guides/balcony-solar-battery-storage">battery storage guide</Link>) and it doesn't export surplus
             electricity in any meaningful way. What it does is offset your home's real-time consumption. If your
             800W system is generating 600W and your home is drawing 400W from the grid, you'll draw nothing from the
             grid during those moments and feed the remaining 200W back. Whether that exported 200W earns you money
@@ -227,7 +228,7 @@ export default function BeginnersGuidePage() {
             These figures assume the electricity you generate replaces grid electricity you would otherwise have bought —
             i.e., someone is home during daylight hours or you have a battery. If the flat is empty all day and you have
             no battery, your effective saving will be much lower because the electricity you generate simply exports at a
-            negligible rate. See our <a href="/guides/balcony-solar-savings-uk">detailed savings guide</a> for a full
+            negligible rate. See our <Link href="/guides/balcony-solar-savings-uk">detailed savings guide</Link> for a full
             breakdown.
           </p>
 
@@ -241,7 +242,7 @@ export default function BeginnersGuidePage() {
           <p>
             The key regulatory requirement currently in place is G98 notification — you should notify your Distribution
             Network Operator (DNO) before connecting generation to the grid. For most balcony solar users this is a
-            straightforward online form. See our <a href="/guides/g98-dno-notification-balcony-solar">G98 guide</a> for
+            straightforward online form. See our <Link href="/guides/g98-dno-notification-balcony-solar">G98 guide</Link> for
             full details.
           </p>
 
@@ -270,19 +271,19 @@ export default function BeginnersGuidePage() {
           </p>
           <ol>
             <li>
-              Use our <a href="/calculator">savings calculator</a> to get a personalised output estimate based on your
+              Use our <Link href="/calculator">savings calculator</Link> to get a personalised output estimate based on your
               postcode, orientation, and system size.
             </li>
             <li>
-              If you're a renter, read our <a href="/guides/balcony-solar-for-renters">guide for renters</a> before
+              If you're a renter, read our <Link href="/guides/balcony-solar-for-renters">guide for renters</Link> before
               doing anything else.
             </li>
             <li>
-              Check the <a href="/guides/is-balcony-solar-legal-uk">legal status guide</a> and understand your G98
+              Check the <Link href="/guides/is-balcony-solar-legal-uk">legal status guide</Link> and understand your G98
               obligations.
             </li>
             <li>
-              Browse our <a href="/reviews">kit reviews</a> to find the right system for your balcony.
+              Browse our <Link href="/reviews">kit reviews</Link> to find the right system for your balcony.
             </li>
           </ol>
 

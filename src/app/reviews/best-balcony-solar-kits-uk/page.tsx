@@ -13,7 +13,7 @@ const products = [
     battery: "Optional (1–5 kWh LFP)",
     app: "Yes — EcoFlow App (iOS/Android)",
     bestFor: "All-rounder, smart home enthusiasts",
-    asin: "B0ECOSTREAM1",
+    asin: null, // TODO: replace with real Amazon ASIN — B0ECOSTREAM1 is not a valid ASIN
     reviewHref: "/reviews/ecoflow-stream",
     ourPick: true,
     badge: "Our Top Pick",
@@ -44,7 +44,7 @@ const products = [
     battery: "Built-in 2 kWh (Solarbank 2 Pro)",
     app: "Yes — Anker App",
     bestFor: "Maximum output, integrated battery",
-    asin: "B0ANKRSOLX1",
+    asin: null, // TODO: replace with real Amazon ASIN — B0ANKRSOLX1 is not a valid ASIN
     reviewHref: "/reviews/anker-solix",
     ourPick: false,
     badge: "Highest Output",
@@ -106,7 +106,7 @@ const products = [
     battery: "Optional (integrated design)",
     app: "Yes — Jackery App",
     bestFor: "Small balconies, Juliet balconies",
-    asin: "B0JCKNAVI01",
+    asin: null, // TODO: replace with real Amazon ASIN — B0JCKNAVI01 is not a valid ASIN
     reviewHref: "/reviews/jackery-navi-2000",
     ourPick: false,
     badge: "Best for Small Spaces",
@@ -132,8 +132,57 @@ const products = [
 ];
 
 export default function BestBalconySolarKitsPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Best Balcony Solar Kits UK 2026',
+    description:
+      'Expert review roundup of the best plug-in balcony solar systems available in the UK in 2026, based on aggregated independent reviews from YouTube, Reddit, Which?, TechRadar, Trustpilot, and specialist solar forums.',
+    url: 'https://www.balconysolarguide.co.uk/reviews/best-balcony-solar-kits-uk',
+    numberOfItems: 4,
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'EcoFlow STREAM',
+        description:
+          'Best all-round balcony solar system for UK homes. 600W panels, modular 1–5 kWh LFP battery, best-in-class app with AI energy management. ~£949.',
+        url: 'https://www.balconysolarguide.co.uk/reviews/ecoflow-stream',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Anker SOLIX Solarbank 2 Pro',
+        description:
+          'Highest output balcony solar system with 800W panel capacity and a built-in 2 kWh LFP battery. ~£899.',
+        url: 'https://www.balconysolarguide.co.uk/reviews/anker-solix',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Plug-in Solar 600W Kit',
+        description:
+          'Best budget balcony solar kit. 600W with a professional-grade Hoymiles HM-600 micro-inverter. No app, no battery. ~£399.',
+        url: 'https://www.balconysolarguide.co.uk/reviews/plug-in-solar-kit',
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Jackery Navi 2000',
+        description:
+          'Best balcony solar system for Juliet balconies and small spaces. Compact 400W system with integrated battery. ~£699.',
+        url: 'https://www.balconysolarguide.co.uk/reviews/jackery-navi-2000',
+      },
+    ],
+  }
+
   return (
-    <div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div>
       <PageHero
         eyebrow="Reviews & Comparisons"
         title="Best Balcony Solar Kits UK 2026: Expert Reviews & Comparisons"
@@ -219,12 +268,12 @@ export default function BestBalconySolarKitsPage() {
                   <td className="px-4 py-3 text-slate-700">Budget</td>
                 </tr>
                 <tr className="bg-white">
-                  <td className="px-4 py-3 font-semibold text-slate-900">Jackery Navi 2000</td>
-                  <td className="px-4 py-3 text-slate-700">£699</td>
+                  <td className="px-4 py-3 font-semibold text-slate-900">Jackery Navi 2000 <span className="text-xs font-normal text-amber-600">(not sold in UK)</span></td>
+                  <td className="px-4 py-3 text-slate-500 italic">EU only</td>
                   <td className="px-4 py-3 text-slate-700">400W</td>
                   <td className="px-4 py-3 text-slate-700">Optional</td>
                   <td className="px-4 py-3 text-slate-700">Yes</td>
-                  <td className="px-4 py-3 text-slate-700">Small balconies</td>
+                  <td className="px-4 py-3 text-slate-500 italic">Not available</td>
                 </tr>
               </tbody>
             </table>
@@ -295,14 +344,16 @@ export default function BestBalconySolarKitsPage() {
                 >
                   See all reviews →
                 </Link>
-                <a
-                  href={`https://www.amazon.co.uk/dp/${product.asin}?tag=balconysolar-21`}
-                  target="_blank"
-                  rel="nofollow sponsored noopener noreferrer"
-                  className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
-                >
-                  View on Amazon →
-                </a>
+                {product.asin && (
+                  <a
+                    href={`https://www.amazon.co.uk/dp/${product.asin}?tag=balconysolar-21`}
+                    target="_blank"
+                    rel="nofollow sponsored noopener noreferrer"
+                    className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+                  >
+                    View on Amazon →
+                  </a>
+                )}
               </div>
             </div>
           </section>
@@ -349,5 +400,6 @@ export default function BestBalconySolarKitsPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }

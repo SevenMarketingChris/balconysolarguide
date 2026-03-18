@@ -79,7 +79,9 @@ export default function BalconySolarSavingsPage() {
             or nothing for it. That 300W is wasted in financial terms.
           </p>
           <p>
-            Average self-consumption rates for balcony solar users in the UK:
+            Average self-consumption rates for balcony solar users in the UK (see our{" "}
+            <Link href="/guides/balcony-solar-self-consumption-guide">detailed self-consumption guide</Link>{" "}
+            for a full breakdown by household type):
           </p>
           <ul>
             <li><strong>Home all day (retired, works from home):</strong> 55–70%</li>
@@ -263,7 +265,7 @@ export default function BalconySolarSavingsPage() {
 
           <h3>Add a Battery</h3>
           <p>
-            As discussed in our <a href="/guides/balcony-solar-battery-storage">battery storage guide</a>, adding a
+            As discussed in our <Link href="/guides/balcony-solar-battery-storage">battery storage guide</Link>, adding a
             1–2kWh battery to your balcony solar system can push self-consumption from 30–50% to 80–90%, dramatically
             improving financial returns for households that are out during the day.
           </p>
@@ -273,7 +275,7 @@ export default function BalconySolarSavingsPage() {
             On a flat-rate tariff at 24p, all self-consumed electricity saves you 24p. On a time-of-use tariff with
             higher peak rates, the electricity you avoid buying during peak periods saves you more — and if you can
             shift consumption to align with your solar generation, you can optimise further. See our{" "}
-            <a href="/guides/balcony-solar-smart-tariffs">smart tariffs guide</a> for full details.
+            <Link href="/guides/balcony-solar-smart-tariffs">smart tariffs guide</Link> for full details.
           </p>
 
           <h3>Avoid Unnecessary Shading</h3>

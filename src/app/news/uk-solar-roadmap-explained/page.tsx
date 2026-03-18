@@ -1,3 +1,4 @@
+import Link from "next/link";
 import InfoBox from "@/components/ui/InfoBox";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import PageHero from "@/components/ui/PageHero";
@@ -192,13 +193,13 @@ export default function UKSolarRoadmapPage() {
             The regulatory process is underway, but it will take time. Properly installed plug-in
             solar systems using UKCA/CE-marked equipment are operating across the UK right now,
             with no enforcement action recorded against any domestic installer. See our{" "}
-            <a href="/calculator" className="underline">
+            <Link href="/calculator" className="underline">
               savings calculator
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a href="/guides" className="underline">
+            <Link href="/guides" className="underline">
               buying guides
-            </a>{" "}
+            </Link>{" "}
             to start planning your installation today.
           </InfoBox>
 

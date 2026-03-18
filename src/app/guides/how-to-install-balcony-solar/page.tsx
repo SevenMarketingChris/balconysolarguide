@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -35,7 +36,7 @@ export default function HowToInstallBalconySolarPage() {
             reading the manual. Before you begin, make sure you have:
           </p>
           <ul>
-            <li>Confirmed your G98 notification has been submitted (see our <a href="/guides/g98-dno-notification-balcony-solar">G98 guide</a>)</li>
+            <li>Confirmed your G98 notification has been submitted (see our <Link href="/guides/g98-dno-notification-balcony-solar">G98 guide</Link>)</li>
             <li>Measured your balcony railing or floor space and confirmed the system fits</li>
             <li>Checked that your balcony socket (or the indoor socket you plan to use) is in good working order</li>
             <li>Read the manufacturer's installation manual specific to your kit</li>

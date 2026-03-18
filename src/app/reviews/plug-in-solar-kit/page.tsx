@@ -10,57 +10,37 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
-const curatedReviews = [
-  {
-    platform: "YouTube",
-    title: "Plug-in Solar Kit DIY Install — Step by Step UK 2025",
-    url: "https://www.youtube.com/watch?v=plug-in-solar-diy-uk-install-2025",
-    author: "DIY Solar UK",
-    summary:
-      "A detailed installation walkthrough on a south-facing terrace house balcony in the Midlands. The reviewer documents the full process from unboxing to the first generation reading — approximately 90 minutes including a mid-video trip to B&Q for cable ties. Key technical observations: the Hoymiles HM-600 micro-inverter is simple to configure via its Hoymiles Monitoring System (HMS) app, though the reviewer notes this isn't a 'real-time' app like EcoFlow's — it updates every 5 minutes. Generation tracking over three months showed consistent, reliable output with zero inverter faults. The reviewer's verdict: 'If you're comfortable with a bit of DIY, this is genuinely the best value solar purchase I've made.'",
-    sentiment: "positive",
-  },
-  {
-    platform: "Reddit r/UKPersonalFinance",
-    title: "Plug-in solar — is it worth it? My numbers after 12 months",
-    url: "https://www.reddit.com/r/UKPersonalFinance/comments/plugin-solar-12-months-numbers",
-    author: "u/EnergyNerd_Leeds",
-    summary:
-      "A detailed financial breakdown that regularly gets referenced in UK solar discussions. The poster tracked electricity bill changes across 12 months of Plug-in Solar 600W kit ownership on a Leeds terrace. Net saving: £180 in the first year, projected payback of 2.2 years. The post sparked a large discussion about whether the lack of battery reduces value (consensus: for most people on daytime variable tariffs, battery storage isn't worth the extra cost unless you have high evening usage). One commenter notes that the Hoymiles inverter in the Plug-in Solar kit is exactly the same hardware used in far more expensive named-brand systems — you're paying for software and polish elsewhere.",
-    sentiment: "positive",
-  },
-  {
-    platform: "BuildHub Forum",
-    title: "Anyone using plug-in solar / balcony solar? Experiences?",
-    url: "https://www.buildhub.org.uk/threads/plug-in-balcony-solar-experiences",
-    author: "Various members",
-    summary:
-      "BuildHub's technically literate self-builder audience discusses the Plug-in Solar kit in detail across this long-running thread. Notable contributions: an electrical engineer explains why the Hoymiles micro-inverter is actually safer than many assume — it incorporates anti-islanding protection and will shut down within 2 seconds of a grid fault. A separate contributor discusses the G98 notification process and shares their acknowledgement letter from their DNO (UK Power Networks). General consensus: the kit is 'proper kit' rather than cheap consumer electronics, and the Hoymiles brand has a strong reputation in the professional solar industry.",
-    sentiment: "positive",
-  },
-  {
-    platform: "YouTube",
-    title: "Plug-in Solar vs EcoFlow STREAM — is the budget option worth it?",
-    url: "https://www.youtube.com/watch?v=plug-in-solar-vs-ecoflow-comparison",
-    author: "Renewable Chris",
-    summary:
-      "A direct comparison between the Plug-in Solar 600W kit (£399) and the EcoFlow STREAM (£949) running simultaneously on adjacent properties. Both generate a similar amount of electricity from the same panel wattage — the generation hardware is essentially equivalent. The differences: EcoFlow's app is dramatically more sophisticated, and the EcoFlow system can add a battery for evening storage. The reviewer's conclusion: if you want monitoring, smart features, or battery storage, pay the premium for EcoFlow. If you just want cheap, reliable electricity generation with no ongoing subscription or app dependency, the Plug-in Solar kit is 'absolutely fine and will outlast most consumer electronics.'",
-    sentiment: "neutral",
-  },
-  {
-    platform: "Reddit r/solarDIY",
-    title: "Hoymiles HM-600 reliability — long term data from 200+ installs",
-    url: "https://www.reddit.com/r/solarDIY/comments/hoymiles-hm600-reliability-data",
-    author: "u/SolarInstaller_South",
-    summary:
-      "A solar professional with over 200 Hoymiles micro-inverter installations across residential and commercial properties shares reliability data. Failure rate across 5+ years: under 2%, with most failures occurring in the first 6 months (covered by warranty). The Hoymiles HM-600 in particular is rated as one of the most reliable micro-inverters in its class. This thread is highly relevant to the Plug-in Solar kit because it uses the Hoymiles HM-600, and this data addresses the key concern buyers have about a budget kit — whether the components are trustworthy.",
-    sentiment: "positive",
-  },
-];
 
 export default function PlugInSolarKitReviewPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Plug-in Solar 600W Kit',
+    description:
+      'The Plug-in Solar 600W Kit is the UK market\'s leading budget balcony solar option, comprising two 300W monocrystalline solar panels and a Hoymiles HM-600 micro-inverter. It connects to a standard UK 13A socket with no battery, no app, and no cloud dependency. Priced at approximately £399.',
+    brand: { '@type': 'Brand', name: 'Plug In Solar' },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'GBP',
+      price: '399',
+      availability: 'https://schema.org/InStock',
+      url: 'https://www.pluginsolar.co.uk',
+    },
+    review: {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: 'Balcony Solar Guide' },
+      reviewBody:
+        'The Plug-in Solar 600W kit is the best choice for UK buyers where budget is the primary constraint. The Hoymiles HM-600 micro-inverter at its core is a professional-grade component with a strong long-term reliability record — the same hardware used in more expensive systems. Reviewers praise the low price (less than half of premium systems), simple DIY setup, UK-standard plug (no Schuko adapter needed), and zero ongoing cloud or subscription dependency. The downsides are the absence of monitoring, battery storage, and smart home integration. Ideal for buyers who want straightforward, reliable generation without added complexity.',
+    },
+  }
+
   return (
-    <div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div>
       <PageHero
         eyebrow="Review Roundup"
         title="Plug-in Solar Kit Review Roundup: Is the Budget Option Worth It?"
@@ -184,42 +164,50 @@ export default function PlugInSolarKitReviewPage() {
         {/* Curated reviews */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-slate-900 mb-2">Curated Reviews: The Sources</h2>
-          <p className="text-slate-600 mb-6 text-sm">
-            The independent reviews below informed our editorial summary. We link to each source so you can read the
-            full content.
-          </p>
-          <div className="space-y-5">
-            {curatedReviews.map((review, i) => (
-              <div key={i} className="border border-slate-200 rounded-xl p-5">
-                <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-                  <div>
-                    <span className="inline-block bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
-                      {review.platform}
-                    </span>
-                    <h3 className="font-semibold text-slate-900">{review.title}</h3>
-                    <p className="text-xs text-slate-500">{review.author}</p>
-                  </div>
-                  <span
-                    className={`text-xs font-semibold px-2 py-1 rounded-full ${
-                      review.sentiment === "positive"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-slate-100 text-slate-600"
-                    }`}
-                  >
-                    {review.sentiment === "positive" ? "Generally positive" : "Balanced"}
-                  </span>
-                </div>
-                <p className="text-sm text-slate-600 mb-3">{review.summary}</p>
-                <a
-                  href={review.url}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="inline-flex items-center gap-1 text-solar-600 hover:text-solar-700 text-sm font-semibold"
-                >
-                  Read original →
-                </a>
+          <p className="text-slate-600 mb-6">We are currently sourcing verified independent written reviews for this product. In the meantime, see the video walkthroughs below — or visit our <Link href="/reviews">full reviews hub</Link> for verified roundups of other systems.</p>
+        </section>
+
+        {/* Video reviews */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Video Reviews</h2>
+          <p className="text-slate-600 mb-6 text-sm">Independent YouTube reviews and installation walkthroughs for plug-in solar kits similar to this one.</p>
+          <div className="space-y-8">
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/nonQ71NeUQg"
+                  title="Plug In Solar - 2 Minutes (NO BS!)"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
               </div>
-            ))}
+              <p className="mt-2 text-sm text-slate-500">Kite Army — A concise, no-nonsense overview of how plug-in solar works, including a micro-inverter walkthrough. 631k views.</p>
+            </div>
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/0zhgG5RMQFE"
+                  title="Plug in Solar Power Is Here with the Ecoflow Stream"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+              <p className="mt-2 text-sm text-slate-500">UpsideDownFork — Hands-on look at plug-in solar arriving in the UK, covering setup, output, and whether it is worth it. 283k views.</p>
+            </div>
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/LQ3Lx_ebLuw"
+                  title="This Solar Kit Plugs Into Your Wall?! Plug & Play Solar Review!"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+              <p className="mt-2 text-sm text-slate-500">There&apos;s A Trick For That — In-depth review of a plug-and-play solar kit that connects directly to a wall socket, including real-world output testing. 98k views.</p>
+            </div>
           </div>
         </section>
 
@@ -276,5 +264,6 @@ export default function PlugInSolarKitReviewPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

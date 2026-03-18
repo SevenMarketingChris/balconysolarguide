@@ -1,71 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
-
-export const metadata: Metadata = {
-  title: "Jackery Solar Generator Navi 2000 UK Review — Curated Reviews | Balcony Solar Guide",
-  description: "Curated independent reviews of the Jackery Navi 2000 balcony solar system — including real-world UK performance from small balconies and Juliet balconies.",
-};
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
-import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
-const curatedReviews = [
-  {
-    platform: "YouTube",
-    title: "Jackery Navi 2000 Review — Perfect for My Flat Balcony?",
-    url: "https://www.youtube.com/watch?v=jackery-navi-2000-uk-flat-balcony",
-    author: "Compact Solar UK",
-    summary:
-      "This reviewer lives in a Manchester first-floor flat with a narrow east-facing Juliet balcony — exactly the use case the Navi 2000 was designed for. The video documents a full installation (40 minutes from unboxing to generating) and tracks daily generation across four weeks. Average daily generation: 0.8–1.1 kWh in late autumn. The reviewer notes that while this won't power a tumble dryer, it reliably covers phone charging, lighting, and much of the TV use across a day. Setup ease is rated 9/10. The Jackery App is described as 'functional but basic' compared to the EcoFlow equivalent.",
-    sentiment: "positive",
-  },
-  {
-    platform: "Reddit r/solarDIY",
-    title: "6 months with the Jackery Navi 2000 — worth it for a renter?",
-    url: "https://www.reddit.com/r/solarDIY/comments/jackery-navi-2000-renter-review",
-    author: "u/BalconyRenterBristol",
-    summary:
-      "A Bristol renter running the Navi 2000 on a shared railing mount (no drilling) documents six months of use. Key insight: the system paid for itself in 14 months in their scenario (working from home, high daytime electricity use). Several commenters note that the Navi 2000 is the only complete integrated system that realistically fits a Juliet balcony railing without requiring any structural modification. One commenter compares it unfavourably to the EcoFlow STREAM on generation capacity, but the OP points out that the STREAM physically cannot fit on their balcony — making the comparison moot.",
-    sentiment: "positive",
-  },
-  {
-    platform: "TechRadar",
-    title: "Jackery Navi 2000 review: compact balcony solar for smaller spaces",
-    url: "https://www.techradar.com/reviews/jackery-navi-2000",
-    author: "TechRadar Reviews",
-    summary:
-      "TechRadar's reviewer tested the Navi 2000 over two months and found it 'exactly what it says on the tin.' The 400W ceiling is genuinely limiting compared to 600–800W rivals, but the compact form factor and integrated 2 kWh battery make it the only viable option for many UK flat dwellers. The reviewer was impressed by Jackery's build quality (their power station range has an excellent reputation) and noted the installation was achievable without any professional help. The app received a moderate score — adequate for monitoring but lacking the smart scheduling features of EcoFlow.",
-    sentiment: "positive",
-  },
-  {
-    platform: "Trustpilot",
-    title: "Jackery UK — Trustpilot Profile",
-    url: "https://uk.trustpilot.com/review/jackery.com",
-    author: "Verified purchasers",
-    summary:
-      "Jackery UK's Trustpilot profile (4.2 stars, ~1,400 reviews as of early 2026) reflects strong satisfaction with their portable power station range, which has been established in the UK market for longer than the Navi balcony system. Navi-specific reviews are a subset — look for recent reviews mentioning 'balcony' or 'Navi' in the search. Recurring positive: 'excellent build quality' and 'feels premium.' Recurring negative: delivery delays on certain accessories and limited phone support availability outside working hours.",
-    sentiment: "positive",
-  },
-  {
-    platform: "Which?",
-    title: "Balcony solar panels for renters — what are your options?",
-    url: "https://www.which.co.uk/reviews/solar-panels/article/balcony-solar-renters",
-    author: "Which? Editorial",
-    summary:
-      "Which? specifically highlighted the Jackery Navi 2000 in their renter-focused coverage as one of the few complete systems suitable for a Juliet balcony. They note the product fills a real gap in the market — most balcony solar systems assume you have a proper full-depth balcony with a floor, whereas millions of UK flats have only a narrow glazed or railed balconette. The 400W limitation is acknowledged but contextualised: for the target audience, 400W is perfectly adequate and 600W simply isn't an option.",
-    sentiment: "positive",
-  },
-];
+export const metadata: Metadata = {
+  title: "Jackery Navi 2000 UK: Not Available to Buy | Balcony Solar Guide",
+  description: "The Jackery Navi 2000 balcony power station is not sold in the UK — it launched in Germany and has never had a UK product page. Find out what Jackery does offer in the UK and which alternatives to consider.",
+};
+
 
 export default function JackeryNavi2000ReviewPage() {
   return (
     <div>
       <PageHero
-        eyebrow="Review Roundup"
-        title="Jackery Navi 2000 Review Roundup: Best for Small Balconies?"
-        subtitle="Aggregating the best independent reviews of the Jackery Navi 2000 balcony solar system — particularly its suitability for Juliet balconies and small UK flats."
-        badge="Updated March 2026"
+        eyebrow="Product Research"
+        title="Jackery Navi 2000: Not Available in the UK"
+        subtitle="The Jackery Navi 2000 is a real balcony power station — but it launched in Germany and has never been sold through the UK store. Here's what we found, what Jackery does offer in the UK, and what alternatives to consider."
+        badge="Verified March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">
@@ -76,37 +28,53 @@ export default function JackeryNavi2000ReviewPage() {
           ]}
         />
 
-        <AffiliateNotice />
-
-        <InfoBox variant="info" title="Aggregator model">
-          This page curates third-party reviews — we link to the original sources so you can read the full content. We
-          don't sell the Jackery Navi 2000 and haven't been provided one for testing.
+        <InfoBox variant="warning" title="Not available in the UK">
+          We originally listed the Jackery Navi 2000 as a UK product. When we went to verify purchase links in March
+          2026, we found that the Navi 2000 has no product page on the UK Jackery store (uk.jackery.com), no confirmed
+          UK pricing, and no Amazon UK listing. The buy links we previously showed were incorrect — the ASIN was
+          fabricated and the product URL returned a 404. We have removed those links and updated this page to reflect
+          what we actually know.
         </InfoBox>
 
-        <InfoBox variant="tip" title="Who this is for">
-          The Jackery Navi 2000 is a niche product that solves a specific problem: getting balcony solar onto small,
-          narrow, or Juliet balconies where larger 600W+ systems cannot physically fit. If you have a full-depth
-          south-facing balcony, the EcoFlow STREAM will generate significantly more electricity for a similar price.{" "}
-          <Link href="/for-renters/juliet-balcony-solar" className="underline font-semibold">
-            See our Juliet balcony guide
-          </Link>
-          .
-        </InfoBox>
-
-        {/* Specs */}
+        {/* What the Navi 2000 actually is */}
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Jackery Navi 2000: Key Specifications</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">What Is the Jackery Navi 2000?</h2>
+          <p className="text-slate-600 mb-4">
+            The Jackery Navi 2000 is a balcony power station — an all-in-one unit combining an inverter, battery, and
+            energy management system — that Jackery launched in Germany in 2024. It was designed for the German{" "}
+            <em>Balkonkraftwerk</em> (balcony power plant) market, which is far more developed than the UK market due
+            to Germany's simpler regulatory framework.
+          </p>
+          <p className="text-slate-600 mb-4">
+            The product is real and appears to work well based on German reviews (see the video reviews below). The
+            Jackery UK website (uk.jackery.com) has several blog posts mentioning the Navi 2000, but as of March 2026
+            there is no UK product page and no UK pricing has ever been announced.
+          </p>
+          <p className="text-slate-600">
+            Jackery has since announced the <strong>HomePower 2000 Ultra</strong> as a successor product for the
+            European market. As of March 2026, this is also not listed for sale on the UK store — only on the EU store
+            (eu.jackery.com) in Euros.
+          </p>
+        </section>
+
+        {/* What the Navi 2000 actually is (specs for reference) */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Navi 2000 Specifications (European Product)</h2>
+          <p className="text-slate-600 mb-4 text-sm">
+            These are the actual specifications of the European Navi 2000, for reference. Note: previous versions of
+            this page listed incorrect specs (400W, non-expandable) — the real product is significantly more capable.
+          </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[
-              { label: "Panel output", value: "Up to 400W (2 × 200W)" },
-              { label: "Battery", value: "Integrated design" },
+              { label: "Max PV input", value: "Up to 800W (4 × 200W flexible panels)" },
+              { label: "Battery capacity", value: "2 kWh LiFePO4 (expandable to 8 kWh)" },
+              { label: "Grid feed-in", value: "800W (AC output)" },
+              { label: "IP rating", value: "IP65 weatherproof" },
               { label: "App", value: "Jackery App (iOS/Android)" },
-              { label: "Connectivity", value: "Bluetooth + Wi-Fi" },
-              { label: "Warranty", value: "3 years" },
-              { label: "Weight", value: "~12 kg" },
-              { label: "Price (2026)", value: "~£699" },
-              { label: "Form factor", value: "Compact — suits narrow balconies" },
-              { label: "Battery expandable?", value: "No" },
+              { label: "Connectivity", value: "Bluetooth + Wi-Fi + Shelly integration" },
+              { label: "Rapid charge", value: "0–80% in 52 minutes" },
+              { label: "UK availability", value: "Not available (as of March 2026)" },
+              { label: "UK price", value: "No UK pricing announced" },
             ].map((spec) => (
               <div key={spec.label} className="bg-slate-50 rounded-lg p-3 border border-slate-200">
                 <p className="text-xs text-slate-500 mb-0.5">{spec.label}</p>
@@ -116,160 +84,124 @@ export default function JackeryNavi2000ReviewPage() {
           </div>
         </section>
 
-        {/* The key question */}
+        {/* Video reviews (German) */}
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Is 400W Enough?</h2>
-          <p className="text-slate-600 mb-4">
-            The most common question about the Navi 2000 is whether its 400W panel ceiling is a serious limitation.
-            The honest answer: it depends entirely on what you're comparing it to.
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Video Reviews (German Market)</h2>
+          <p className="text-slate-600 mb-2 text-sm">
+            These German-language reviews give a genuine sense of the product's performance and build quality, even if
+            it is not currently sold in the UK.
           </p>
-          <div className="grid sm:grid-cols-2 gap-4 mb-4">
-            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-              <h3 className="font-semibold text-slate-900 mb-2">If you have a Juliet balcony</h3>
-              <p className="text-sm text-slate-600">
-                A 600W or 800W system physically cannot mount on a Juliet balcony railing in most configurations. The
-                Navi 2000 is not competing with those products — it's the only complete integrated system that works.
-                400W on a Juliet balcony is infinitely better than 0W.
-              </p>
-            </div>
-            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-              <h3 className="font-semibold text-slate-900 mb-2">If you have a full balcony</h3>
-              <p className="text-sm text-slate-600">
-                You'd be leaving significant generation potential on the table. On a south-facing balcony in the South
-                East of England, a 600W system generates roughly 50% more electricity than 400W across a year. If space
-                permits, choose the EcoFlow STREAM or Anker SOLIX instead.
-              </p>
-            </div>
-          </div>
-          <p className="text-slate-600">
-            In practical terms, 400W will generate approximately 1–2 kWh per day in summer and 0.3–0.7 kWh in winter
-            in most UK locations. That covers daily smartphone charging, LED lighting, a router, and a smart TV for
-            several hours — a meaningful but modest contribution to household electricity needs.
-          </p>
-        </section>
-
-        {/* Aggregated pros and cons */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">What Reviewers Agree On</h2>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold text-green-700 mb-3">Consistent praise across sources</h3>
-              <ul className="space-y-2">
-                {[
-                  "Compact form factor is genuinely unique — the only complete integrated system for Juliet balconies",
-                  "Jackery's build quality reputation (established via their power station range) translates to the Navi",
-                  "Integrated battery at this price point provides good value compared to add-on battery options",
-                  "Quickest setup time of any balcony solar system — multiple reviewers achieved sub-1-hour installs",
-                  "Portable and fully removable — ideal for renters who may need to take it when they move",
-                ].map((pro, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-slate-700">
-                    <span className="text-green-500 font-bold flex-shrink-0">+</span>
-                    {pro}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-red-600 mb-3">Consistent criticisms across sources</h3>
-              <ul className="space-y-2">
-                {[
-                  "400W ceiling significantly limits generation vs 600–800W alternatives",
-                  "Newer product — less long-term reliability data than EcoFlow or Anker systems",
-                  "App is functional but lacks smart scheduling and AI optimisation features",
-                  "3-year warranty is shorter than the 5 years offered by EcoFlow and Anker",
-                  "Battery cannot be expanded — fixed capacity limits future-proofing",
-                ].map((con, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-slate-700">
-                    <span className="text-red-400 font-bold flex-shrink-0">−</span>
-                    {con}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Curated reviews */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Curated Reviews: The Sources</h2>
           <p className="text-slate-600 mb-6 text-sm">
-            The independent reviews below informed our editorial summary. Click through to read each source in full.
+            Note: the German regulatory context is different — Germany permits 800W balcony solar with simple
+            notification, whereas the UK is still developing its simplified framework (expected 2026–2027).
           </p>
-          <div className="space-y-5">
-            {curatedReviews.map((review, i) => (
-              <div key={i} className="border border-slate-200 rounded-xl p-5">
-                <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-                  <div>
-                    <span className="inline-block bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
-                      {review.platform}
-                    </span>
-                    <h3 className="font-semibold text-slate-900">{review.title}</h3>
-                    <p className="text-xs text-slate-500">{review.author}</p>
-                  </div>
-                  <span className="text-xs font-semibold px-2 py-1 rounded-full bg-green-100 text-green-700">
-                    Generally positive
-                  </span>
-                </div>
-                <p className="text-sm text-slate-600 mb-3">{review.summary}</p>
-                <a
-                  href={review.url}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="inline-flex items-center gap-1 text-solar-600 hover:text-solar-700 text-sm font-semibold"
-                >
-                  Read original →
-                </a>
+          <div className="space-y-8">
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/dUitQn6cknk"
+                  title="Jackery Speicher für Balkonkraftwerke Navi 2000 Next Gen"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
               </div>
-            ))}
+              <p className="mt-2 text-sm text-slate-500">
+                Marc testet… — First look and hands-on test of the Jackery Navi 2000 Next Gen. German language. (77k views)
+              </p>
+            </div>
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/5VOAbYfAeNA"
+                  title="Jackery Navi 2000 Balkonkraftwerk – Shelly integration update"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+              <p className="mt-2 text-sm text-slate-500">
+                Marc testet… — Follow-up covering post-update features including Shelly Pro 3EM smart home integration. German language.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Where to buy */}
+        {/* Where to buy — honest section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy the Jackery Navi 2000</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Can You Buy It in the UK?</h2>
+          <div className="border border-amber-200 bg-amber-50 rounded-xl p-5">
+            <p className="text-sm text-amber-900 mb-3">
+              <strong>Short answer: No, not through any verified UK channel.</strong>
+            </p>
+            <ul className="space-y-2 text-sm text-amber-800">
+              <li>— There is no product page at uk.jackery.com for the Navi 2000</li>
+              <li>— There is no Amazon UK listing for the Navi 2000</li>
+              <li>— No UK GBP pricing has ever been published</li>
+              <li>— The successor product (HomePower 2000 Ultra) is sold in Euros on eu.jackery.com but not through the UK store</li>
+            </ul>
+            <p className="text-sm text-amber-900 mt-3">
+              If a Jackery Navi 2000 UK launch is announced, we will update this page with verified links.
+            </p>
+          </div>
+        </section>
+
+        {/* Alternatives */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">What to Buy Instead</h2>
+          <p className="text-slate-600 mb-4">
+            If you were looking at the Navi 2000 for a small balcony or Juliet balcony, here are the most relevant
+            alternatives that are verifiably available in the UK:
+          </p>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="border border-slate-200 rounded-xl p-5">
-              <h3 className="font-semibold text-slate-900 mb-1">Jackery UK Official Store</h3>
+              <span className="inline-block bg-solar-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full mb-2">Best overall</span>
+              <h3 className="font-semibold text-slate-900 mb-2">EcoFlow STREAM</h3>
               <p className="text-sm text-slate-600 mb-3">
-                Jackery's UK store offers the Navi 2000 with full UK warranty and customer support. Jackery
-                occasionally bundles additional mounting hardware or panel options.
+                600W panels, expandable battery, AI energy management, 5-year warranty. Available on Amazon UK and
+                EcoFlow's UK store with verified pricing. The strongest complete system currently available in the UK.
               </p>
-              <a
-                href="https://www.jackery.com/uk/products/navi-2000"
-                target="_blank"
-                rel="nofollow sponsored noopener noreferrer"
+              <Link
+                href="/reviews/ecoflow-stream"
                 className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
               >
-                Visit Jackery UK →
-              </a>
+                Read the review roundup →
+              </Link>
             </div>
             <div className="border border-slate-200 rounded-xl p-5">
-              <h3 className="font-semibold text-slate-900 mb-1">Amazon UK</h3>
+              <span className="inline-block bg-slate-700 text-white text-xs font-semibold px-2.5 py-1 rounded-full mb-2">High output</span>
+              <h3 className="font-semibold text-slate-900 mb-2">Anker SOLIX Solarbank 2</h3>
               <p className="text-sm text-slate-600 mb-3">
-                Available on Amazon UK with Prime delivery. The Navi 2000 has appeared in Jackery's regular Lightning
-                Deal promotions, particularly around seasonal events.
+                800W panels, 2 kWh built-in battery (Pro version), 5-year warranty. Available on Amazon UK and from
+                Anker's UK store. Good choice if output is your priority.
               </p>
-              <a
-                href="https://www.amazon.co.uk/dp/B0JCKNAVI01?tag=balconysolar-21"
-                target="_blank"
-                rel="nofollow sponsored noopener noreferrer"
-                className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+              <Link
+                href="/reviews/anker-solix"
+                className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
               >
-                View on Amazon →
-              </a>
+                Read the review roundup →
+              </Link>
             </div>
           </div>
+          <p className="text-slate-600 mt-4 text-sm">
+            For a Juliet balcony specifically, see our{" "}
+            <Link href="/for-renters/juliet-balcony-solar" className="text-solar-600 underline">
+              Juliet balcony solar guide
+            </Link>{" "}
+            — which covers what can physically mount on a railing-only balcony and what products work in that
+            constrained space.
+          </p>
         </section>
 
         <div className="border-t border-slate-200 pt-6">
           <p className="text-sm text-slate-500">
-            Have a Juliet balcony?{" "}
-            <Link href="/for-renters/juliet-balcony-solar" className="text-solar-600 underline">
-              Read our dedicated Juliet balcony solar guide
-            </Link>
-            . Or compare all systems in our{" "}
+            Compare all systems in our{" "}
             <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline">
               Best Balcony Solar Kits UK roundup
+            </Link>
+            . Or browse all{" "}
+            <Link href="/reviews" className="text-solar-600 underline">
+              product review roundups
             </Link>
             .
           </p>

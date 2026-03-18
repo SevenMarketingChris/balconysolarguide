@@ -31,21 +31,42 @@ const products = [
     specs: ["800W panels", "Solarbank 2 Pro: 2 kWh built-in", "Smart app", "5-year warranty"],
   },
   {
+    href: "/reviews/apsystems-ds3",
+    name: "APsystems DS3 Microinverter",
+    price: "~£149–£299",
+    tag: "Best Microinverter",
+    tagColour: "bg-blue-600",
+    description:
+      "APsystems' dual-MPPT microinverter is one of the most popular DIY choices for balcony solar. Up to 97% efficiency, Zigbee connectivity for panel-level monitoring, and a 10-year standard warranty with 20-year option.",
+    specs: ["Up to 880W output", "Dual MPPT", "Zigbee monitoring", "10/20yr warranty"],
+  },
+  {
+    href: "/reviews/hoymiles-hm-600",
+    name: "Hoymiles HMS-600-2T",
+    price: "~£89–£149",
+    tag: "Budget Microinverter",
+    tagColour: "bg-green-700",
+    description:
+      "The Hoymiles HMS-600-2T is the UK's best-selling budget microinverter — compact, reliable, and widely compatible. At 96.5% CEC efficiency and under £150, it's the default choice for a no-frills 600W balcony system.",
+    specs: ["600W output", "96.5% CEC efficiency", "DTU monitoring", "12-year warranty"],
+  },
+  {
     href: "/reviews/jackery-navi-2000",
     name: "Jackery Navi 2000",
-    price: "~£699",
-    tag: "Best for Small Balconies",
-    tagColour: "bg-slate-600",
+    price: "Not available in UK",
+    tag: "Not sold in UK",
+    tagColour: "bg-amber-600",
     description:
-      "Compact, portable, and backed by Jackery's strong reliability reputation. The Navi 2000 is designed for smaller balconies and Juliet balconies where larger 600W+ systems simply won't fit.",
-    specs: ["400W panels", "2 kWh integrated battery", "Jackery App", "Portable design"],
+      "The Navi 2000 is a real balcony power station — but it launched in Germany and has never been sold through the UK store. No UK product page, no Amazon UK listing, no GBP pricing. See our page for details and UK alternatives.",
+    specs: ["EU market only", "No UK listing", "No Amazon UK ASIN", "Last checked Mar 2026"],
+    cta: "See what we found →",
   },
   {
     href: "/reviews/plug-in-solar-kit",
     name: "Plug-in Solar 600W Kit",
     price: "~£399",
-    tag: "Budget Pick",
-    tagColour: "bg-green-600",
+    tag: "Budget Kit",
+    tagColour: "bg-slate-500",
     description:
       "The no-frills DIY approach: proven Hoymiles micro-inverter paired with 600W solar panels. No app, no battery, no monthly subscription — just solid, reliable electricity generation at the lowest entry price.",
     specs: ["600W panels", "Hoymiles micro-inverter", "No battery", "No app required"],
@@ -146,7 +167,7 @@ export default function ReviewsHubPage() {
                   href={product.href}
                   className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
                 >
-                  Read review roundup →
+                  {product.cta ?? "Read review roundup →"}
                 </Link>
               </div>
             ))}

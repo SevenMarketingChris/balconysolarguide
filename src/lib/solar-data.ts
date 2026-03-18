@@ -112,9 +112,16 @@ export function calculatePayback(systemCost: number, annualSavings: number): num
 }
 
 export function recommendProduct(wattage: number, budget: number): SolarProduct {
-  const affordable = PRODUCTS.filter((p) => p.price <= budget && p.wattage <= wattage);
-  if (affordable.length > 0) {
-    return affordable.sort((a, b) => b.wattage - a.wattage)[0];
+  // Best match: within budget AND wattage limit, prefer highest wattage
+  const matching = PRODUCTS.filter((p) => p.price <= budget && p.wattage <= wattage);
+  if (matching.length > 0) {
+    return matching.sort((a, b) => b.wattage - a.wattage)[0];
   }
-  return PRODUCTS[2]; // default to budget option
+  // Relax wattage: find smallest-wattage product within budget
+  const affordable = PRODUCTS.filter((p) => p.price <= budget);
+  if (affordable.length > 0) {
+    return affordable.sort((a, b) => a.wattage - b.wattage)[0];
+  }
+  // Absolute fallback: cheapest product overall (always exists)
+  return [...PRODUCTS].sort((a, b) => a.price - b.price)[0];
 }

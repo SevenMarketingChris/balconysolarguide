@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Link from "next/link";
 import {
   UK_REGIONS,
   calculateSolarOutput,
@@ -281,9 +282,9 @@ export default function SolarCalculator() {
                 kWh/year = (Wattage ÷ 1000) × Irradiance × Performance Ratio × Orientation Factor × Tilt Factor
               </p>
               <p>
-                <a href="/guides/balcony-solar-savings-uk" className="text-solar-600 underline">
+                <Link href="/guides/balcony-solar-savings-uk" className="text-solar-600 underline">
                   Read our full guide to balcony solar savings →
-                </a>
+                </Link>
               </p>
             </div>
           )}

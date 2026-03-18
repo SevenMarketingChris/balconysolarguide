@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -152,14 +153,16 @@ export default function BalconySolarBatteryStoragePage() {
             periods and then discharge during peak hours (typically 4–7pm when prices are highest on Agile). This is
             grid arbitrage — buying cheap electricity to sell or use expensive. With the EcoFlow app and Anker SOLIX
             app, this can be automated based on time schedules. The financial gains from tariff arbitrage with a
-            1–2kWh battery are modest (perhaps £30–£60/year on top of solar savings), but they add up.
+            1–2kWh battery are modest (perhaps £30–£60/year on top of solar savings), but they add up. See our{" "}
+            <Link href="/guides/balcony-solar-smart-tariffs">smart tariffs guide</Link> for a full comparison of which
+            time-of-use tariffs work best with battery storage.
           </p>
 
           <InfoBox variant="info" title="Is a battery worth it?">
             For someone who is out all day on weekdays, the answer is almost certainly yes — a battery transforms the
             economics. For someone who is home during the day, the marginal benefit is smaller and you should calculate
             carefully before committing the additional spend. See our{" "}
-            <a href="/guides/balcony-solar-savings-uk">savings guide</a> for a full worked calculation.
+            <Link href="/guides/balcony-solar-savings-uk">savings guide</Link> for a full worked calculation.
           </InfoBox>
 
           <h2>Practical Considerations</h2>

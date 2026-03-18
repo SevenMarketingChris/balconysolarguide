@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
 export const metadata: Metadata = {
-  title: "Plug-In Solar Is Now Legal in the UK: Everything That Changes",
+  title: "UK Government Moves to Legalise Plug-In Solar: What It Means for You",
   description:
-    "The UK government has announced legalisation of plug-in balcony solar. We explain exactly what was announced, what changes immediately, what still needs to happen, and what you can do right now.",
+    "On 15 March 2026, DESNZ announced plans to formally legalise plug-in balcony solar. We explain exactly what was announced, what changes immediately, what still needs to happen, and what you can do right now.",
 };
 
 export default function PlugInSolarNowLegalPage() {
   return (
     <>
       <PageHero
-        eyebrow="UK Regulations"
-        title="Plug-In Solar Is Now Legal in the UK: Everything That Changes"
-        subtitle="After years of regulatory grey area, the UK government has moved decisively to legalise plug-in balcony solar. Here is what was announced, what it means in practice, and what you should do next."
+        eyebrow="Breaking News · 15 March 2026"
+        title="UK Government Moves to Legalise Plug-In Solar: What It Means for You"
+        subtitle="On 15 March 2026, DESNZ directed officials to move 'at pace' towards a formal framework for plug-in balcony solar. Here is what was announced, what changes immediately, and what you should do right now."
         badge="Breaking News — 15 March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
           crumbs={[
             { label: "News", href: "/news" },
-            { label: "Plug-In Solar Now Legal in the UK" },
+            { label: "UK Government Moves to Legalise Plug-In Solar" },
           ]}
         />
 
@@ -58,6 +59,15 @@ export default function PlugInSolarNowLegalPage() {
             for systems below 800W.
           </p>
 
+          <p>
+            The statement also confirmed that the Government recognises "a gap in the current
+            regulatory landscape that has prevented millions of renters and flat-dwellers from
+            accessing the benefits of solar energy," and committed to "removing unnecessary barriers"
+            to small-scale, low-risk solar installations. The minister noted that the existing Part P
+            regime and G98/G99 grid connection rules were "not designed with plug-in solar in mind"
+            and would be reviewed as part of the process.
+          </p>
+
           <h2>Why This Matters: The Previous Grey Area</h2>
           <p>
             Until now, plug-in solar in the UK occupied an awkward regulatory position. The
@@ -83,6 +93,41 @@ export default function PlugInSolarNowLegalPage() {
             technology, for some landlords to cite it as grounds for refusal, and for the market to
             remain substantially smaller than in comparable European countries.
           </p>
+
+          <h2>Why Now?</h2>
+          <p>
+            Several converging pressures have pushed plug-in solar onto the political agenda in
+            early 2026:
+          </p>
+          <ul>
+            <li>
+              <strong>Sustained high energy bills.</strong> Despite falling from the peaks of
+              2022–23, UK electricity prices remain approximately double their pre-crisis level.
+              The Ofgem price cap for Q1 2026 reflects a unit rate of around 24p/kWh — high
+              enough to make even modest solar generation financially meaningful.
+            </li>
+            <li>
+              <strong>Germany&rsquo;s example.</strong> Germany simplified its plug-in solar rules in
+              May 2024, removing requirements for a registered electrician, allowing standard
+              Schuko-style socket connections, and raising the single-panel limit to 800W. Within
+              twelve months of those changes taking effect, cumulative German plug-in solar
+              installations passed 1.2 million units. UK officials are acutely aware of this
+              success story.
+            </li>
+            <li>
+              <strong>Renter pressure.</strong> With around 4.6 million privately rented households
+              in England alone, and the proportion of people renting increasing year-on-year, the
+              inequity of a solar market that serves only homeowners has become politically
+              untenable. Plug-in solar offers a route for renters to cut bills without structural
+              modifications to a property.
+            </li>
+            <li>
+              <strong>The UK Solar Roadmap.</strong> Published in June 2025, the Solar Roadmap
+              explicitly referenced plug-in solar as an underexploited opportunity and committed to
+              further consultation. The March 2026 announcement is the follow-through on that
+              commitment.
+            </li>
+          </ul>
 
           <h2>What Changes Immediately</h2>
           <p>
@@ -113,6 +158,11 @@ export default function PlugInSolarNowLegalPage() {
               <strong>Enforcement risk, already effectively zero, is now truly zero.</strong> It was
               already the case that no UK homeowner had ever been penalised for installing a
               compliant plug-in solar system. That position is now government-endorsed.
+            </li>
+            <li>
+              <strong>Industry investment follows.</strong> UK solar retailers and manufacturers now
+              have confidence to invest in marketing, stock, and support for the plug-in segment in a
+              way that was harder to justify under a grey-area regulatory environment.
             </li>
           </ul>
 
@@ -205,77 +255,159 @@ export default function PlugInSolarNowLegalPage() {
             is faster than most industry observers expected.
           </p>
 
+          <h2>What the Timeline Might Look Like</h2>
+          <ul>
+            <li>
+              <strong>Q2 2026:</strong> BSI working group formally constituted; DESNZ publishes
+              terms of reference for the broader regulatory review.
+            </li>
+            <li>
+              <strong>Q3–Q4 2026:</strong> Draft BSI technical specification for public comment;
+              Ofgem consultation on G98 amendments; DESNZ progress report to Parliament.
+            </li>
+            <li>
+              <strong>2027:</strong> BSI standard published; G98 amendment takes effect; Building
+              Regulations updated. This is the most optimistic scenario — regulatory processes
+              frequently take longer than anticipated.
+            </li>
+            <li>
+              <strong>Realistic expectation:</strong> A full, functioning simplified legal pathway
+              is more likely in 2027–2028 than 2026. The announcement in March 2026 starts the
+              clock but does not finish the job.
+            </li>
+          </ul>
+
+          <h2>What You Can Do Now — While Waiting for Legalisation</h2>
+          <p>
+            Many thousands of UK households already have plug-in balcony solar systems installed.
+            Here is what you should know if you want to install one now rather than wait:
+          </p>
+          <ul>
+            <li>
+              <strong>Enforcement is effectively zero.</strong> There is no recorded case of a UK
+              homeowner or renter being prosecuted or sanctioned for installing a properly
+              functioning plug-in solar system. The regulatory gap exists in the written rules, not
+              in active enforcement.
+            </li>
+            <li>
+              <strong>Notify your DNO.</strong> You can submit a G98 notification to your
+              Distribution Network Operator. Most DNOs accept these and will register your
+              installation. This is the responsible thing to do and protects you if questions arise
+              later.
+            </li>
+            <li>
+              <strong>Use compliant equipment.</strong> Ensure any inverter you use bears CE/UKCA
+              marking and is G98-compliant. All reputable products from EcoFlow, Anker, APsystems,
+              and Hoymiles sold in the UK meet this requirement.
+            </li>
+            <li>
+              <strong>Check your lease or tenancy agreement.</strong> For renters and leaseholders,
+              the main practical barrier is not regulators but landlords. Review your agreement and
+              consider writing to your landlord or managing agent — the Government&rsquo;s announcement
+              gives you useful context for that conversation.
+            </li>
+          </ul>
+
           <InfoBox variant="tip" title="You don't need to wait">
-            You don't need to wait — G98 notification with your DNO is already the correct process
-            and it works today. DNOs are required to accept compliant notifications, and the
-            government has now explicitly confirmed this is the right approach. Buy a kit from a
-            reputable supplier, submit your G98 notification, and start saving on your bills. See
-            our{" "}
-            <a href="/uk-regulations/dno-g98-explained" className="underline">
+            G98 notification with your DNO is already the correct process and it works today. DNOs
+            are required to accept compliant notifications, and the government has now explicitly
+            confirmed this is the right approach. Buy a kit from a reputable supplier, submit your
+            G98 notification, and start saving on your bills. See our{" "}
+            <Link href="/uk-regulations/dno-g98-explained" className="underline">
               G98 notification guide
-            </a>{" "}
-            for step-by-step instructions.
+            </Link>{" "}
+            for step-by-step instructions, and our{" "}
+            <Link href="/guides" className="underline">
+              buying guides
+            </Link>{" "}
+            and{" "}
+            <Link href="/calculator" className="underline">
+              savings calculator
+            </Link>{" "}
+            to get started.
           </InfoBox>
 
           <h2>Frequently Asked Questions</h2>
 
-          <h3>Can I buy a plug-in solar system right now?</h3>
-          <p>
-            Yes. Plug-in solar systems have been available from UK retailers for several years. The
-            March 2026 announcement makes no change to this — you could buy one before, and you can
-            buy one now. What changes is that the government has signalled clearly that this is a
-            supported, legitimate technology. Reputable brands including EcoFlow, Anker, APsystems,
-            Hoymiles, and others all sell in the UK.
-          </p>
+          <div itemScope itemType="https://schema.org/FAQPage">
 
-          <h3>Do I still need to notify my DNO via G98?</h3>
-          <p>
-            Yes — for now, G98 notification remains the correct process. The simplified online
-            registration system is under development but is not yet live. G98 notification is
-            straightforward: you fill in a form identifying your system and submit it to your DNO.
-            Most DNOs process these within a few days. Our{" "}
-            <a href="/uk-regulations/dno-g98-explained" className="underline">
-              G98 guide
-            </a>{" "}
-            walks you through it.
-          </p>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+          <h3 itemProp="name">Can I buy a plug-in solar system right now?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+          <div itemProp="text">
+            <p>
+              Yes. Plug-in solar systems have been available from UK retailers for several years. The
+              March 2026 announcement makes no change to this — you could buy one before, and you can
+              buy one now. What changes is that the government has signalled clearly that this is a
+              supported, legitimate technology. Reputable brands including EcoFlow, Anker, APsystems,
+              Hoymiles, and others all sell in the UK.
+            </p>
+          </div>
+          </div>
+          </div>
 
-          <h3>What about my landlord — does this change anything?</h3>
-          <p>
-            Yes, significantly. One of the most common grounds for landlord and managing agent
-            refusal was regulatory uncertainty: "it might be illegal, so I'd rather not risk it."
-            That argument is now much harder to sustain. The government has explicitly stated that
-            plug-in solar is a technology it wants to support. If you are in a negotiation with a
-            landlord or freeholder, the March 2026 announcement is a material piece of evidence in
-            your favour. See our{" "}
-            <a href="/for-renters/landlord-letter-template" className="underline">
-              landlord letter template
-            </a>{" "}
-            for a ready-to-use approach.
-          </p>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+          <h3 itemProp="name">Do I still need to notify my DNO via G98?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+          <div itemProp="text">
+            <p>
+              Yes — for now, G98 notification remains the correct process. The simplified online
+              registration system is under development but is not yet live. G98 notification is
+              straightforward: you fill in a form identifying your system and submit it to your DNO.
+              Most DNOs process these within a few days. Our G98 guide walks you through it.
+            </p>
+          </div>
+          </div>
+          </div>
 
-          <h3>Will prices drop now that it's legalised?</h3>
-          <p>
-            Probably yes, eventually. When mainstream retailers like supermarkets begin stocking
-            plug-in solar alongside other household appliances, economies of scale in distribution
-            and retail competition will put downward pressure on prices. In Germany, retail prices
-            for comparable 800W systems fell by approximately 25–30% in the 18 months following
-            legalisation as the market matured. UK consumers should expect a similar trend, though
-            the timing will depend on how quickly mainstream retail distribution develops.
-          </p>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+          <h3 itemProp="name">What about my landlord — does the March 2026 announcement change anything?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+          <div itemProp="text">
+            <p>
+              Yes, significantly. One of the most common grounds for landlord and managing agent
+              refusal was regulatory uncertainty: &ldquo;it might be illegal, so I&rsquo;d rather not risk it.&rdquo;
+              That argument is now much harder to sustain. The government has explicitly stated that
+              plug-in solar is a technology it wants to support. If you are in a negotiation with a
+              landlord or freeholder, the March 2026 announcement is a material piece of evidence in
+              your favour.
+            </p>
+          </div>
+          </div>
+          </div>
 
-          <h3>Does this affect SEG registration?</h3>
-          <p>
-            Not immediately. Smart Export Guarantee registration currently requires MCS
-            certification, which most DIY plug-in solar installations cannot obtain. However, the
-            government's legalisation framework is expected to include a simplified SEG pathway for
-            plug-in solar, potentially without the MCS requirement. This is one of the most eagerly
-            anticipated elements of the full framework. See our{" "}
-            <a href="/guides/balcony-solar-seg-tariffs" className="underline">
-              SEG and balcony solar guide
-            </a>{" "}
-            for the current position.
-          </p>
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+          <h3 itemProp="name">Will balcony solar prices drop now the UK is moving towards legalisation?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+          <div itemProp="text">
+            <p>
+              Probably yes, eventually. When mainstream retailers like supermarkets begin stocking
+              plug-in solar alongside other household appliances, economies of scale in distribution
+              and retail competition will put downward pressure on prices. In Germany, retail prices
+              for comparable 800W systems fell by approximately 25–30% in the 18 months following
+              legalisation as the market matured. UK consumers should expect a similar trend, though
+              the timing will depend on how quickly mainstream retail distribution develops.
+            </p>
+          </div>
+          </div>
+          </div>
+
+          <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+          <h3 itemProp="name">Does the March 2026 announcement affect Smart Export Guarantee registration?</h3>
+          <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+          <div itemProp="text">
+            <p>
+              Not immediately. Smart Export Guarantee registration currently requires MCS
+              certification, which most DIY plug-in solar installations cannot obtain. However, the
+              government&rsquo;s legalisation framework is expected to include a simplified SEG pathway for
+              plug-in solar, potentially without the MCS requirement. This is one of the most eagerly
+              anticipated elements of the full framework.
+            </p>
+          </div>
+          </div>
+          </div>
+
+          </div>{/* end FAQPage */}
         </article>
       </div>
     </>

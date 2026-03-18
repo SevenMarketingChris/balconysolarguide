@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -23,11 +23,20 @@ export const metadata: Metadata = {
     title: "Balcony Solar Guide UK — Independent Guide to Plug-In Solar Panels",
     description:
       "The UK's independent guide to balcony solar panels. Compare kits, calculate savings, understand regulations.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Balcony Solar Panels UK — Reviews, Savings Calculator & Buying Guide",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Balcony Solar Guide UK",
     description: "The UK's independent guide to balcony solar panels.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -36,9 +45,15 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#060d1e",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className="bg-[#f0f7ff]">
       <body>
         <Header />
         <main>{children}</main>

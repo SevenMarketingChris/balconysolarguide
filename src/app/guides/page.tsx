@@ -144,6 +144,54 @@ const guides = [
       "A technical comparison of the main microinverter brands — gateway requirements, app quality, efficiency, warranty, and UK availability.",
     badge: "Technical",
   },
+  {
+    href: "/guides/how-much-does-balcony-solar-cost-uk",
+    emoji: "💰",
+    title: "How Much Does Balcony Solar Cost in the UK?",
+    description:
+      "Full price breakdown for UK balcony solar in 2026 — entry-level kits from £300, premium systems up to £1,500, microinverter-only options, and a worked payback calculation.",
+    badge: "Cost",
+  },
+  {
+    href: "/guides/best-direction-for-balcony-solar-uk",
+    emoji: "🧭",
+    title: "Best Direction & Tilt for Balcony Solar Panels in the UK",
+    description:
+      "South, south-west, east-west split — which orientation maximises your generation? UK-specific data, seasonal tilt tables, and the case for vertical mounting.",
+    badge: "Setup",
+  },
+  {
+    href: "/guides/balcony-solar-flat-roof",
+    emoji: "🏗️",
+    title: "Balcony Solar on a Flat Roof: A UK Guide",
+    description:
+      "Mounting options, tilt frame angles, waterproofing, wind uplift, and planning permission for flat-roof solar installs — including leasehold and leaseholder considerations.",
+    badge: "Mounting",
+  },
+  {
+    href: "/guides/balcony-solar-planning-permission-flats",
+    emoji: "📋",
+    title: "Do You Need Planning Permission for Balcony Solar on a Flat?",
+    description:
+      "Permitted Development Class A Part 14, leasehold consent, managing agent approval, and the March 2026 regulatory changes — a complete guide for flat owners.",
+    badge: "Legal",
+  },
+  {
+    href: "/guides/plug-in-solar-vs-rooftop-solar",
+    emoji: "⚖️",
+    title: "Plug-In Solar vs Rooftop Solar: Which Is Right for You?",
+    description:
+      "A side-by-side comparison of plug-in balcony solar and traditional rooftop PV — upfront cost, payback period, planning rules, SEG eligibility, and who each suits.",
+    badge: "Comparison",
+  },
+  {
+    href: "/guides/balcony-solar-insurance-uk",
+    emoji: "🛡️",
+    title: "Does Balcony Solar Affect Your Home Insurance?",
+    description:
+      "What UK insurers actually say about plug-in solar, whether you need to declare it, how to add it to your contents policy, and what happens if you don't.",
+    badge: "Insurance",
+  },
 ];
 
 export default function GuidesHubPage() {

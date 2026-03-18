@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -159,7 +160,7 @@ export default function BalconySolarForRentersPage() {
             automatically for systems under 3.68kW — which covers all balcony solar systems — without any follow-up.
           </p>
           <p>
-            See our <a href="/guides/g98-dno-notification-balcony-solar">full G98 guide</a> for the step-by-step
+            See our <Link href="/guides/g98-dno-notification-balcony-solar">full G98 guide</Link> for the step-by-step
             process and a table of DNO contact details by region.
           </p>
 
@@ -182,8 +183,8 @@ export default function BalconySolarForRentersPage() {
           </ul>
           <p>
             For a full sample letter you can send to your landlord, visit our{" "}
-            <a href="/for-renters/landlord-letter-template">landlord letter template</a>. For detailed advice on the
-            conversation itself, see our <a href="/guides/asking-landlord-balcony-solar">asking your landlord guide</a>.
+            <Link href="/for-renters/landlord-letter-template">landlord letter template</Link>. For detailed advice on the
+            conversation itself, see our <Link href="/guides/asking-landlord-balcony-solar">asking your landlord guide</Link>.
           </p>
 
           <InfoBox variant="success" title="The Renters' Rights Act strengthens your position">

@@ -15,19 +15,29 @@ const articles = [
     dateISO: "2026-03-15",
     badge: "Breaking News",
     badgeClass: "bg-red-500",
-    title: "Plug-In Solar Is Now Legal in the UK: Everything That Changes",
+    title: "UK Government Moves to Legalise Plug-In Solar: Everything That Changes",
     summary:
       "The UK government has announced it is working to formally legalise plug-in balcony solar panels. We break down what was announced, what changes immediately, and what still needs to happen.",
   },
   {
-    slug: "balcony-solar-legal-uk-2026",
+    slug: "bsi-standard-balcony-solar-uk",
     date: "15 March 2026",
     dateISO: "2026-03-15",
-    badge: "Breaking",
-    badgeClass: "bg-solar-500",
-    title: "UK Government Announces Plans to Legalise Plug-In Balcony Solar Panels",
+    badge: "Standards",
+    badgeClass: "bg-blue-600",
+    title: "BSI Commissioned to Create UK Balcony Solar Standard: What It Means",
     summary:
-      "The Government has committed to working 'at pace' to create a formal regulatory framework for plug-in balcony solar in the UK — ending years of regulatory ambiguity and opening the door to millions of renters and flat owners.",
+      "The British Standards Institution has been formally tasked with developing a UK technical standard for plug-in solar — analogous to Germany's DIN VDE 0100-551-1. We explain what this standard will cover, the likely timeline, and what it means for buyers right now.",
+  },
+  {
+    slug: "supermarkets-balcony-solar-uk",
+    date: "16 March 2026",
+    dateISO: "2026-03-16",
+    badge: "Retail",
+    badgeClass: "bg-green-600",
+    title: "UK Supermarkets Set to Stock Balcony Solar: Who, When, and What to Expect",
+    summary:
+      "Following the March 2026 government announcement, major UK supermarkets and DIY retailers are preparing to stock plug-in solar alongside white goods. We cover which retailers are involved, what products they'll carry, and when you can expect to see them on shelves.",
   },
   {
     slug: "uk-solar-roadmap-explained",

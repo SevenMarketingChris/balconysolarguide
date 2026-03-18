@@ -10,57 +10,37 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
-const curatedReviews = [
-  {
-    platform: "YouTube",
-    title: "Anker SOLIX Solarbank 2 Pro — 8 Month UK Review",
-    url: "https://www.youtube.com/watch?v=anker-solix-solarbank2-uk-review",
-    author: "Green Watts UK",
-    summary:
-      "A comprehensive long-term review from a Yorkshire homeowner with a south-west facing balcony. The reviewer documented monthly generation figures across summer and autumn 2025, achieving an average of 2.1–2.8 kWh per day in peak months thanks to the 800W panel capacity — noticeably more than a typical 600W system on the same roof. The Solarbank 2 Pro's built-in 2 kWh battery shifted generation effectively to evening consumption periods. The reviewer rated the Anker app as 'good but not exceptional' — more functional than decorative, with solid data but fewer smart features than EcoFlow's offering.",
-    sentiment: "positive",
-  },
-  {
-    platform: "Trustpilot",
-    title: "Anker SOLIX UK — Trustpilot Profile",
-    url: "https://uk.trustpilot.com/review/ankersolix.com",
-    author: "Verified purchasers",
-    summary:
-      "Anker SOLIX UK's Trustpilot profile sits at 4.1 stars from approximately 1,800 reviews (early 2026). Satisfaction with the hardware itself is high — 'solid build quality' and 'exactly as described' appear frequently. The most common complaint relates to delivery timescales for accessories and some early adopters reporting minor app connectivity bugs that were resolved in firmware updates. Anker's customer service response rate on Trustpilot is notably high, with most negative reviews receiving a reply within 24–48 hours.",
-    sentiment: "positive",
-  },
-  {
-    platform: "Reddit r/solarDIY",
-    title: "SOLIX Solarbank 2 vs EcoFlow STREAM — which did you choose and why?",
-    url: "https://www.reddit.com/r/solarDIY/comments/solix-vs-stream-uk-comparison",
-    author: "Multiple contributors",
-    summary:
-      "A busy Reddit thread comparing the two leading systems. SOLIX owners consistently cite the 800W ceiling as a key differentiator — particularly for south-facing balconies in summer months where the additional 200W makes a tangible difference to daily generation. Several commenters who went with EcoFlow instead noted that the modular battery system was the deciding factor. One highly upvoted comment from a data analyst who owns both systems shows a side-by-side generation comparison: over three summer months, the SOLIX generated approximately 12% more electricity from an identical balcony, consistent with the 33% higher panel wattage minus real-world losses.",
-    sentiment: "neutral",
-  },
-  {
-    platform: "PC Mag / TechRadar",
-    title: "Anker SOLIX Solarbank 2 Pro Review",
-    url: "https://www.techradar.com/reviews/anker-solix-solarbank-2-pro",
-    author: "TechRadar Reviews",
-    summary:
-      "TechRadar's lab and real-world testing of the Solarbank 2 Pro found it to be a polished, capable system that punches slightly above its price point relative to EcoFlow. The reviewer praised the build quality and the clean cable routing design, and highlighted that the 2 kWh integrated battery hits a useful practical threshold — enough to cover typical evening lighting and TV use from daytime generation. The app was rated 'good' rather than 'excellent', with the main gap being the lack of AI-driven optimisation features that EcoFlow offers.",
-    sentiment: "positive",
-  },
-  {
-    platform: "BuildHub Forum",
-    title: "Anker SOLIX Solarbank 2 installation — any experience?",
-    url: "https://www.buildhub.org.uk/threads/anker-solix-solarbank-2-installation",
-    author: "Various members",
-    summary:
-      "BuildHub is a UK self-builder and renovation forum with technically knowledgeable contributors. This thread covers installation specifics: railing mount compatibility, the G98 notification process (most members had not received any response from their DNO after submitting the form — normal for G98), and a discussion of whether the SOLIX's Schuko plug requires DNO notification at all given its power output. Consensus: yes, notify your DNO as a precaution regardless of output. The thread is useful reading for understanding the regulatory context from a practically-minded UK audience.",
-    sentiment: "neutral",
-  },
-];
 
 export default function AnkerSOLIXReviewPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'Anker SOLIX Solarbank 2 Pro',
+    description:
+      'The Anker SOLIX Solarbank 2 Pro is a balcony solar system for UK homes featuring 800W panel capacity, a built-in 2 kWh LFP battery, Wi-Fi and Bluetooth connectivity, and a 5-year warranty. Priced at approximately £899.',
+    brand: { '@type': 'Brand', name: 'Anker' },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'GBP',
+      price: '899',
+      availability: 'https://schema.org/InStock',
+      url: 'https://www.ankersolix.com/uk/products/solarbank-2-pro',
+    },
+    review: {
+      '@type': 'Review',
+      author: { '@type': 'Organization', name: 'Balcony Solar Guide' },
+      reviewBody:
+        'The Anker SOLIX Solarbank 2 Pro delivers more raw generation potential than most rivals at 800W, with a 2 kWh LFP battery built in at a competitive £899. Reviewers consistently praise its premium build quality, solid app monitoring, and strong 5-year warranty. The main limitation is the fixed, non-expandable battery — and it lacks the AI optimisation features found in the EcoFlow app. A strong choice for UK balconies where maximum generation is the priority.',
+    },
+  }
+
   return (
-    <div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div>
       <PageHero
         eyebrow="Review Roundup"
         title="Anker SOLIX Solarbank 2 Review Roundup: UK Balcony Solar"
@@ -177,45 +157,35 @@ export default function AnkerSOLIXReviewPage() {
           </div>
         </section>
 
-        {/* Curated reviews */}
+        {/* Video reviews */}
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Curated Reviews: The Sources</h2>
-          <p className="text-slate-600 mb-6 text-sm">
-            The independent reviews below form the basis of our editorial summary. Click through to read each source in
-            full.
-          </p>
-          <div className="space-y-5">
-            {curatedReviews.map((review, i) => (
-              <div key={i} className="border border-slate-200 rounded-xl p-5">
-                <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-                  <div>
-                    <span className="inline-block bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-full mb-2">
-                      {review.platform}
-                    </span>
-                    <h3 className="font-semibold text-slate-900">{review.title}</h3>
-                    <p className="text-xs text-slate-500">{review.author}</p>
-                  </div>
-                  <span
-                    className={`text-xs font-semibold px-2 py-1 rounded-full ${
-                      review.sentiment === "positive"
-                        ? "bg-green-100 text-green-700"
-                        : "bg-slate-100 text-slate-600"
-                    }`}
-                  >
-                    {review.sentiment === "positive" ? "Generally positive" : "Balanced"}
-                  </span>
-                </div>
-                <p className="text-sm text-slate-600 mb-3">{review.summary}</p>
-                <a
-                  href={review.url}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="inline-flex items-center gap-1 text-solar-600 hover:text-solar-700 text-sm font-semibold"
-                >
-                  Read original →
-                </a>
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Video Reviews</h2>
+          <p className="text-slate-600 mb-6 text-sm">Independent video reviews from YouTube creators who have tested the Anker SOLIX Solarbank 2.</p>
+          <div className="space-y-8">
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/aYMB87349Oo"
+                  title="Anker SOLIX Solarbank 2 AC Review: Home Battery for Solar Panels + Home Assistant Support!"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
               </div>
-            ))}
+              <p className="mt-2 text-sm text-slate-500">Smart Home Junkie — Hands-on review of the Solarbank 2 AC covering real-world solar storage performance, app setup, and Home Assistant integration</p>
+            </div>
+            <div>
+              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/b_6oMqgh5Fs"
+                  title="Anker Solix Solarbank 2 E1600 Plus and BP1600 and FS20 and Smart Plug balcony solar system video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+              <p className="mt-2 text-sm text-slate-500">Funkyhome — Full system video covering the Solarbank 2 E1600 Plus with expansion battery, flexible FS20 solar panels, and Smart Plugs in a complete balcony solar setup</p>
+            </div>
           </div>
         </section>
 
@@ -271,5 +241,6 @@ export default function AnkerSOLIXReviewPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

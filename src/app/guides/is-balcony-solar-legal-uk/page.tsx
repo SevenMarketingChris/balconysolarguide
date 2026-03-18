@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -117,7 +118,7 @@ export default function IsBalconySolarLegalPage() {
             Your Distribution Network Operator is the company that owns and maintains the electricity cables in your
             area — not your energy supplier. You can find your DNO by entering your postcode at{" "}
             <strong>www.energynetworks.org/customers/find-my-network-operator</strong>. See our full{" "}
-            <a href="/guides/g98-dno-notification-balcony-solar">G98 notification guide</a> for a complete list of DNOs
+            <Link href="/guides/g98-dno-notification-balcony-solar">G98 notification guide</Link> for a complete list of DNOs
             and their contact details.
           </InfoBox>
 
