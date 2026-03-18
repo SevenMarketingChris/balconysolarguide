@@ -51,6 +51,14 @@ export default function IsBalconySolarLegalPage() {
             systems — is expected within months. This page will be updated as those changes are confirmed.
           </InfoBox>
 
+          <InfoBox variant="info" title="Want the detail on specific topics?">
+            This guide gives you the big picture. For detailed guidance on specific areas — planning permission, building
+            regulations, G98 notification, and leasehold rules — see our{" "}
+            <Link href="/uk-regulations" className="underline font-semibold">
+              UK Regulations hub
+            </Link>.
+          </InfoBox>
+
           <h2>What Has the Grey Area Actually Been?</h2>
           <p>
             The technical concern that has kept balcony solar in regulatory limbo relates to BS 7671 — the IET Wiring

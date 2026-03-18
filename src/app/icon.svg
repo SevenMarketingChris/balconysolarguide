@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#065f46"/>
+  <rect width="32" height="32" rx="6" fill="#060d1e"/>
   <!-- Sun -->
   <circle cx="16" cy="10" r="5" fill="#fbbf24"/>
   <!-- Sun rays -->
@@ -14,7 +14,7 @@
   </g>
   <!-- Solar panel -->
   <g transform="translate(6,18)">
-    <rect x="0" y="0" width="20" height="10" rx="1" fill="#1e40af"/>
+    <rect x="0" y="0" width="20" height="10" rx="1" fill="#1e3a8a"/>
     <!-- Grid lines -->
     <line x1="5" y1="0" x2="5" y2="10" stroke="#3b82f6" stroke-width="0.5"/>
     <line x1="10" y1="0" x2="10" y2="10" stroke="#3b82f6" stroke-width="0.5"/>

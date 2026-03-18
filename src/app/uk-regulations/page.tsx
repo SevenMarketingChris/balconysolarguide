@@ -187,6 +187,14 @@ export default function UKRegulationsPage() {
           </div>
         </section>
 
+        <InfoBox variant="info" title="Looking for a quick overview?">
+          If you just want a straightforward answer to "is balcony solar legal?", read our guide:{" "}
+          <Link href="/guides/is-balcony-solar-legal-uk" className="underline font-semibold">
+            Is Balcony Solar Legal in the UK?
+          </Link>
+          {" "}It covers the legal position, G98 requirements, planning rules, and what's changing — all in one article.
+        </InfoBox>
+
         <InfoBox variant="tip" title="Bottom line for most people">
           If you're in a freehold house or semi-detached property with a balcony or south-facing wall, the practical
           barriers to balcony solar are minimal. Notify your DNO (takes 15 minutes), confirm you're within permitted
