@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
+
+export const metadata: Metadata = {
+  title: "Best Balcony Solar Kits UK 2026 — Expert Comparison | Balcony Solar Guide",
+  description: "Side-by-side comparison of the best plug-in balcony solar kits available in the UK. Aggregated reviews from YouTube, Reddit, and specialist forums.",
+};
 
 const products = [
   {
@@ -13,7 +19,7 @@ const products = [
     battery: "Optional (1–5 kWh LFP)",
     app: "Yes — EcoFlow App (iOS/Android)",
     bestFor: "All-rounder, smart home enthusiasts",
-    asin: null, // TODO: replace with real Amazon ASIN — B0ECOSTREAM1 is not a valid ASIN
+    asin: "B0F2FTSZKG",
     reviewHref: "/reviews/ecoflow-stream",
     ourPick: true,
     badge: "Our Top Pick",
@@ -44,7 +50,7 @@ const products = [
     battery: "Built-in 2 kWh (Solarbank 2 Pro)",
     app: "Yes — Anker App",
     bestFor: "Maximum output, integrated battery",
-    asin: null, // TODO: replace with real Amazon ASIN — B0ANKRSOLX1 is not a valid ASIN
+    asin: "B0D1X82HDL",
     reviewHref: "/reviews/anker-solix",
     ourPick: false,
     badge: "Highest Output",
@@ -101,18 +107,18 @@ const products = [
   {
     id: "jackery-navi",
     name: "Jackery Navi 2000",
-    price: "£699",
-    wattage: "400W",
-    battery: "Optional (integrated design)",
+    price: "Not yet available in UK",
+    wattage: "Up to 800W PV input",
+    battery: "2 kWh LiFePO4 (expandable to 8 kWh)",
     app: "Yes — Jackery App",
     bestFor: "Small balconies, Juliet balconies",
-    asin: null, // TODO: replace with real Amazon ASIN — B0JCKNAVI01 is not a valid ASIN
+    asin: null, // Jackery Navi 2000 not available on Amazon UK
     reviewHref: "/reviews/jackery-navi-2000",
     ourPick: false,
     badge: "Best for Small Spaces",
     specs: {
-      panels: "Up to 2 × 200W",
-      inverter: "Integrated 400W",
+      panels: "Up to 800W PV input",
+      inverter: "Integrated 800W",
       connectivity: "Bluetooth + Wi-Fi",
       warranty: "3 years",
       weight: "~12 kg",
@@ -120,14 +126,14 @@ const products = [
     pros: [
       "Compact footprint makes it the only viable option for Juliet balconies and narrow terraces",
       "Jackery has a strong reliability reputation built on their portable power station range",
-      "Integrated battery unit keeps the system tidy with fewer cables and components",
+      "2 kWh LiFePO4 battery expandable to 8 kWh for serious storage capacity",
     ],
     cons: [
-      "400W ceiling significantly limits generation potential compared to 600–800W rivals",
+      "Not yet available in the UK — currently sold in EU markets only",
       "Newer product with less long-term reliability data than more established systems",
     ],
     verdict:
-      "The Jackery Navi 2000 fills an important gap: it's the best option for renters and homeowners with small or Juliet balconies where larger systems simply cannot be mounted. If your balcony can accommodate a full 600W system, the EcoFlow STREAM is a better investment.",
+      "The Jackery Navi 2000 is a promising balcony solar system with up to 800W PV input and expandable LiFePO4 battery storage, but it is not yet available in the UK. We'll update this listing when UK availability is confirmed.",
   },
 ];
 

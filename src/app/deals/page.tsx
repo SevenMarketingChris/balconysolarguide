@@ -17,7 +17,7 @@ const deals = [
     badgeClass: "bg-solar-500",
     rrp: 949,
     currentPrice: null,
-    url: "https://www.ecoflow.com/uk",
+    url: "https://uk.ecoflow.com/pages/stream-series-plug-in-solar-battery",
     source: "EcoFlow UK",
     wattage: "600W",
     description:
@@ -31,7 +31,7 @@ const deals = [
     badgeClass: "bg-slate-700",
     rrp: 899,
     currentPrice: null,
-    url: "https://www.ankersolix.com/uk",
+    url: "https://www.ankersolix.com/uk/products/solarbank-2-pro",
     source: "Anker SOLIX UK",
     wattage: "800W",
     description:

@@ -1,8 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { DM_Sans } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
+
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", display: "swap" });
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap" });
 
 export const metadata: Metadata = {
   title: {
@@ -55,12 +60,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB" className="bg-[#f0f7ff]">
-      <body>
+      <body className={`${dmSans.variable} ${fraunces.variable}`}>
         <Header />
         <main>{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-VR2J7TGWHX" />
       </body>
-      <GoogleAnalytics gaId="G-VR2J7TGWHX" />
     </html>
   );
 }

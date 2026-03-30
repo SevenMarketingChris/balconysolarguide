@@ -215,7 +215,7 @@ export default function AnkerSOLIXReviewPage() {
                 received significant price cuts during Prime Day and Black Friday.
               </p>
               <a
-                href="https://www.amazon.co.uk/dp/B0ANKRSOLX1?tag=balconysolar-21"
+                href="https://www.amazon.co.uk/dp/B0D1X82HDL?tag=balconysolar-21"
                 target="_blank"
                 rel="nofollow sponsored noopener noreferrer"
                 className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"

@@ -10,33 +10,22 @@ export const metadata: Metadata = {
     "EcoFlow STREAM Microinverter Review 2026 — Real Performance, Pros & Cons | Balcony Solar Guide",
   description:
     "Independent EcoFlow STREAM microinverter review for UK homes. We analysed every video review, hands-on test, and user report to give you the honest verdict on specs, performance, and value.",
-  keywords:
-    "ecoflow stream microinverter review, ecoflow stream review, ecoflow powerstream review, ecoflow stream 800w review, ecoflow balcony solar uk, ecoflow stream uk",
-  alternates: {
-    canonical: "https://www.balconysolarguide.co.uk/reviews/ecoflow-stream",
-  },
 };
 
 export default function EcoFlowStreamReviewPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "EcoFlow STREAM Microinverter",
+    name: "EcoFlow STREAM",
     description:
       "The EcoFlow STREAM is a plug-in balcony solar system for UK homes, featuring a 1,200W micro-inverter with 2 MPPT channels, optional modular LFP battery storage expandable up to 11.52 kWh, and AI energy management via the EcoFlow app.",
     brand: { "@type": "Brand", name: "EcoFlow" },
     offers: {
       "@type": "Offer",
       priceCurrency: "GBP",
-      price: "129",
+      price: "949",
       availability: "https://schema.org/InStock",
       url: "https://uk.ecoflow.com/pages/stream-series-plug-in-solar-battery",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.3",
-      bestRating: "5",
-      reviewCount: "7",
     },
     review: {
       "@type": "Review",
@@ -1072,7 +1061,7 @@ export default function EcoFlowStreamReviewPage() {
                   Amazon&apos;s renewable energy deals.
                 </p>
                 <a
-                  href="https://www.amazon.co.uk/dp/B0ECOSTREAM1?tag=balconysolar-21"
+                  href="https://www.amazon.co.uk/dp/B0F2FTSZKG?tag=balconysolar-21"
                   target="_blank"
                   rel="nofollow sponsored noopener noreferrer"
                   className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"

@@ -26,7 +26,7 @@ export default function UKSolarRoadmapPage() {
           ]}
         />
 
-        <article className="prose prose-slate max-w-none">
+        <article className="prose-solar">
           <h2>What Is the UK Solar Roadmap?</h2>
           <p>
             Published on 1 June 2025 by the Department for Energy Security and Net Zero (DESNZ),
