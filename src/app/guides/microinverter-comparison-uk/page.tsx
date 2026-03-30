@@ -390,7 +390,7 @@ export default function MicroinverterComparisonPage() {
             If your priority is buying a plug-in solar and battery system as a single integrated
             unit, the Growatt NEO 800M-X paired with the NOAH 2000 battery is the most accessible
             option in this category. The 5-year warranty is a significant downside — compare
-            carefully with the EcoFlow STREAM, which offers a similar plug-in solar plus battery
+            carefully with the <Link href="/reviews/ecoflow-stream">EcoFlow STREAM</Link>, which offers a similar plug-in solar plus battery
             proposition with potentially better support.
           </p>
 

@@ -146,6 +146,13 @@ export default function DealsPage() {
           ))}
         </div>
 
+        <p className="text-sm text-slate-600 mt-6">
+          Not sure which system is right for you? Read our{" "}
+          <Link href="/reviews/ecoflow-stream" className="text-solar-600 underline font-medium">EcoFlow STREAM review</Link>,{" "}
+          <Link href="/reviews/anker-solix" className="text-solar-600 underline font-medium">Anker SOLIX review</Link>, or see the{" "}
+          <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline font-medium">full comparison</Link>.
+        </p>
+
         {/* Price alert */}
         <div className="mt-10 bg-solar-50 border border-solar-200 rounded-xl px-6 py-5">
           <p className="font-semibold text-solar-800 mb-1">Price alert tip</p>

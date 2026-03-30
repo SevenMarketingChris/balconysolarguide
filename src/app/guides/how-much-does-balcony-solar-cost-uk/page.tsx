@@ -131,7 +131,7 @@ export default function BalconySolarCostPage() {
           <h3>Not included</h3>
           <ul>
             <li><strong>Dedicated socket:</strong> You'll use an existing external or indoor socket, or have one installed by an electrician if convenient access doesn't exist. A new socket from an electrician costs £80–£150.</li>
-            <li><strong>Battery:</strong> Unless you specifically buy a battery-integrated system (like the EcoFlow STREAM), batteries are separate purchases.</li>
+            <li><strong>Battery:</strong> Unless you specifically buy a battery-integrated system (like the <Link href="/reviews/ecoflow-stream">EcoFlow STREAM</Link>), batteries are separate purchases.</li>
             <li><strong>G98 notification fee:</strong> There is currently no charge for submitting a G98 notification to your DNO — it's free, though administratively fiddly. See our <Link href="/guides/g98-dno-notification-balcony-solar">G98 guide</Link> for how to do it.</li>
           </ul>
 

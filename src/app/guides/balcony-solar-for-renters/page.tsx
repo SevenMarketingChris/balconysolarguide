@@ -201,7 +201,7 @@ export default function BalconySolarForRentersPage() {
               shifts your consumption to when your panels are generating, improving self-consumption significantly.
             </li>
             <li>
-              <strong>Consider a battery</strong> if you're out during the day. Systems like the EcoFlow STREAM with an
+              <strong>Consider a battery</strong> if you're out during the day. Systems like the <Link href="/reviews/ecoflow-stream">EcoFlow STREAM</Link> with an
               integrated battery store daytime generation for evening use, transforming the economics for anyone with a
               9-to-5 routine.
             </li>

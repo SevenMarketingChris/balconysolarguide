@@ -171,7 +171,7 @@ export default function BeginnersGuidePage() {
               app monitoring, premium inverter brands, and heavier-duty mounting hardware.
             </li>
             <li>
-              <strong>Battery-integrated systems</strong> (e.g. EcoFlow STREAM with battery): £1,200–£2,500 depending
+              <strong>Battery-integrated systems</strong> (e.g. <Link href="/reviews/ecoflow-stream">EcoFlow STREAM</Link> with battery): £1,200–£2,500 depending
               on battery capacity.
             </li>
           </ul>

@@ -77,7 +77,7 @@ export default function BalconySolarBatteryStoragePage() {
             the inverter and the battery management system — you can't simply connect any battery to any plug-in solar
             kit. As of early 2026, the main systems available in the UK with integrated battery support are:
           </p>
-          <h3>EcoFlow STREAM with PowerStream Battery</h3>
+          <h3><Link href="/reviews/ecoflow-stream">EcoFlow STREAM</Link> with PowerStream Battery</h3>
           <p>
             EcoFlow's STREAM system is specifically designed for plug-in solar with optional battery integration. The
             PowerStream micro-inverter (available in 600W and 800W versions) connects to EcoFlow's portable power
