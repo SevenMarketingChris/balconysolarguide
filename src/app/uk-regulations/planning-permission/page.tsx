@@ -3,18 +3,30 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Do You Need Planning Permission for Balcony Solar Panels? UK Guide | Balcony Solar Guide",
-  description: "For most UK homes, balcony solar falls under permitted development rights. Learn what applies to your property — including exceptions for listed buildings, conservation areas, and flats.",
+  title: "Do You Need Planning Permission for Balcony Solar Panels? UK Guide",
+  description: "Do you need planning permission for balcony solar? Most UK homes are covered by permitted development. Exceptions for listed buildings and conservation areas.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Do You Need Planning Permission for Balcony Solar Panels?",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export default function PlanningPermissionPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="UK Regulations"
         title="Do You Need Planning Permission for Balcony Solar Panels?"
+        badge="Updated March 2026"
         subtitle="For most UK properties, the answer is no — balcony solar panels typically fall within permitted development rights. But there are conditions, and some property types require more care."
       />
 
@@ -206,18 +218,32 @@ export default function PlanningPermissionPage() {
         </section>
 
         <div className="border-t border-slate-200 pt-6">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 mb-2">
             Continue reading:{" "}
             <Link href="/uk-regulations/building-regulations" className="text-solar-600 underline">
-              Building regulations and BS 7671 →
+              Building regulations and BS 7671
             </Link>
             {" · "}
             <Link href="/uk-regulations/dno-g98-explained" className="text-solar-600 underline">
-              G98 DNO notification →
+              G98 DNO notification
             </Link>
             {" · "}
             <Link href="/uk-regulations/leasehold-balcony-solar" className="text-solar-600 underline">
-              Leasehold considerations →
+              Leasehold considerations
+            </Link>
+            {" · "}
+            <Link href="/uk-regulations/timeline" className="text-solar-600 underline">
+              Legalisation timeline
+            </Link>
+          </p>
+          <p className="text-sm text-slate-500">
+            Tools & reviews:{" "}
+            <Link href="/calculator" className="text-solar-600 underline">
+              Savings calculator
+            </Link>
+            {" · "}
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline">
+              Best balcony solar kits
             </Link>
           </p>
         </div>

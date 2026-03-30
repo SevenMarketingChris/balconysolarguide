@@ -3,20 +3,36 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "The Renters' Rights Act 2025 and Balcony Solar — UK Renters' Guide | Balcony Solar Guide",
-  description: "How the Renters' Rights Act 2025 strengthens your position when requesting landlord permission for balcony solar. Covers Section 21 abolition, right to request improvements, and the new Ombudsman.",
+  title: "The Renters' Rights Act 2025 and Balcony Solar — UK Renters' Guide",
+  description: "How the Renters' Rights Act 2025 strengthens your position when requesting landlord permission for balcony solar. Section 21 abolition and the new Ombudsman.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
 export default function RentersRightsActPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "The Renters' Rights Act 2025 and Balcony Solar",
+    description: "How the Renters' Rights Act 2025 strengthens your position when requesting landlord permission for balcony solar.",
+    author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+    publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+    datePublished: "2025-06-01",
+    dateModified: "2026-03-30",
+    mainEntityOfPage: "https://www.balconysolarguide.co.uk/for-renters/renters-rights-act-solar",
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow="For Renters"
         title="The Renters' Rights Act 2025 and Balcony Solar"
         subtitle="The most significant reform to private renting in England in a generation. What does it mean for your ability to install balcony solar panels?"
-        badge="In force from 2025"
+        badge="Updated March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">

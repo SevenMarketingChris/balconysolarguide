@@ -1,21 +1,34 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Is Balcony Solar Safe? UK Electrical Safety Explained Honestly",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Is Balcony Solar Safe? UK Electrical Safety Explained Honestly",
   description:
-    "An honest, technically credible look at the real electrical safety questions around plug-in balcony solar in the UK. UK ring circuits, RCD types, anti-islanding, and what to check before you install.",
+    "An honest look at balcony solar electrical safety in the UK. Covers ring circuits, RCD types, anti-islanding, and what to check before you install.",
 };
 
 export default function BalconySolarElectricalSafetyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Safety Guide"
         title="Is Balcony Solar Safe? UK Electrical Safety Explained Honestly"
         subtitle="The genuine electrical safety questions about plug-in solar in the UK — and the honest answers. We cover UK ring circuits, anti-islanding, RCD types, and exactly what to check before you plug anything in."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -192,7 +205,8 @@ export default function BalconySolarElectricalSafetyPage() {
             UKCA certification. Hoymiles, APsystems, Enphase, Deye, Growatt, and EcoFlow all
             manufacture to recognised safety standards and have real customer support. The price
             difference between a certified and an uncertified inverter is typically £30–£60. It is
-            not worth saving that amount.
+            not worth saving that amount. For a comparison of the main inverter options, see our{" "}
+            <Link href="/guides/balcony-solar-inverter-types" className="text-solar-600 hover:text-solar-700 font-medium">inverter types guide</Link>.
           </p>
 
           <InfoBox variant="warning" title="Only buy certified equipment">
@@ -311,6 +325,23 @@ export default function BalconySolarElectricalSafetyPage() {
             of these are reasons to avoid plug-in solar — they are reasons to be a reasonably
             careful buyer and installer.
           </p>
+          <p>
+            For a step-by-step walkthrough of the full installation process, see our{" "}
+            <Link href="/guides/how-to-install-balcony-solar-panels-uk" className="text-solar-600 hover:text-solar-700 font-medium">installation guide</Link>.
+            You may also want to review the{" "}
+            <Link href="/uk-regulations/building-regulations-balcony-solar" className="text-solar-600 hover:text-solar-700 font-medium">building regulations</Link>{" "}
+            and <Link href="/guides/balcony-solar-insurance-uk" className="text-solar-600 hover:text-solar-700 font-medium">insurance</Link> implications
+            before proceeding.
+          </p>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

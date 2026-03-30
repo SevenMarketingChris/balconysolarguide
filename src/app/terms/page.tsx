@@ -1,10 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
-export const metadata = {
-  title: "Terms of Use — Balcony Solar Guide",
+export const metadata: Metadata = {
+  title: "Terms of Use",
   description:
     "Terms of use for Balcony Solar Guide. Important information about the nature of the content on this site and your responsibilities as a user.",
 };

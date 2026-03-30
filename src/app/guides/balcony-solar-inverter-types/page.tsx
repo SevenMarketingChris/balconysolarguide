@@ -1,22 +1,35 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar Inverter Types Explained",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Balcony Solar Inverter Types Explained",
   description:
-    "Everything you need to know about micro-inverters for balcony solar. Covers how they work, leading brands (Hoymiles, Deye, APsystems, Enphase), efficiency, safety specs, and what to look for when buying.",
+    "Micro-inverters for balcony solar explained. How they work, leading brands (Hoymiles, APsystems, Enphase), efficiency, safety specs, and buying tips.",
 };
 
 export default function BalconySolarInverterTypesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="Balcony Solar Inverter Types Explained"
         subtitle="The inverter is the heart of your balcony solar system. Here's how micro-inverters work, why they're better than string inverters for balcony solar, and what to look for when buying."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -295,6 +308,43 @@ export default function BalconySolarInverterTypesPage() {
             or inverter faults early. Most issues can be diagnosed remotely through the app before they require any
             physical inspection.
           </p>
+
+          <h2>Further Reading</h2>
+          <ul>
+            <li>
+              <Link href="/reviews/apsystems-ds3" className="text-solar-600 hover:text-solar-700 font-medium">
+                APsystems DS3 review
+              </Link>{" "}
+              — in-depth look at one of the most popular dual-panel micro-inverters
+            </li>
+            <li>
+              <Link href="/reviews/hoymiles-hm-600" className="text-solar-600 hover:text-solar-700 font-medium">
+                Hoymiles HM-600 review
+              </Link>{" "}
+              — the micro-inverter found in many mid-range kits
+            </li>
+            <li>
+              <Link href="/guides/balcony-solar-electrical-safety-uk" className="text-solar-600 hover:text-solar-700 font-medium">
+                Electrical safety guide
+              </Link>{" "}
+              — G98, RCD protection, and safe installation practices
+            </li>
+            <li>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 hover:text-solar-700 font-medium">
+                Best balcony solar kits UK
+              </Link>{" "}
+              — our top-rated complete systems including inverter
+            </li>
+          </ul>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

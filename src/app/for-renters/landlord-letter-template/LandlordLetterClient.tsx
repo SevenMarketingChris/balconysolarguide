@@ -79,6 +79,7 @@ export default function LandlordLetterClient() {
         eyebrow="For Renters"
         title="Landlord Permission Letter Template for Balcony Solar"
         subtitle="A complete, professionally drafted letter you can adapt and send to your landlord. Covers all the key points that make approval more likely — including the Renters' Rights Act 2025."
+        badge="Updated March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">

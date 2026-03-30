@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -7,7 +8,7 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 export const metadata: Metadata = {
   title: "G98 DNO Notification for Balcony Solar: Do You Need to Notify?",
   description:
-    "A complete guide to G98 notification for plug-in solar users. Covers what G98 is, who your DNO is, the notification process, and a table of all UK DNOs and their contact details.",
+    "Complete guide to G98 notification for plug-in solar. What G98 is, who your DNO is, the notification process, and a table of all UK DNOs with contact details.",
 };
 
 export default function G98DnoNotificationPage() {
@@ -17,6 +18,7 @@ export default function G98DnoNotificationPage() {
         eyebrow="Guides"
         title="G98 DNO Notification for Balcony Solar"
         subtitle="Connecting generation to the grid requires notifying your Distribution Network Operator. Here's exactly what G98 means, who your DNO is, and how to complete the notification in about 15 minutes."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -32,7 +34,8 @@ export default function G98DnoNotificationPage() {
           <p>
             G98 is the short name for Engineering Recommendation G98 — the UK standard that governs how small-scale
             electricity generation equipment (up to 16A per phase, which equates to around 3.68kW on a single-phase
-            supply) is connected to the public electricity grid. It was introduced in 2019 to provide a simpler, faster
+            supply) is connected to the public electricity grid. For a broader overview of the legal landscape, see
+            our <Link href="/guides/is-balcony-solar-legal-uk">legal status guide</Link>. G98 was introduced in 2019 to provide a simpler, faster
             pathway for small generators than the previous G83 standard, and it applies to everything from rooftop solar
             panels to wind turbines and, yes, balcony solar systems.
           </p>
@@ -216,8 +219,42 @@ export default function G98DnoNotificationPage() {
             confirm G98 compliance. If you're buying a kit from a UK retailer, G98-compliant inverters should be
             standard — check before purchasing if you're buying from an international marketplace.
           </p>
+
+          <h2>Next Steps</h2>
+          <p>
+            Once your G98 notification is submitted, you are ready to{" "}
+            <Link href="/guides/how-to-install-balcony-solar">install your system</Link>. If you are new to balcony solar
+            entirely, our <Link href="/guides/beginners-guide-to-balcony-solar">beginner's guide</Link> covers all the basics.
+            For more detail on the technical requirements, see our{" "}
+            <Link href="/uk-regulations/dno-g98-explained">DNO G98 regulatory explainer</Link>. And to estimate how much your
+            system could save you, try our <Link href="/calculator">savings calculator</Link>.
+          </p>
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "G98 DNO Notification for Balcony Solar",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

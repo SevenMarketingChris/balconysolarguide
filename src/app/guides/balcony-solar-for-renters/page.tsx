@@ -5,19 +5,31 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar for Renters: A Complete UK Guide",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Balcony Solar for Renters: A Complete UK Guide",
   description:
-    "Renting and want balcony solar? This guide covers the Renters' Rights Act 2025, landlord permissions, portable systems, Juliet balconies, and DNO notification for tenants.",
+    "Renting and want balcony solar? Covers the Renters' Rights Act 2025, landlord permissions, portable systems, Juliet balconies, and DNO notification.",
 };
 
 export default function BalconySolarForRentersPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="Balcony Solar for Renters: A Complete UK Guide"
         subtitle="How renters across the UK can benefit from plug-in solar — covering landlord permissions, portable systems, legal rights, and practical tips for flat-dwellers."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -55,7 +67,9 @@ export default function BalconySolarForRentersPage() {
             That said, the Act doesn't give tenants carte blanche. You still need to notify your landlord, and in
             practice the most sensible approach is to seek written consent before installing anything — not because the
             system is inherently problematic, but because maintaining a good landlord relationship is almost always worth
-            more than the principle of the thing. If your landlord refuses, the no-drill options below mean you can
+            more than the principle of the thing. If you rent from a housing association, the approval process may differ —
+            see our <Link href="/guides/balcony-solar-housing-association" className="text-solar-600 hover:text-solar-700 font-medium">housing association guide</Link> for
+            specific advice. If your landlord refuses, the no-drill options below mean you can
             often proceed without affecting the structure of the property at all.
           </p>
 
@@ -113,7 +127,9 @@ export default function BalconySolarForRentersPage() {
             mounts designed for horizontal railings don't always work on vertical glass balustrades. However, several
             manufacturers now produce Juliet-specific mounting systems that clamp to the frame of the balustrade rather
             than the glass. These typically support a single panel oriented vertically, which reduces output but is
-            manageable. Alternatively, if you have a flat roof above a ground-floor flat, a discreet floor-stand
+            manageable. For a full breakdown of Juliet-specific options, see our{" "}
+            <Link href="/for-renters/juliet-balcony-solar" className="text-solar-600 hover:text-solar-700 font-medium">Juliet balcony solar guide</Link>.
+            Alternatively, if you have a flat roof above a ground-floor flat, a discreet floor-stand
             installation may be possible — worth discussing with your landlord.
           </p>
 
@@ -214,6 +230,15 @@ export default function BalconySolarForRentersPage() {
               queries the system.
             </li>
           </ul>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

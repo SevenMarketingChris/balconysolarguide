@@ -8,7 +8,7 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 export const metadata: Metadata = {
   title: "Beginner's Guide to Balcony Solar Panels in the UK",
   description:
-    "New to balcony solar? This complete beginner's guide explains how plug-in solar panels work, what they cost in the UK, realistic savings by region, and everything you need to know before buying.",
+    "New to balcony solar? This beginner's guide explains how plug-in solar panels work, what they cost, realistic UK savings by region, and everything you need to know.",
 };
 
 export default function BeginnersGuidePage() {
@@ -18,6 +18,7 @@ export default function BeginnersGuidePage() {
         eyebrow="Guides"
         title="Beginner's Guide to Balcony Solar Panels in the UK"
         subtitle="Everything you need to know before buying your first plug-in solar system — from how the technology works to what you can realistically expect to save."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -47,7 +48,7 @@ export default function BeginnersGuidePage() {
           <h2>How Does It Work?</h2>
           <p>
             A balcony solar system has three main components: one or two solar panels, a micro-inverter, and a plug
-            cable. Here's the energy flow:
+            cable. See our <Link href="/guides/how-to-install-balcony-solar">installation guide</Link> for the full step-by-step process. Here's the energy flow:
           </p>
           <ol>
             <li>
@@ -86,12 +87,14 @@ export default function BeginnersGuidePage() {
           <h2>Balcony Solar vs Rooftop Solar: What's the Difference?</h2>
           <p>
             Rooftop solar is a permanent installation wired into your consumer unit, typically 3–12kW in capacity,
-            costing £5,000–£12,000 installed, and requiring a qualified electrician and often a DNO application. It's
+            costing £5,000–£12,000 installed, and requiring a qualified electrician and often a DNO application. For a full
+            side-by-side comparison, see our <Link href="/guides/plug-in-solar-vs-rooftop-solar">plug-in solar vs rooftop solar</Link> guide. It's
             the right choice if you own your home, have a suitable south-facing roof, and can afford the upfront cost.
           </p>
           <p>
             Balcony solar is none of those things — and that's intentional. It's designed for the 35% of UK households
-            who rent, for flat-dwellers with no roof access, for people who want a low-commitment entry into solar, and
+            who rent, for flat-dwellers with no roof access — including those with{" "}
+            <Link href="/guides/balcony-solar-flat-roof">flat roofs</Link> — for people who want a low-commitment entry into solar, and
             for those who can't yet afford a full rooftop system. At £399–£949 for a complete kit, the economics are
             entirely different. You're not maximising output per household — you're making solar accessible to people who
             would otherwise be locked out of it entirely.
@@ -127,7 +130,8 @@ export default function BeginnersGuidePage() {
           <h2>What You Need to Know Before Buying</h2>
           <h3>Orientation and Shading</h3>
           <p>
-            South-facing is best, east or west is workable, north-facing is not worth it. A south-facing system at a
+            South-facing is best, east or west is workable, north-facing is not worth it — see our{" "}
+            <Link href="/guides/best-direction-for-balcony-solar-uk">direction guide</Link> for full data by orientation. A south-facing system at a
             30–35° tilt delivers maximum annual output. However, balcony railings often force a near-vertical angle
             (60–90°) — this reduces annual output by roughly 20–30% compared to an optimal tilt, but in summer (when
             sun angles are higher) the penalty is much smaller. An east-facing 800W system will generate around 60–65%
@@ -380,7 +384,31 @@ export default function BeginnersGuidePage() {
             </div>
           </div>
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Beginner's Guide to Balcony Solar Panels in the UK",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

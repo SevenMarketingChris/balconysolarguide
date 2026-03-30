@@ -4,19 +4,31 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Smart Export Guarantee (SEG) and Balcony Solar: Can You Get Paid for Excess Generation?",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
-  title: "Smart Export Guarantee (SEG) and Balcony Solar: Can You Get Paid for Excess Generation?",
+  title: "Smart Export Guarantee (SEG) and Balcony Solar",
   description:
-    "Can UK balcony solar owners register for the Smart Export Guarantee? The honest answer, current SEG rates, the MCS certification problem, and what is expected to change after legalisation.",
+    "Can UK balcony solar owners register for the SEG? Current rates, the MCS certification barrier, and what changes to expect after legalisation.",
 };
 
 export default function SegTariffsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Tariffs & Export"
         title="Smart Export Guarantee (SEG) and Balcony Solar: Can You Get Paid for Excess Generation?"
         subtitle="The Smart Export Guarantee pays for electricity you export to the grid — but can balcony solar owners actually register? The current position, the MCS certification barrier, and what is expected to change."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -153,7 +165,7 @@ export default function SegTariffsPage() {
           <p className="text-sm text-slate-500">
             Rates as of early 2026 — approximate only. Verify on{" "}
             <a
-              href="https://www.ofgem.gov.uk/check-if-energy-company-is-ofgem-licensed/smart-export-guarantee-registered-suppliers"
+              href="https://www.ofgem.gov.uk/environmental-and-social-schemes/smart-export-guarantee-seg"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -276,6 +288,25 @@ export default function SegTariffsPage() {
             confirmed, switching to an Octopus Energy SEG tariff will likely be the best first
             step.
           </InfoBox>
+
+          <h2>Related Guides</h2>
+          <ul>
+            <li>
+              <Link href="/guides/balcony-solar-savings-uk" className="text-solar-600 hover:text-solar-700 font-medium">
+                How much can you save with balcony solar?
+              </Link>{" "}
+              — detailed savings estimates by region and system size
+            </li>
+          </ul>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

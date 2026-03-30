@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Plug-In Solar Kit UK Review — Curated Reviews & Specs | Balcony Solar Guide",
-  description: "We've curated the best independent reviews of the Plug-in Solar 600W kit — the DIY budget option using a Hoymiles micro-inverter. Is it worth it? Here's what real owners say.",
+  title: "Plug-In Solar Kit UK Review — Curated Reviews & Specs",
+  description: "Curated independent reviews of the Plug-in Solar 600W kit with Hoymiles micro-inverter. Real owner verdicts on the budget DIY option.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -31,6 +32,11 @@ export default function PlugInSolarKitReviewPage() {
       author: { '@type': 'Organization', name: 'Balcony Solar Guide' },
       reviewBody:
         'The Plug-in Solar 600W kit is the best choice for UK buyers where budget is the primary constraint. The Hoymiles HM-600 micro-inverter at its core is a professional-grade component with a strong long-term reliability record — the same hardware used in more expensive systems. Reviewers praise the low price (less than half of premium systems), simple DIY setup, UK-standard plug (no Schuko adapter needed), and zero ongoing cloud or subscription dependency. The downsides are the absence of monitoring, battery storage, and smart home integration. Ideal for buyers who want straightforward, reliable generation without added complexity.',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '3.8',
+        bestRating: '5',
+      },
     },
   }
 
@@ -173,38 +179,20 @@ export default function PlugInSolarKitReviewPage() {
           <p className="text-slate-600 mb-6 text-sm">Independent YouTube reviews and installation walkthroughs for plug-in solar kits similar to this one.</p>
           <div className="space-y-8">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/nonQ71NeUQg"
-                  title="Plug In Solar - 2 Minutes (NO BS!)"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="nonQ71NeUQg" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Kite Army — A concise, no-nonsense overview of how plug-in solar works, including a micro-inverter walkthrough. 631k views.</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/0zhgG5RMQFE"
-                  title="Plug in Solar Power Is Here with the Ecoflow Stream"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="0zhgG5RMQFE" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">UpsideDownFork — Hands-on look at plug-in solar arriving in the UK, covering setup, output, and whether it is worth it. 283k views.</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/LQ3Lx_ebLuw"
-                  title="This Solar Kit Plugs Into Your Wall?! Plug & Play Solar Review!"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="LQ3Lx_ebLuw" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">There&apos;s A Trick For That — In-depth review of a plug-and-play solar kit that connects directly to a wall socket, including real-world output testing. 98k views.</p>
             </div>

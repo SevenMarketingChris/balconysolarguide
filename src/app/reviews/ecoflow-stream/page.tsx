@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -7,9 +8,9 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
 export const metadata: Metadata = {
   title:
-    "EcoFlow STREAM Microinverter Review 2026 — Real Performance, Pros & Cons | Balcony Solar Guide",
+    "EcoFlow STREAM Microinverter Review 2026 — Real Performance, Pros & Cons",
   description:
-    "Independent EcoFlow STREAM microinverter review for UK homes. We analysed every video review, hands-on test, and user report to give you the honest verdict on specs, performance, and value.",
+    "Independent EcoFlow STREAM microinverter review for UK homes. Every video review and hands-on test analysed for the honest verdict on specs and value.",
 };
 
 export default function EcoFlowStreamReviewPage() {
@@ -179,6 +180,33 @@ export default function EcoFlowStreamReviewPage() {
           />
 
           <AffiliateNotice />
+
+          {/* Quick Verdict */}
+          <div className="bg-solar-50 border border-solar-200 rounded-xl p-5 mb-8">
+            <h2 className="text-lg font-bold text-slate-900 mb-1">Quick Verdict</h2>
+            <p className="text-sm text-slate-700 mb-2">
+              The best all-round balcony solar system for UK homes in 2026. Exceptional app, genuinely plug-and-play setup, and modular battery expansion up to 5 kWh. Premium price but justified by build quality and features.
+            </p>
+            <p className="text-sm font-semibold text-slate-800 mb-3">Rating: 4.3/5 across 7 sources &middot; From ~£949 (panels + inverter bundle)</p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://uk.ecoflow.com/pages/stream-series-plug-in-solar-battery"
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+              >
+                Buy from EcoFlow UK →
+              </a>
+              <a
+                href="https://www.amazon.co.uk/dp/B0F2FTSZKG?tag=balconysolar-21"
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+              >
+                View on Amazon →
+              </a>
+            </div>
+          </div>
 
           <InfoBox variant="info" title="How we wrote this review">
             We don&apos;t own an EcoFlow STREAM. Instead, we aggregated findings
@@ -648,14 +676,8 @@ export default function EcoFlowStreamReviewPage() {
                   key={video.id}
                   className="border border-slate-200 rounded-xl overflow-hidden"
                 >
-                  <div className="relative aspect-video bg-slate-100">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${video.id}`}
-                      title={video.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full border-0"
-                    />
+                  <div className="rounded-xl overflow-hidden">
+                    <YouTubeEmbed videoid={video.id} style="border-radius: 12px;" />
                   </div>
                   <div className="p-5">
                     <h3 className="font-semibold text-slate-900 mb-1">

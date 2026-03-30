@@ -3,18 +3,30 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Balcony Solar in Leasehold Flats UK — What You Need to Know | Balcony Solar Guide",
-  description: "Most UK flats are leasehold, adding complexity beyond planning permission. Learn how to check your lease, establish whether your balcony is demised to you, and request freeholder consent.",
+  title: "Balcony Solar in Leasehold Flats UK — What You Need to Know",
+  description: "Balcony solar in leasehold flats: how to check your lease, whether your balcony is demised to you, and how to request freeholder consent.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar in Leasehold Flats: What You Need to Know",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export default function LeaseholdPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="UK Regulations"
         title="Balcony Solar in Leasehold Flats: What You Need to Know"
+        badge="Updated March 2026"
         subtitle="Most UK flats are leasehold — and this adds a layer of complexity beyond planning permission and electrical regulations. Understanding your lease position is the first step."
       />
 
@@ -247,7 +259,7 @@ export default function LeaseholdPage() {
         </section>
 
         <div className="border-t border-slate-200 pt-6">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 mb-2">
             Related guides:{" "}
             <Link href="/for-renters/landlord-letter-template" className="text-solar-600 underline">
               Landlord permission letter template
@@ -259,6 +271,20 @@ export default function LeaseholdPage() {
             {" · "}
             <Link href="/uk-regulations/planning-permission" className="text-solar-600 underline">
               Planning permission guide
+            </Link>
+            {" · "}
+            <Link href="/uk-regulations/dno-g98-explained" className="text-solar-600 underline">
+              G98 DNO notification
+            </Link>
+          </p>
+          <p className="text-sm text-slate-500">
+            Tools & reviews:{" "}
+            <Link href="/calculator" className="text-solar-600 underline">
+              Savings calculator
+            </Link>
+            {" · "}
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline">
+              Best balcony solar kits
             </Link>
           </p>
         </div>

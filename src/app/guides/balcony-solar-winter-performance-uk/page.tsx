@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -6,7 +7,7 @@ import InfoBox from "@/components/ui/InfoBox";
 export const metadata: Metadata = {
   title: "Balcony Solar in Winter: What to Expect in the UK",
   description:
-    "UK monthly generation data for balcony solar, the winter advantage of vertical panel mounting, what to expect from December to February, and winter maintenance tips.",
+    "UK monthly generation data for balcony solar, the winter advantage of vertical panel mounting, and what to expect from December to February.",
 };
 
 export default function WinterPerformancePage() {
@@ -16,6 +17,7 @@ export default function WinterPerformancePage() {
         eyebrow="Seasonal Guide"
         title="Balcony Solar in Winter: What to Expect in the UK"
         subtitle="UK irradiance drops significantly in winter — but balcony solar still generates, and vertical panel mounting has a surprising winter advantage. Here is the full seasonal picture."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -278,7 +280,8 @@ export default function WinterPerformancePage() {
 
           <h3>Low Winter Sun and South-East/South-West Orientations</h3>
           <p>
-            If your balcony faces south-east or south-west rather than due south, winter performance
+            If your balcony faces south-east or south-west rather than due south — see our{" "}
+            <Link href="/guides/best-direction-for-balcony-solar-uk">direction guide</Link> for full details — winter performance
             may be slightly more useful than you expect — though for different reasons than the
             summer months. As the sun tracks low along the horizon in a broad arc from south-east to
             south-west during winter, a south-east-facing panel catches useful morning light that it
@@ -309,8 +312,42 @@ export default function WinterPerformancePage() {
             inverter is reporting any fault codes. Winter is when low-light generation exposes any
             partial shading issues that may not have been apparent in summer.
           </p>
+
+          <h2>Understanding Your Annual Savings</h2>
+          <p>
+            Winter output is lower, but it still contributes to your annual return. To see exactly how much you could save
+            across the full year — including the strong summer months — use our{" "}
+            <Link href="/calculator">savings calculator</Link>. For a detailed breakdown of annual savings
+            by region, see our <Link href="/guides/balcony-solar-savings-uk">savings guide</Link>. And if you are considering
+            adding a <Link href="/guides/balcony-solar-battery-storage">battery</Link> to store daytime generation for
+            evening use, that can significantly improve winter self-consumption.
+          </p>
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Balcony Solar in Winter: What to Expect in the UK",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

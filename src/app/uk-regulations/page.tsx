@@ -3,8 +3,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "UK Balcony Solar Regulations 2026 — Complete Guide | Balcony Solar Guide",
-  description: "The definitive guide to UK plug-in solar regulations: planning permission, G98 DNO notification, building regulations, leasehold rules, and the government's March 2026 legalisation announcement.",
+  title: "UK Balcony Solar Regulations 2026 — Complete Guide",
+  description: "Complete guide to UK plug-in solar regulations: planning permission, G98 DNO notification, building regs, leasehold rules, and the March 2026 announcement.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -93,7 +93,7 @@ export default function UKRegulationsPage() {
           </ul>
           <p className="text-slate-600">
             The UK is around 5 years behind Germany in this respect. Germany legalised plug-in solar in 2021 and now
-            has over 1.5 million registered Balkonkraftwerk installations. The UK is following the same trajectory with
+            has over 1.2 million registered Balkonkraftwerk installations. The UK is following the same trajectory with
             a lag.
           </p>
         </section>
@@ -124,7 +124,7 @@ export default function UKRegulationsPage() {
                 status: "Grey area being resolved",
                 statusColour: "bg-slate-100 text-slate-700",
                 summary:
-                  "BS 7671 (the Wiring Regulations) doesn't explicitly address plug-in solar, but modern consumer units with RCBOs provide effective protection for the reverse current flow involved. The BSI is actively developing a specific standard for plug-in solar, expected to be published in 2026.",
+                  "BS 7671 (the Wiring Regulations) doesn't explicitly address plug-in solar, but modern consumer units with RCBOs provide effective protection for the reverse current flow involved. The BSI has been commissioned to develop a specific standard for plug-in solar, expected in late 2027 at the earliest.",
                 link: "/uk-regulations/building-regulations",
               },
               {
@@ -194,6 +194,28 @@ export default function UKRegulationsPage() {
           </Link>
           {" "}It covers the legal position, G98 requirements, planning rules, and what's changing — all in one article.
         </InfoBox>
+
+        {/* CTA section */}
+        <section className="mb-10 bg-solar-50 border border-solar-200 rounded-xl p-6">
+          <h2 className="text-xl font-bold text-solar-900 mb-3">Ready to Get Started?</h2>
+          <p className="text-sm text-slate-600 mb-4">
+            Now you understand the regulatory position, see how much you could save — or find the right kit for your balcony.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/calculator"
+              className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
+            >
+              Calculate your savings →
+            </Link>
+            <Link
+              href="/reviews/best-balcony-solar-kits-uk"
+              className="inline-block bg-white border border-slate-300 hover:border-solar-400 text-slate-700 font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
+            >
+              Best balcony solar kits →
+            </Link>
+          </div>
+        </section>
 
         <InfoBox variant="tip" title="Bottom line for most people">
           If you're in a freehold house or semi-detached property with a balcony or south-facing wall, the practical

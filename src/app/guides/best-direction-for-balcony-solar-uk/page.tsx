@@ -8,7 +8,7 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 export const metadata: Metadata = {
   title: "Best Direction for Balcony Solar Panels in the UK (2026)",
   description:
-    "Which way should your balcony solar panels face? South is best, but SW and SE are nearly as good. Full UK output data by direction, tilt angle advice, shading warnings, and guidance for east, west, and north-facing balconies.",
+    "Which way should your balcony solar panels face? Full UK output data by direction, tilt angle advice, shading warnings, and guidance for every orientation.",
 };
 
 export default function BestDirectionBalconySolarPage() {
@@ -18,6 +18,7 @@ export default function BestDirectionBalconySolarPage() {
         eyebrow="Guides"
         title="Best Direction for Balcony Solar Panels in the UK"
         subtitle="South-facing is ideal, but south-west and south-east are almost as good — and even east or west-facing balconies can produce a worthwhile return. Here's how to make the most of whatever direction you have."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -470,7 +471,31 @@ export default function BestDirectionBalconySolarPage() {
           </div>
 
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Best Direction for Balcony Solar Panels in the UK",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

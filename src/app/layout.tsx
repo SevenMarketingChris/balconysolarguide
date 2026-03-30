@@ -4,7 +4,7 @@ import { Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import CookieConsent from "@/components/ui/CookieConsent";
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", display: "swap" });
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap" });
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-VR2J7TGWHX" />
+        <CookieConsent />
       </body>
     </html>
   );

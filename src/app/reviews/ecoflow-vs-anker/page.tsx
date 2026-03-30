@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "EcoFlow STREAM vs Anker SOLIX: Which Balcony Solar System is Best for UK Homes?",
-  description: "A detailed head-to-head comparison of the EcoFlow STREAM and Anker SOLIX Solarbank 2. We've aggregated owner reviews, generation data, and expert assessments to help you decide.",
+  description: "Head-to-head comparison of the EcoFlow STREAM and Anker SOLIX Solarbank 2. Aggregated owner reviews, generation data, and expert assessments.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -295,10 +296,10 @@ export default function EcoFlowVsAnkerPage() {
         </section>
 
         <InfoBox variant="warning" title="Don't forget the Schuko adapter">
-          Both systems use Schuko plugs, as they're designed primarily for the European market (where balcony solar is
-          already legal and widely adopted). You'll need a UK adapter for either. Neither system includes one as
-          standard, so budget an extra £5–£10 for a UK-to-Schuko adapter — and ensure you use a quality one that can
-          handle continuous load.
+          Both systems use Schuko plugs, as they&apos;re designed primarily for the European market (where balcony solar is
+          already legal and widely adopted). You&apos;ll need a UK adapter for either. The Anker SOLIX UK version includes
+          an adapter in the box, but the EcoFlow STREAM does not — so budget an extra £5–£10 for a quality
+          UK-to-Schuko adapter that can handle continuous load.
         </InfoBox>
 
         {/* Video reviews */}
@@ -307,38 +308,20 @@ export default function EcoFlowVsAnkerPage() {
           <p className="text-slate-600 mb-6 text-sm">YouTube creators reviewing the EcoFlow STREAM and comparing EcoFlow vs Anker SOLIX systems.</p>
           <div className="space-y-8">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/I4x7tSCYz-s"
-                  title="Anker SOLIX F3000 vs. EcoFlow DELTA Pro: Ultimate Power Station Showdown"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="I4x7tSCYz-s" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">FlytPath — Anker SOLIX vs EcoFlow DELTA Pro direct comparison (102k views)</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/13zezvokiMY"
-                  title="DIY Game Changer: NEW EcoFlow STREAM Balcony Solar System"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="13zezvokiMY" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Solar Surge — Full EcoFlow STREAM balcony solar system review (128k views)</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/IjVkBobZikw"
-                  title="Ecoflow Stream DIY Solar: What I Wish I Knew Before I Bought It..."
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="IjVkBobZikw" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Dork off-grid — Honest EcoFlow Stream owner review: things to know before buying (35k views)</p>
             </div>
@@ -352,12 +335,36 @@ export default function EcoFlowVsAnkerPage() {
             <div className="border border-slate-200 rounded-xl p-5">
               <h3 className="font-bold text-solar-700 mb-2">EcoFlow STREAM</h3>
               <p className="text-sm text-slate-600 mb-3">~£949 · Best app · Expandable battery</p>
-              <p className="text-sm text-slate-500 italic">Purchase links coming soon.</p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://uk.ecoflow.com/pages/stream-series-plug-in-solar-battery"
+                  target="_blank"
+                  rel="nofollow sponsored noopener noreferrer"
+                  className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+                >
+                  Buy from EcoFlow UK →
+                </a>
+                <a
+                  href="https://www.amazon.co.uk/dp/B0F2FTSZKG?tag=balconysolar-21"
+                  target="_blank"
+                  rel="nofollow sponsored noopener noreferrer"
+                  className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+                >
+                  View on Amazon →
+                </a>
+              </div>
             </div>
             <div className="border border-slate-200 rounded-xl p-5">
               <h3 className="font-bold text-slate-900 mb-2">Anker SOLIX Solarbank 2</h3>
               <p className="text-sm text-slate-600 mb-3">~£899 · 800W · Built-in 2 kWh battery</p>
-              <p className="text-sm text-slate-500 italic">Purchase links coming soon.</p>
+              <a
+                href="https://www.amazon.co.uk/dp/B0D1X82HDL?tag=balconysolar-21"
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+              >
+                View on Amazon →
+              </a>
             </div>
           </div>
         </section>

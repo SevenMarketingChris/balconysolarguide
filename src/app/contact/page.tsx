@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
 export const metadata: Metadata = {
-  title: "Contact Balcony Solar Guide",
+  title: "Contact Us",
   description:
     "Get in touch with Balcony Solar Guide. We welcome factual corrections, press enquiries, and partnership questions.",
 };
@@ -18,6 +19,7 @@ export default function ContactPage() {
         subtitle="Questions, corrections, press enquiries, or partnership requests — we'd like to hear from you."
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
+        <Breadcrumb crumbs={[{ label: "Contact" }]} />
         <article className="prose-solar">
           <InfoBox variant="info" title="What we can and can't help with">
             <p>

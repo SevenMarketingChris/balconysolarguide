@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "About Balcony Solar Guide — UK's Resource for Plug-In Solar",
+  title: "About Us — UK's Independent Resource for Plug-In Solar",
   description:
-    "Balcony Solar Guide is an independent UK resource for renters and flat-dwellers exploring plug-in solar. Honest, technically accurate, and built around UK regulations.",
+    "Independent UK resource for renters and flat-dwellers exploring plug-in solar. Honest, technically accurate, and built around UK regulations.",
 };
 
 export default function AboutPage() {
@@ -17,6 +18,7 @@ export default function AboutPage() {
         subtitle="Independent UK resource for renters and flat-dwellers exploring plug-in solar"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
+        <Breadcrumb crumbs={[{ label: "About" }]} />
         <article className="prose-solar">
           <h2>What This Site Is</h2>
           <p>

@@ -6,8 +6,8 @@ import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
 export const metadata: Metadata = {
-  title: "Best Balcony Solar Kits UK 2026 — Expert Comparison | Balcony Solar Guide",
-  description: "Side-by-side comparison of the best plug-in balcony solar kits available in the UK. Aggregated reviews from YouTube, Reddit, and specialist forums.",
+  title: "Best Balcony Solar Kits UK 2026 — Expert Comparison",
+  description: "Side-by-side comparison of the best plug-in balcony solar kits available in the UK. Aggregated reviews from YouTube, Reddit, and forums.",
 };
 
 const products = [
@@ -364,6 +364,31 @@ export default function BestBalconySolarKitsPage() {
             </div>
           </section>
         ))}
+
+        {/* Learn more / outgoing links */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Learn More</h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[
+              { href: "/reviews/ecoflow-stream", label: "EcoFlow STREAM review roundup" },
+              { href: "/reviews/anker-solix", label: "Anker SOLIX Solarbank 2 review roundup" },
+              { href: "/reviews/hoymiles-hm-600", label: "Hoymiles HMS-600 microinverter review" },
+              { href: "/reviews/apsystems-ds3", label: "APsystems DS3 microinverter review" },
+              { href: "/reviews/jackery-navi-2000", label: "Jackery Navi 2000 (UK availability)" },
+              { href: "/reviews/plug-in-solar-kit", label: "Plug-in Solar 600W kit review" },
+              { href: "/deals", label: "Current balcony solar deals" },
+              { href: "/calculator", label: "Balcony solar savings calculator" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="flex items-center gap-2 text-sm text-solar-600 hover:text-solar-700 hover:underline font-medium border border-slate-200 rounded-lg px-4 py-3 hover:border-solar-300 transition-colors"
+              >
+                <span>→</span> {link.label}
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* How we curate */}
         <section className="mt-6 bg-slate-50 rounded-xl border border-slate-200 p-6">

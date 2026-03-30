@@ -5,19 +5,31 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar Panels and Planning Permission in Flats (UK 2026)",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Balcony Solar Panels and Planning Permission in Flats (UK 2026)",
   description:
-    "Do you need planning permission to install balcony solar panels on a flat? A detailed UK guide covering permitted development rights, conservation areas, leasehold rules, and the expected March 2026 GPDO changes.",
+    "Do you need planning permission for balcony solar on a flat? UK guide on permitted development, conservation areas, leasehold rules, and GPDO changes.",
 };
 
 export default function PlanningPermissionFlatsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="Balcony Solar Panels and Planning Permission in Flats (UK 2026)"
         subtitle="Planning permission and leasehold consent are two completely separate questions — and you need to consider both. This guide explains exactly where you stand on each."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -481,6 +493,15 @@ export default function PlanningPermissionFlatsPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
             </div>
           </div>
         </article>

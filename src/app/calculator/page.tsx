@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import SolarCalculator from "@/components/ui/SolarCalculator";
 
 export const metadata: Metadata = {
@@ -8,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function CalculatorPage() {
-  return <SolarCalculator />;
+  return (
+    <>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <Breadcrumb crumbs={[{ label: "Calculator" }]} />
+      </div>
+      <SolarCalculator />
+    </>
+  );
 }

@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
-export const metadata = {
-  title: "Affiliate Disclosure — Balcony Solar Guide",
+export const metadata: Metadata = {
+  title: "Affiliate Disclosure",
   description:
     "Full affiliate disclosure for Balcony Solar Guide. We participate in affiliate programmes including Amazon Associates UK, EcoFlow, and Anker SOLIX.",
 };

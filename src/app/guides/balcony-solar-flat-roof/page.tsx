@@ -5,15 +5,26 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar on a Flat Roof: UK Guide (2026)",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Balcony Solar on a Flat Roof: UK Guide (2026)",
   description:
-    "A practical UK guide to installing plug-in balcony solar on a flat roof. Covers permitted development rules, ballast mounting systems, structural considerations, cable routing, and the garden office use case.",
+    "A practical UK guide to installing plug-in solar on a flat roof. Covers permitted development, ballast mounting, structural checks, and cable routing.",
 };
 
 export default function FlatRoofSolarPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="Balcony Solar on a Flat Roof: UK Guide (2026)"
@@ -36,8 +47,9 @@ export default function FlatRoofSolarPage() {
             Unlike a fixed balcony, a flat roof lets you orient your panels in any direction and tilt
             them to the optimal angle — typically south-facing at 30–35°. This can meaningfully improve
             annual output compared to a balcony that faces east, west, or is shaded by the building
-            above. If you have access to a suitable flat roof, it is worth taking seriously as a
-            solar location.
+            above. See our <Link href="/guides/best-direction-balcony-solar" className="text-solar-600 hover:text-solar-700 font-medium">best direction guide</Link> for
+            a full analysis of orientation and tilt. If you have access to a suitable flat roof, it is
+            worth taking seriously as a solar location.
           </InfoBox>
 
           <h2>Section 1: Is a Flat Roof Suitable for Plug-In Solar?</h2>
@@ -126,7 +138,9 @@ export default function FlatRoofSolarPage() {
           <h2>Section 3: Mounting Options for Flat Roof Solar</h2>
           <p>
             The most important practical decision for a flat roof installation is how the panels are
-            physically supported. There are three main approaches:
+            physically supported. For a general overview of all mounting methods, see our{" "}
+            <Link href="/guides/how-to-mount-balcony-solar-panels" className="text-solar-600 hover:text-solar-700 font-medium">mounting guide</Link>.
+            There are three main approaches for flat roofs specifically:
           </p>
 
           <h3>Ballast-Weighted Tilt Frames</h3>
@@ -447,7 +461,9 @@ export default function FlatRoofSolarPage() {
                     generate substantially more. The downsides are that flat roof access may be
                     restricted, structural checks may be required, and for leasehold buildings,
                     freeholder consent is needed for the roof but not necessarily for a balcony
-                    railing installation.
+                    railing installation. If you have a Juliet balcony rather than a standard balcony, a flat roof
+                    may be an especially good alternative — see our{" "}
+                    <Link href="/for-renters/juliet-balcony-solar" className="text-solar-600 hover:text-solar-700 font-medium">Juliet balcony solar guide</Link>.
                   </p>
                 </div>
               </div>
@@ -469,6 +485,15 @@ export default function FlatRoofSolarPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
             </div>
           </div>
         </article>

@@ -3,8 +3,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Balcony Solar for Renters UK — Your Complete Guide | Balcony Solar Guide",
-  description: "4.4 million UK private renters can benefit from portable balcony solar. It requires no structural changes, moves with you when you leave, and can save £150–£300 per year on electricity bills.",
+  title: "Balcony Solar for Renters UK — Your Complete Guide",
+  description: "4.4 million UK private renters can benefit from portable balcony solar. No structural changes, moves with you, and saves £80–£200 per year on electricity.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -13,7 +13,7 @@ const quickWins = [
   {
     title: "Buy a portable system",
     description:
-      "All the main balcony solar systems — EcoFlow STREAM, Anker SOLIX, Jackery Navi 2000 — are portable. They're not fixed to the building. When you move, you take the system with you and reinstall it at your next property.",
+      "All the main balcony solar systems — EcoFlow STREAM, Anker SOLIX, Plug-in Solar 600W Kit — are portable. They're not fixed to the building. When you move, you take the system with you and reinstall it at your next property.",
   },
   {
     title: "Use a floor mount or railing clip",
@@ -74,7 +74,7 @@ export default function ForRentersHubPage() {
         eyebrow="For Renters"
         title="Balcony Solar for Renters UK: Your Complete Hub"
         subtitle="4.4 million private renters and 2.8 million leaseholders in the UK can benefit from balcony solar. It's portable, removable, requires no structural changes — and it moves with you when your tenancy ends."
-        badge="Renters' Rights Act 2025"
+        badge="Updated March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">
@@ -103,11 +103,19 @@ export default function ForRentersHubPage() {
               <p className="text-sm text-slate-600">leasehold flat owners</p>
             </div>
             <div className="bg-solar-50 border border-solar-200 rounded-lg p-4 text-center">
-              <p className="text-2xl font-bold text-solar-700 mb-1">£150–£300</p>
+              <p className="text-2xl font-bold text-solar-700 mb-1">£80–£200</p>
               <p className="text-sm text-slate-600">typical annual electricity saving</p>
             </div>
           </div>
         </section>
+
+        <p className="text-slate-600 mb-6">
+          If you live in a housing association or managed leasehold property, the process can differ slightly — see our{" "}
+          <Link href="/guides/balcony-solar-housing-association" className="text-solar-600 underline font-semibold">
+            housing association solar guide
+          </Link>{" "}
+          for specific advice.
+        </p>
 
         <InfoBox variant="success" title="You don't need to own your property to go solar">
           Portable balcony solar systems are classified as personal property — like your furniture or white goods.
@@ -163,7 +171,7 @@ export default function ForRentersHubPage() {
               {
                 step: "2",
                 title: "Choose a portable, no-drill system",
-                desc: "For rental situations, prioritise systems with freestanding floor mounts or clip-on railing mounts. Avoid anything requiring wall or floor drilling. The EcoFlow STREAM, Anker SOLIX, and Jackery Navi 2000 all have portable mounting options.",
+                desc: "For rental situations, prioritise systems with freestanding floor mounts or clip-on railing mounts. Avoid anything requiring wall or floor drilling. The EcoFlow STREAM, Anker SOLIX, and Plug-in Solar 600W Kit all have portable mounting options.",
               },
               {
                 step: "3",
@@ -210,7 +218,7 @@ export default function ForRentersHubPage() {
               },
               {
                 q: "What if my landlord says no?",
-                a: "Under the Renters' Rights Act 2025, landlords cannot unreasonably withhold consent for reasonable improvements. If refused, ask for the reason in writing, propose a no-drill alternative if you haven't already, and seek free advice from Citizens Advice or Shelter. See our guide on the Renters' Rights Act for more.",
+                a: "Under the Renters' Rights Act 2025, landlords cannot unreasonably withhold consent for reasonable improvements. If refused, ask for the reason in writing, propose a no-drill alternative if you haven't already, and seek free advice from Citizens Advice or Shelter. See our guide on the Renters' Rights Act for more. If you live in a housing association property, see our housing association solar guide for specific advice.",
               },
               {
                 q: "Do I need to tell the landlord at all?",
@@ -243,12 +251,11 @@ export default function ForRentersHubPage() {
             EcoFlow STREAM
           </Link>{" "}
           is the best choice — it's the easiest to set up, has the best app for monitoring savings, and its mounting
-          accessories are specifically designed for rental situations (no drilling required). For smaller balconies or
-          Juliet balconies, the{" "}
-          <Link href="/reviews/jackery-navi-2000" className="underline font-semibold">
-            Jackery Navi 2000
+          accessories are specifically designed for rental situations (no drilling required). On a tighter budget, the{" "}
+          <Link href="/reviews/plug-in-solar-kit" className="underline font-semibold">
+            Plug-in Solar 600W Kit
           </Link>{" "}
-          is the better fit.
+          offers a no-frills alternative at around £399, with everything you need included.
         </InfoBox>
       </div>
     </div>

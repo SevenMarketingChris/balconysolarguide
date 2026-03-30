@@ -5,19 +5,31 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "How to Ask Your Landlord About Balcony Solar",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "How to Ask Your Landlord About Balcony Solar",
   description:
-    "Practical advice for renters seeking landlord permission for balcony solar. Covers framing the conversation, what to put in writing, a sample request letter, and what to do if refused.",
+    "Practical advice for renters seeking landlord permission for balcony solar. Covers framing the request, a sample letter, and what to do if refused.",
 };
 
 export default function AskingLandlordBalconySolarPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="How to Ask Your Landlord About Balcony Solar"
         subtitle="Practical advice on approaching your landlord for permission — how to frame it, what to put in writing, a sample letter, and your options if they say no."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -191,7 +203,9 @@ export default function AskingLandlordBalconySolarPage() {
             </li>
             <li>
               <strong>"It might affect my insurance."</strong> Explain that the system is your personal property,
-              not a building fixture, and is covered by your contents insurance — not the building's policy.
+              not a building fixture, and is covered by your contents insurance — not the building's policy. See our{" "}
+              <Link href="/guides/balcony-solar-insurance-uk" className="text-solar-600 hover:text-solar-700 font-medium">insurance guide</Link> for
+              a full breakdown of how balcony solar interacts with building and contents policies.
             </li>
             <li>
               <strong>"I'm not sure if it's legal."</strong> Share the government's March 2026 announcement and
@@ -200,7 +214,9 @@ export default function AskingLandlordBalconySolarPage() {
             <li>
               <strong>General reluctance without reason.</strong> Under the Renters' Rights Act 2025, landlords
               cannot unreasonably withhold consent for reasonable improvements. If you believe the refusal is
-              unreasonable, you can seek advice from Shelter or Citizens Advice.
+              unreasonable, you can seek advice from Shelter or Citizens Advice. If you live in a housing association
+              property, the process may differ — see our{" "}
+              <Link href="/guides/balcony-solar-housing-association" className="text-solar-600 hover:text-solar-700 font-medium">housing association guide</Link>.
             </li>
           </ul>
 
@@ -234,6 +250,15 @@ export default function AskingLandlordBalconySolarPage() {
             See our <Link href="/guides/how-to-mount-balcony-solar-panels" className="text-solar-600 hover:text-solar-700 font-medium">mounting guide</Link> for
             a full breakdown of all mounting options and their implications for renters.
           </p>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

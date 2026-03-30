@@ -1,22 +1,35 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Maximising Balcony Solar with Smart Energy Tariffs",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Maximising Balcony Solar with Smart Energy Tariffs",
   description:
-    "Which UK electricity tariff works best with balcony solar? Compare Octopus Agile, Flux, Intelligent Go, E.ON Next Drive, and OVO — with worked examples and a comparison table.",
+    "Which UK electricity tariff works best with balcony solar? Compare Octopus Agile, Flux, Intelligent Go, E.ON Next Drive, and OVO with worked examples.",
 };
 
 export default function BalconySolarSmartTariffsPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="Maximising Balcony Solar with Smart Energy Tariffs"
         subtitle="Your choice of electricity tariff has a direct bearing on the value of your balcony solar system. Here's how the main UK smart tariffs interact with plug-in solar — and which to consider."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -232,6 +245,43 @@ export default function BalconySolarSmartTariffsPage() {
             make this effortless: plug your washing machine into a scheduled smart plug set to run at 11am, and it
             happens automatically.
           </p>
+
+          <h2>Related Guides</h2>
+          <ul>
+            <li>
+              <Link href="/guides/balcony-solar-savings-uk" className="text-solar-600 hover:text-solar-700 font-medium">
+                How much can you save with balcony solar?
+              </Link>{" "}
+              — detailed savings estimates by region and system size
+            </li>
+            <li>
+              <Link href="/guides/balcony-solar-battery-storage" className="text-solar-600 hover:text-solar-700 font-medium">
+                Battery storage for balcony solar
+              </Link>{" "}
+              — how batteries unlock the full potential of smart tariffs
+            </li>
+            <li>
+              <Link href="/guides/balcony-solar-seg-tariffs" className="text-solar-600 hover:text-solar-700 font-medium">
+                Smart Export Guarantee and balcony solar
+              </Link>{" "}
+              — can you get paid for electricity you export?
+            </li>
+            <li>
+              <Link href="/calculator" className="text-solar-600 hover:text-solar-700 font-medium">
+                Savings calculator
+              </Link>{" "}
+              — get a personalised estimate based on your location and setup
+            </li>
+          </ul>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

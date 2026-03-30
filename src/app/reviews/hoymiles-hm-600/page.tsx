@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
 export const metadata: Metadata = {
-  title: "Hoymiles HMS-600 Microinverter Review UK 2026 — Balcony Solar Guide",
+  title: "Hoymiles HMS-600 Microinverter Review UK 2026 — Specs & Where to Buy",
   description:
-    "Independent review roundup of the Hoymiles HMS-600 microinverter for UK balcony solar. HMS-600-2T vs HM-600, specs, S-Miles Cloud monitoring, and where to buy in the UK.",
+    "Independent Hoymiles HMS-600 microinverter review for UK balcony solar. HMS-600-2T vs HM-600 specs, S-Miles Cloud monitoring, and where to buy.",
 };
 
 export default function HoymilesHM600ReviewPage() {
@@ -32,6 +33,11 @@ export default function HoymilesHM600ReviewPage() {
       author: { '@type': 'Organization', name: 'Balcony Solar Guide' },
       reviewBody:
         'The Hoymiles HMS-600-2T is the most popular microinverter in UK DIY balcony solar for good reason: it combines a proven European track record (over 1.2 million units deployed), an excellent S-Miles Cloud monitoring app, a low 22V startup voltage ideal for overcast UK days, and a highly competitive price point. The 10-year warranty and sub-0.5% field failure rate across five-year periods make it a very reliable long-term choice. The main downsides are that Wi-Fi monitoring requires a separate DTU-W dongle (around £25) and the app lacks the AI features of premium systems like EcoFlow.',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.2',
+        bestRating: '5',
+      },
     },
   }
 
@@ -222,38 +228,20 @@ export default function HoymilesHM600ReviewPage() {
           <p className="text-slate-600 mb-6 text-sm">Independent video reviews from YouTube creators who have installed and tested the Hoymiles HMS-600.</p>
           <div className="space-y-8">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/HrDH8eSL4C0"
-                  title="Hoymiles Microinverters may be your BEST OPTION"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="HrDH8eSL4C0" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">The Solar Pit — Hoymiles microinverter overview covering the HM-700NT dual microinverter, with performance data and comparison to Enphase</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/mKDXUrtzd5I"
-                  title="Hoymiles HMS microinverter with WiFi + App"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="mKDXUrtzd5I" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Unboxingexperience7 — Hands-on look at the Hoymiles HMS microinverter including WiFi setup and the S-Miles Cloud app</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/Y1u9LHC8WxY"
-                  title="2-in-1 Single-phase microinverter | HMS-600/700/800/900/1000-2T & FLEX Accessories Installation"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="Y1u9LHC8WxY" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Hoymiles (official) — Step-by-step installation guide for the HMS-600/700/800/900/1000-2T with FLEX accessories</p>
             </div>

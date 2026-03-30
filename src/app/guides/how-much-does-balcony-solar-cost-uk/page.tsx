@@ -8,7 +8,7 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 export const metadata: Metadata = {
   title: "How Much Does Balcony Solar Cost in the UK? (2026 Guide)",
   description:
-    "Complete guide to UK balcony solar kit prices in 2026 — from £299 single-panel systems to £2,500 battery-integrated units. Payback periods, annual savings estimates, and tips for getting the best deal.",
+    "UK balcony solar kit prices in 2026 — from £299 single-panel systems to £2,500 battery-integrated units. Payback periods, savings estimates, and buying tips.",
 };
 
 export default function BalconySolarCostPage() {
@@ -18,6 +18,7 @@ export default function BalconySolarCostPage() {
         eyebrow="Guides"
         title="How Much Does Balcony Solar Cost in the UK?"
         subtitle="A complete breakdown of kit prices, what's included, payback periods, and how the March 2026 legalisation announcement is already pushing prices down — so you know exactly what to expect before you buy."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -197,7 +198,9 @@ export default function BalconySolarCostPage() {
 
           <h2>Balcony Solar vs Rooftop Solar: A Cost Comparison</h2>
           <p>
-            For context, here's how balcony solar compares with a traditional rooftop solar installation:
+            For context, here's how balcony solar compares with a traditional rooftop solar installation. For a deeper
+            dive into the differences beyond cost, see our{" "}
+            <Link href="/guides/plug-in-solar-vs-rooftop-solar">plug-in solar vs rooftop solar</Link> comparison.
           </p>
           <div className="overflow-x-auto">
             <table>
@@ -299,7 +302,8 @@ export default function BalconySolarCostPage() {
               balcony solar savings calculator
             </Link>{" "}
             to estimate your specific payback period based on your postcode, orientation, and system size before
-            committing to a purchase.
+            committing to a purchase. You can also check our <Link href="/deals">deals page</Link> for current discounts
+            on popular kits.
           </p>
 
           <h2>Frequently Asked Questions</h2>
@@ -388,7 +392,31 @@ export default function BalconySolarCostPage() {
           </div>
 
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "How Much Does Balcony Solar Cost in the UK?",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

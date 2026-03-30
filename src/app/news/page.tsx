@@ -58,6 +58,7 @@ export default function NewsPage() {
         eyebrow="News & Policy"
         title="Balcony Solar News UK"
         subtitle="Regulation, policy, and government announcements that affect balcony solar owners and those thinking about installing."
+        badge="Updated March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">
@@ -119,6 +120,15 @@ export default function NewsPage() {
             this page or check back regularly — particularly in 2026 as the BSI standard
             development progresses.
           </p>
+        </div>
+
+        <div className="mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to buy a balcony solar kit?</h3>
+          <p className="text-sm text-slate-600 mb-4">See our top-rated systems, current UK deals, or calculate your potential savings.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+          </div>
         </div>
       </div>
     </div>

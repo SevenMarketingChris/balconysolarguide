@@ -34,6 +34,9 @@ export const TILT_FACTORS: Record<string, number> = {
 // Performance ratio (accounts for inverter losses, wiring, temperature)
 export const PERFORMANCE_RATIO = 0.78;
 
+// Assumes 50% self-consumption — the realistic UK average for homes without battery storage
+export const SELF_CONSUMPTION_RATE = 0.5;
+
 // Products for recommendation engine
 export interface SolarProduct {
   id: string;
@@ -43,6 +46,8 @@ export interface SolarProduct {
   affiliateUrl: string;
   description: string;
   bestFor: string;
+  reviewHref: string;
+  source: string;
 }
 
 export const PRODUCTS: SolarProduct[] = [
@@ -51,18 +56,22 @@ export const PRODUCTS: SolarProduct[] = [
     name: "EcoFlow STREAM",
     wattage: 600,
     price: 949,
-    affiliateUrl: "https://www.ecoflow.com/uk",
+    affiliateUrl: "https://uk.ecoflow.com/pages/stream-series-plug-in-solar-battery",
     description: "All-in-one system with smart app control and optional battery storage",
     bestFor: "Best all-rounder with smart features",
+    reviewHref: "/reviews/ecoflow-stream",
+    source: "EcoFlow",
   },
   {
     id: "anker-solix",
     name: "Anker SOLIX Solarbank 2",
     wattage: 800,
     price: 899,
-    affiliateUrl: "https://www.ankersolix.com/uk",
+    affiliateUrl: "https://www.amazon.co.uk/dp/B0D1X82HDL?tag=balconysolar-21",
     description: "Higher wattage system with excellent build quality and app integration",
     bestFor: "Best for maximising output",
+    reviewHref: "/reviews/anker-solix",
+    source: "Amazon",
   },
   {
     id: "plug-in-solar-600",
@@ -72,15 +81,8 @@ export const PRODUCTS: SolarProduct[] = [
     affiliateUrl: "https://www.amazon.co.uk/dp/B0BV2N6SCZ?tag=balconysolar-21",
     description: "No-frills DIY kit. Everything you need to get started at a lower price",
     bestFor: "Best budget option",
-  },
-  {
-    id: "jackery-navi",
-    name: "Jackery Navi 2000",
-    wattage: 400,
-    price: 699,
-    affiliateUrl: "https://www.amazon.co.uk/dp/B0CX1234XX?tag=balconysolar-21",
-    description: "Compact system ideal for smaller balconies or Juliet balconies",
-    bestFor: "Best for small spaces",
+    reviewHref: "/reviews/plug-in-solar-kit",
+    source: "Amazon",
   },
 ];
 
@@ -103,7 +105,8 @@ export function calculateSolarOutput(
 }
 
 export function calculateSavings(annualKwh: number, tariffPence: number): number {
-  return Math.round((annualKwh * tariffPence) / 100);
+  // Assumes 50% self-consumption — the realistic UK average for homes without battery storage
+  return Math.round((annualKwh * tariffPence * SELF_CONSUMPTION_RATE) / 100);
 }
 
 export function calculatePayback(systemCost: number, annualSavings: number): number {

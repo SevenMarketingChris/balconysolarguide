@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
-export const metadata = {
-  title: "Privacy Policy — Balcony Solar Guide",
+export const metadata: Metadata = {
+  title: "Privacy Policy",
   description:
     "Privacy policy for Balcony Solar Guide. How we collect, use, and protect your data under UK GDPR.",
 };

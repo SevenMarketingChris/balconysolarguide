@@ -3,8 +3,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "G98 DNO Notification for Balcony Solar: Complete UK Guide | Balcony Solar Guide",
-  description: "Everything you need to know about G98 DNO notification before connecting balcony solar. Step-by-step process, timescales, and a full directory of every UK DNO with contact details.",
+  title: "G98 DNO Notification for Balcony Solar: Complete UK Guide",
+  description: "G98 DNO notification for balcony solar explained. Step-by-step process, timescales, and a full directory of every UK DNO with contact details.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -12,7 +12,7 @@ import InfoBox from "@/components/ui/InfoBox";
 const dnos = [
   {
     name: "National Grid Electricity Distribution (NGED)",
-    regions: "South West England, East Midlands, West Midlands, East of England",
+    regions: "South West England, East Midlands, West Midlands, South Wales",
     website: "https://www.nationalgrid.co.uk/electricity-distribution/home",
     g98Portal: "https://www.nationalgrid.co.uk/electricity-distribution/connections/home/g98-application",
     email: "connections@nationalgrid.co.uk",
@@ -84,12 +84,24 @@ const dnos = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "G98 DNO Notification for Balcony Solar: Complete UK Guide",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export default function DNOG98Page() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="UK Regulations"
         title="G98 DNO Notification for Balcony Solar: Complete UK Guide"
+        badge="Updated March 2026"
         subtitle="Before connecting a balcony solar system to the grid, you should notify your Distribution Network Operator under the G98 standard. Here's exactly how to do it — and a directory of every UK DNO."
       />
 
@@ -264,7 +276,7 @@ export default function DNOG98Page() {
         </section>
 
         <div className="border-t border-slate-200 pt-6">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 mb-2">
             Related guides:{" "}
             <Link href="/uk-regulations/building-regulations" className="text-solar-600 underline">
               Building regulations & BS 7671
@@ -276,6 +288,20 @@ export default function DNOG98Page() {
             {" · "}
             <Link href="/uk-regulations/timeline" className="text-solar-600 underline">
               Legalisation timeline
+            </Link>
+            {" · "}
+            <Link href="/uk-regulations/leasehold-balcony-solar" className="text-solar-600 underline">
+              Leasehold considerations
+            </Link>
+          </p>
+          <p className="text-sm text-slate-500">
+            Tools & reviews:{" "}
+            <Link href="/calculator" className="text-solar-600 underline">
+              Savings calculator
+            </Link>
+            {" · "}
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline">
+              Best balcony solar kits
             </Link>
           </p>
         </div>

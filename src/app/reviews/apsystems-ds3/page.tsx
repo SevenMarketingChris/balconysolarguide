@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
 export const metadata: Metadata = {
-  title: "APsystems DS3 Microinverter Review UK 2026 — Balcony Solar Guide",
+  title: "APsystems DS3 Microinverter Review UK 2026 — Specs & Where to Buy",
   description:
-    "Independent review roundup of the APsystems DS3 dual-MPPT microinverter for UK balcony solar. DS3-S vs DS3-L specs, efficiency, warranty, and where to buy in the UK.",
+    "Independent APsystems DS3 dual-MPPT microinverter review for UK balcony solar. DS3-S vs DS3-L specs, efficiency, warranty, and where to buy.",
 };
 
 export default function APsystemsDS3ReviewPage() {
@@ -31,6 +32,11 @@ export default function APsystemsDS3ReviewPage() {
       author: { '@type': 'Organization', name: 'Balcony Solar Guide' },
       reviewBody:
         'The APsystems DS3 stands out for its industry-leading 97% efficiency and two fully independent MPPT channels, making it especially well-suited to balconies with partial shading. The 10-year standard warranty — extendable to 20 years — is exceptional for a component expected to last 25 years. The main drawback is that full per-panel monitoring requires a separate ECU-R Zigbee gateway, adding a small extra cost and setup step. For UK DIY installations seeking professional-grade reliability and maximum efficiency, the DS3-L is an excellent choice.',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.4',
+        bestRating: '5',
+      },
     },
   }
 
@@ -173,26 +179,14 @@ export default function APsystemsDS3ReviewPage() {
           <p className="text-slate-600 mb-6 text-sm">Independent video reviews and installation guides from YouTube creators who have covered the APsystems DS3.</p>
           <div className="space-y-8">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/_f3yH00qpGw"
-                  title="APsystems DS3 Microinverter series – Installation video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="_f3yH00qpGw" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">APsystems Solar — Official step-by-step DS3 installation walkthrough covering mounting, wiring, and commissioning</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/Wt7p59smgSc"
-                  title="DS3 Product Overview and Installation Training"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="Wt7p59smgSc" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">APsystems Solar — Comprehensive DS3 product overview and installer training (42 minutes, covers technical specs, EMA monitoring setup, and FAQs)</p>
             </div>

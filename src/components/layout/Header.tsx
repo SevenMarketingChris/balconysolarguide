@@ -39,7 +39,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-0.5">
+          <nav className="hidden md:flex items-center gap-0.5" aria-label="Main navigation">
             {nav.map((item) => (
               <Link
                 key={item.href}
@@ -63,6 +63,7 @@ export default function Header() {
             className="md:hidden p-2 rounded-lg text-[#1e3a5f] hover:text-[#0c1f3d] hover:bg-[#dbe8ff] transition-colors"
             aria-label="Toggle menu"
             aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? (
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
@@ -78,7 +79,7 @@ export default function Header() {
 
         {/* Mobile nav */}
         {open && (
-          <div className="md:hidden pb-4 border-t border-[#dbe8ff] mt-0 pt-3">
+          <div id="mobile-menu" className="md:hidden pb-4 border-t border-[#dbe8ff] mt-0 pt-3">
             {nav.map((item) => (
               <Link
                 key={item.href}

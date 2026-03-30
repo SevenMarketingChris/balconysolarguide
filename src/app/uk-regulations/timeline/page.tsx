@@ -3,8 +3,8 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "UK Plug-in Solar Legalisation Timeline — Every Key Date | Balcony Solar Guide",
-  description: "A chronological tracker of every significant UK balcony solar regulatory event — from Germany's early moves to the UK government's landmark March 2026 announcement. Updated as events unfold.",
+  title: "UK Plug-in Solar Legalisation Timeline — Every Key Date",
+  description: "Every key date in UK balcony solar regulation, from Germany's early moves to the landmark March 2026 government announcement. Updated March 2026.",
 };
 import InfoBox from "@/components/ui/InfoBox";
 import Link from "next/link";
@@ -108,9 +108,9 @@ const timelineEvents = [
   },
   {
     date: "September 2025",
-    title: "BSI begins working group for plug-in solar standard",
+    title: "BSI commissioned to develop UK plug-in solar standard",
     description:
-      "The British Standards Institution (BSI) formally constitutes a working group to develop the UK equivalent of Germany's VDE 0100-551-1. The group includes representatives from the IET (Institution of Engineering and Technology), BEAMA (the electrical equipment manufacturers' association), DNOs, consumer groups, and product manufacturers. Work is expected to take 12–18 months.",
+      "The British Standards Institution (BSI) is commissioned to develop the UK equivalent of Germany's VDE 0100-551-1. The scope covers a new technical standard for plug-in solar, with the working group expected to be formally constituted in Q2 2026. Representatives from the IET, BEAMA, DNOs, consumer groups, and product manufacturers are expected to participate. The standard is expected to take 18–24 months from the working group's formation, with publication likely in late 2027 at the earliest.",
     significance: "high",
     country: "UK",
   },
@@ -148,9 +148,20 @@ const significanceStyles: Record<string, string> = {
   critical: "bg-solar-700",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "UK Plug-in Solar Legalisation Timeline: Every Key Date",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export default function TimelinePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="UK Regulations"
         title="UK Plug-in Solar Legalisation Timeline: Every Key Date"
@@ -290,6 +301,37 @@ export default function TimelinePage() {
             </Link>
           </div>
         </section>
+
+        <div className="border-t border-slate-200 pt-6">
+          <p className="text-sm text-slate-500 mb-2">
+            Related guides:{" "}
+            <Link href="/uk-regulations/building-regulations" className="text-solar-600 underline">
+              Building regulations & BS 7671
+            </Link>
+            {" · "}
+            <Link href="/uk-regulations/planning-permission" className="text-solar-600 underline">
+              Planning permission
+            </Link>
+            {" · "}
+            <Link href="/uk-regulations/leasehold-balcony-solar" className="text-solar-600 underline">
+              Leasehold considerations
+            </Link>
+          </p>
+          <p className="text-sm text-slate-500">
+            Tools & reviews:{" "}
+            <Link href="/calculator" className="text-solar-600 underline">
+              Savings calculator
+            </Link>
+            {" · "}
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline">
+              Best balcony solar kits
+            </Link>
+            {" · "}
+            <Link href="/guides/is-balcony-solar-legal-uk" className="text-solar-600 underline">
+              Is balcony solar legal?
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );

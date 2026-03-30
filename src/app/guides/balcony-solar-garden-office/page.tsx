@@ -5,19 +5,31 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Can You Use Balcony Solar to Power a Garden Office or Shed?",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Can You Use Balcony Solar to Power a Garden Office or Shed?",
   description:
-    "Yes — and it is often simpler than balcony solar. A guide to off-grid DC systems and grid-connected plug-in solar for garden offices and sheds, with realistic power consumption tables.",
+    "A guide to off-grid DC systems and grid-connected plug-in solar for garden offices and sheds, with realistic power consumption tables.",
 };
 
 export default function GardenOfficePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Off-Grid Uses"
         title="Can You Use Balcony Solar to Power a Garden Office or Shed?"
         subtitle="Using solar to power a garden office or shed is often simpler than balcony solar — especially off-grid. Here is what each approach involves, what it can realistically power, and what to buy."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -293,8 +305,10 @@ export default function GardenOfficePage() {
           <p>
             If mounting panels on the garden office roof, a south-facing pitch at 30–40° is ideal.
             Many garden offices and sheds have shallow-pitched or flat roofs — in this case, a
-            tilted mounting frame can optimise the angle. Panels lying flat on a shallow roof lose
-            significant output compared to an angled installation.
+            tilted mounting frame can optimise the angle. For detailed guidance on flat roof mounting
+            methods including ballast systems, see our{" "}
+            <Link href="/guides/balcony-solar-flat-roof" className="text-solar-600 hover:text-solar-700 font-medium">flat roof solar guide</Link>.
+            Panels lying flat on a shallow roof lose significant output compared to an angled installation.
           </p>
 
           <h3>Cable Length from Panel to Battery or Inverter</h3>
@@ -312,6 +326,15 @@ export default function GardenOfficePage() {
             be stored indoors. If using an AGM or gel battery in your garden office, ensure there
             is adequate ventilation — a gap under the door and a vent at roof level is sufficient.
           </p>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

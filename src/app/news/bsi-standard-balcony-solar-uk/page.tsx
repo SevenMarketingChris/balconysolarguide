@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -6,17 +7,31 @@ import InfoBox from "@/components/ui/InfoBox";
 export const metadata: Metadata = {
   title: "The UK's New Balcony Solar Standard: What BSI Is Building and When to Expect It",
   description:
-    "The British Standards Institution has been formally commissioned to create a UK technical standard for plug-in solar. We explain what it will cover, how it compares to Germany's DIN VDE spec, and when a final standard is realistically expected.",
+    "BSI has been commissioned to create a UK plug-in solar standard. What it covers, how it compares to Germany, and when to expect it.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "The UK's New Balcony Solar Standard: What BSI Is Building and When to Expect It",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
 };
 
 export default function BsiStandardBalconySolarPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow="News"
         title="The UK's New Balcony Solar Standard: What BSI Is Building and When to Expect It"
         subtitle="The British Standards Institution has been formally commissioned to develop a UK technical standard for plug-in solar — the critical piece of the legalisation puzzle. Here is what that means, what the standard will cover, and when you can realistically expect it."
-        badge="March 2026"
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -320,6 +335,23 @@ export default function BsiStandardBalconySolarPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <h2>Further Reading</h2>
+          <ul>
+            <li><Link href="/uk-regulations/building-regulations" className="underline">UK building regulations for balcony solar</Link> — what Part P means for plug-in solar installations.</li>
+            <li><Link href="/uk-regulations/timeline" className="underline">UK balcony solar regulation timeline</Link> — key dates and milestones on the path to legalisation.</li>
+            <li><Link href="/guides/balcony-solar-electrical-safety-uk" className="underline">Balcony solar electrical safety guide</Link> — ring circuits, RCDs, and what you need to know.</li>
+            <li><Link href="/guides/is-balcony-solar-legal-uk" className="underline">Is balcony solar legal in the UK?</Link> — the full legal position explained.</li>
+          </ul>
+
+          <div className="mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to buy a balcony solar kit?</h3>
+            <p className="text-sm text-slate-600 mb-4">See our top-rated systems and current UK deals.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+              <Link href="/deals" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">View current deals</Link>
             </div>
           </div>
         </article>

@@ -23,14 +23,14 @@ const styles: Record<InfoBoxVariant, { box: string; icon: string }> = {
 
 const icons: Record<InfoBoxVariant, React.ReactElement> = {
   info: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
       <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" strokeWidth="1.5" />
       <rect x="7.25" y="7" width="1.5" height="5" rx="0.75" />
       <circle cx="8" cy="5" r="0.875" />
     </svg>
   ),
   warning: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
       <path
         d="M8 1.5L1 14h14L8 1.5z"
         fill="none"
@@ -50,6 +50,7 @@ const icons: Record<InfoBoxVariant, React.ReactElement> = {
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
+      aria-hidden="true"
     >
       <circle cx="8" cy="8" r="6.5" />
       <path d="M5 8.5l2 2 4-4" strokeLinecap="round" strokeLinejoin="round" />
@@ -63,6 +64,7 @@ const icons: Record<InfoBoxVariant, React.ReactElement> = {
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
+      aria-hidden="true"
     >
       <path
         d="M8 1v1M8 14v1M1 8h1M14 8h1M3.05 3.05l.7.7M12.25 12.25l.7.7M3.05 12.95l.7-.7M12.25 3.75l.7-.7"

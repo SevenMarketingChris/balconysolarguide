@@ -3,19 +3,36 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Balcony Solar for Juliet Balconies UK — What Works and What Doesn't | Balcony Solar Guide",
-  description: "No full balcony floor? Juliet balconies can still host solar panels with the right system. An honest guide to options, generation expectations, and what to avoid — including glazed balustrades.",
+  title: "Balcony Solar for Juliet Balconies UK — What Works and What Doesn't",
+  description: "No full balcony floor? Juliet balconies can still host solar panels with the right system. Options, generation expectations, and what to avoid.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
 export default function JulietBalconySolarPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Balcony Solar for Juliet Balconies: What Works and What Doesn't",
+    description: "No full balcony floor? Juliet balconies can still host solar panels with the right system. An honest guide to options, generation expectations, and what to avoid.",
+    author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+    publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+    datePublished: "2026-03-01",
+    dateModified: "2026-03-30",
+    mainEntityOfPage: "https://www.balconysolarguide.co.uk/for-renters/juliet-balcony-solar",
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow="For Renters"
         title="Balcony Solar for Juliet Balconies: What Works and What Doesn't"
         subtitle="Juliet balconies — narrow railings or glazed barriers at a window with no floor space — are common in UK flats. Here's the honest guide to what's possible."
+        badge="Updated March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">

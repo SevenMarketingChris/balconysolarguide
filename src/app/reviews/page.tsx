@@ -3,8 +3,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Balcony Solar Panel Reviews UK 2026 — Curated from Trusted Sources | Balcony Solar Guide",
-  description: "We curate the best independent balcony solar reviews from YouTube, Reddit, Which?, and Trustpilot — so you get an honest picture before spending several hundred pounds.",
+  title: "Balcony Solar Panel Reviews UK 2026 — Curated from Trusted Sources",
+  description: "Curated independent balcony solar reviews from YouTube, Reddit, Which?, and Trustpilot. Get an honest picture before you buy.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
 export const metadata: Metadata = {
-  title: "Jackery Navi 2000 UK: Not Available to Buy | Balcony Solar Guide",
-  description: "The Jackery Navi 2000 balcony power station is not sold in the UK — it launched in Germany and has never had a UK product page. Find out what Jackery does offer in the UK and which alternatives to consider.",
+  title: "Jackery Navi 2000 UK: Not Available to Buy",
+  description: "The Jackery Navi 2000 balcony power station is not sold in the UK. Find out what Jackery offers in the UK and which alternatives to consider.",
 };
 
 
@@ -97,31 +98,19 @@ export default function JackeryNavi2000ReviewPage() {
           </p>
           <div className="space-y-8">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/dUitQn6cknk"
-                  title="Jackery Speicher für Balkonkraftwerke Navi 2000 Next Gen"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="dUitQn6cknk" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">
-                Marc testet… — First look and hands-on test of the Jackery Navi 2000 Next Gen. German language. (77k views)
+                Marc testet... — First look and hands-on test of the Jackery Navi 2000 Next Gen. German language. (77k views)
               </p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/5VOAbYfAeNA"
-                  title="Jackery Navi 2000 Balkonkraftwerk – Shelly integration update"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="5VOAbYfAeNA" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">
-                Marc testet… — Follow-up covering post-update features including Shelly Pro 3EM smart home integration. German language.
+                Marc testet... — Follow-up covering post-update features including Shelly Pro 3EM smart home integration. German language.
               </p>
             </div>
           </div>

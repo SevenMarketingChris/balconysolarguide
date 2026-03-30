@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
@@ -17,6 +18,7 @@ export default function HowToMountBalconySolarPage() {
         eyebrow="Guides"
         title="How to Mount Balcony Solar Panels"
         subtitle="A complete guide to every mounting option for UK balconies — railing clamps, wall brackets, floor stands, and Juliet balconies — with tilt angles, safety guidance, and a comparison table."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -106,7 +108,7 @@ export default function HowToMountBalconySolarPage() {
 
           <h2>4. Juliet Balcony Mounts</h2>
           <p>
-            Juliet balconies — the floor-to-ceiling glass or metal railing panels commonly found in purpose-built flats
+            <Link href="/for-renters/juliet-balcony-solar">Juliet balconies</Link> — the floor-to-ceiling glass or metal railing panels commonly found in purpose-built flats
             — present a specific challenge. There's no floor space to use, and the balustrade is typically glass or
             widely-spaced vertical bars rather than a grippable horizontal railing.
           </p>
@@ -119,7 +121,8 @@ export default function HowToMountBalconySolarPage() {
             option.
           </p>
           <p>
-            An alternative for ground-floor or first-floor Juliet balcony flats is to install a freestanding floor
+            An alternative for ground-floor or first-floor Juliet balcony flats — or those with{" "}
+            <Link href="/guides/balcony-solar-flat-roof">flat roof access</Link> — is to install a freestanding floor
             mount on the patio or garden immediately outside the door, routing the cable through the gap around the door
             frame. This allows an optimal tilt angle with no railing attachment required.
           </p>
@@ -131,7 +134,8 @@ export default function HowToMountBalconySolarPage() {
 
           <h2>Tilt Angle: How Much Does It Matter?</h2>
           <p>
-            The optimal tilt angle for solar panels in the UK is approximately 30–35° from horizontal. At this angle, a
+            The optimal tilt angle for solar panels in the UK is approximately 30–35° from horizontal — see our{" "}
+            <Link href="/guides/best-direction-for-balcony-solar-uk">direction and tilt guide</Link> for full data. At this angle, a
             south-facing panel captures the most total energy over the course of a year, balancing the high sun angles
             of summer with the lower angles of winter.
           </p>
@@ -181,7 +185,9 @@ export default function HowToMountBalconySolarPage() {
           <p>
             The important takeaway is that even a vertical mounting still captures roughly 72% of the output you'd get
             from a perfectly-angled installation. The trade-off in convenience — no drilling, full portability, renter
-            suitability — is well worth a 28% reduction in annual output for most people.
+            suitability — is well worth a 28% reduction in annual output for most people. Once you have decided on a
+            mounting method, see our <Link href="/guides/how-to-install-balcony-solar">installation guide</Link> for the
+            full step-by-step process.
           </p>
 
           <h2>Wind Loading and Safety</h2>
@@ -280,7 +286,31 @@ export default function HowToMountBalconySolarPage() {
             </table>
           </div>
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "How to Mount Balcony Solar Panels: UK Guide to All Balcony Types",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

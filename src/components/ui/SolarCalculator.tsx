@@ -13,8 +13,7 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
 const BUDGET_OPTIONS = [
   { label: "Under £500", value: 499 },
-  { label: "£500–£800", value: 800 },
-  { label: "£800–£1,200", value: 1200 },
+  { label: "£500–£1,000", value: 1000 },
   { label: "Any budget", value: 99999 },
 ];
 
@@ -246,8 +245,14 @@ export default function SolarCalculator() {
                     rel="noopener noreferrer nofollow sponsored"
                     className="mt-4 block w-full text-center bg-solar-500 hover:bg-solar-600 text-white font-semibold rounded-lg py-2.5 text-sm transition-colors"
                   >
-                    View on retailer site →
+                    Check price on {recommended.source} →
                   </a>
+                  <Link
+                    href={recommended.reviewHref}
+                    className="mt-2 block w-full text-center text-solar-400 hover:text-solar-300 font-medium text-sm transition-colors"
+                  >
+                    Read our review →
+                  </Link>
                 </div>
               </div>
             </div>

@@ -7,17 +7,31 @@ import InfoBox from "@/components/ui/InfoBox";
 export const metadata: Metadata = {
   title: "Balcony Solar Coming to UK Supermarkets: What the Government Has Planned",
   description:
-    "The UK government has announced it is working with supermarkets and DIY retailers to stock plug-in balcony solar. We explain what was said, what the Germany precedent tells us, which retailers are likely, and when mainstream availability is realistic.",
+    "UK supermarkets and DIY retailers are preparing to stock plug-in balcony solar. Which retailers, what to expect, and when.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "Balcony Solar Coming to UK Supermarkets: What the Government Has Planned",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
 };
 
 export default function SupermarketsBalconySolarPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow="News"
         title="Balcony Solar Coming to UK Supermarkets: What the Government Has Planned"
         subtitle="As part of its March 2026 legalisation announcement, the government confirmed it is in active discussions with supermarket chains and a major DIY retailer to stock plug-in solar units. We explain what that means, what Germany's experience tells us, and when it is likely to happen."
-        badge="March 2026"
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -255,6 +269,15 @@ export default function SupermarketsBalconySolarPage() {
             prices costs you 18 months of savings. The maths favours buying sooner rather
             than later for most households.
           </InfoBox>
+
+          <div className="mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to buy a balcony solar kit?</h3>
+            <p className="text-sm text-slate-600 mb-4">See our top-rated systems and current UK deals.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+              <Link href="/deals" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">View current deals</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

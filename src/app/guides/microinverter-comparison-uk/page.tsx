@@ -8,7 +8,7 @@ import AffiliateNotice from "@/components/ui/AffiliateNotice";
 export const metadata: Metadata = {
   title: "Hoymiles vs APsystems vs Growatt: UK Balcony Solar Microinverter Comparison",
   description:
-    "A detailed technical comparison of the four main microinverter brands for UK balcony solar: Hoymiles HMS, APsystems EZ1-M, Growatt NEO 800M-X, and Enphase IQ8MC. G98 certification, app quality, pricing, and our recommendation.",
+    "Comparing Hoymiles HMS, APsystems EZ1-M, Growatt NEO 800M-X, and Enphase IQ8MC for UK balcony solar. G98 certification, app quality, pricing, and our pick.",
 };
 
 export default function MicroinverterComparisonPage() {
@@ -18,6 +18,7 @@ export default function MicroinverterComparisonPage() {
         eyebrow="Technical Guide"
         title="Hoymiles vs APsystems vs Growatt: UK Balcony Solar Microinverter Comparison"
         subtitle="The microinverter is the most technically important component in your balcony solar system. Here is a detailed comparison of the main options available in the UK — G98 certification, monitoring apps, pricing, and our honest recommendation."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -401,7 +402,31 @@ export default function MicroinverterComparisonPage() {
             demonstrate G98 compliance with documentation.
           </InfoBox>
         </article>
+
+        <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+          <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+          <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Hoymiles vs APsystems vs Growatt: UK Balcony Solar Microinverter Comparison",
+            datePublished: "2026-03-15",
+            dateModified: "2026-03-30",
+            author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+            publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+          }),
+        }}
+      />
     </>
   );
 }

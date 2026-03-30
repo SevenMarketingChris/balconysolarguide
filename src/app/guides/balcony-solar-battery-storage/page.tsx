@@ -5,19 +5,31 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 import AffiliateNotice from "@/components/ui/AffiliateNotice";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Adding Battery Storage to Your Balcony Solar System",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Adding Battery Storage to Your Balcony Solar System",
   description:
-    "Should you add a battery to your balcony solar setup? We cover costs, compatible systems, self-consumption improvements, payback periods, and smart tariff integration.",
+    "Should you add a battery to your balcony solar setup? We cover costs, compatible systems, payback periods, and smart tariff integration.",
 };
 
 export default function BalconySolarBatteryStoragePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Guides"
         title="Adding Battery Storage to Your Balcony Solar System"
         subtitle="A battery can transform your balcony solar economics — pushing self-consumption from 30% to over 80%. Here's everything you need to know before adding one."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -187,6 +199,15 @@ export default function BalconySolarBatteryStoragePage() {
             approximately 5–16 years of daily cycling. Most reputable balcony solar batteries come with a 2–5 year
             warranty. EcoFlow offers 5 years on its power stations; Anker SOLIX offers 5 years on the Solarbank 2.
           </p>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

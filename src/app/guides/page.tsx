@@ -209,6 +209,15 @@ export default function GuidesHubPage() {
           install, these guides cover every angle. All content is UK-specific, regularly updated, and written without
           jargon.
         </p>
+        <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 mb-10">
+          <h2 className="font-semibold text-slate-900 text-lg mb-2">Not sure where to start?</h2>
+          <p className="text-sm text-slate-600 mb-4">Try our savings calculator for a personalised estimate, or browse our top-rated kits.</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+          </div>
+        </div>
+
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {guides.map((guide) => (
             <Link

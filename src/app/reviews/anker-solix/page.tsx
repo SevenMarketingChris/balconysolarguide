@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { YouTubeEmbed } from "@next/third-parties/google";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Anker SOLIX Balcony Solar UK Review 2026 — Curated Reviews | Balcony Solar Guide",
+  title: "Anker SOLIX Balcony Solar UK Review 2026 — Curated Reviews",
   description: "The best Anker SOLIX balcony solar reviews curated in one place. Real UK performance data, specs comparison, and where to buy.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -24,13 +25,18 @@ export default function AnkerSOLIXReviewPage() {
       priceCurrency: 'GBP',
       price: '899',
       availability: 'https://schema.org/InStock',
-      url: 'https://www.ankersolix.com/uk/products/solarbank-2-pro',
+      url: 'https://www.amazon.co.uk/dp/B0D1X82HDL?tag=balconysolar-21',
     },
     review: {
       '@type': 'Review',
       author: { '@type': 'Organization', name: 'Balcony Solar Guide' },
       reviewBody:
         'The Anker SOLIX Solarbank 2 Pro delivers more raw generation potential than most rivals at 800W, with a 2 kWh LFP battery built in at a competitive £899. Reviewers consistently praise its premium build quality, solid app monitoring, and strong 5-year warranty. The main limitation is the fixed, non-expandable battery — and it lacks the AI optimisation features found in the EcoFlow app. A strong choice for UK balconies where maximum generation is the priority.',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '4.0',
+        bestRating: '5',
+      },
     },
   }
 
@@ -57,6 +63,23 @@ export default function AnkerSOLIXReviewPage() {
         />
 
         <AffiliateNotice />
+
+        {/* Quick Verdict */}
+        <div className="bg-solar-50 border border-solar-200 rounded-xl p-5 mb-8">
+          <h2 className="text-lg font-bold text-slate-900 mb-1">Quick Verdict</h2>
+          <p className="text-sm text-slate-700 mb-2">
+            The highest-output balcony solar system available in the UK, with 800W panel capacity and a built-in 2 kWh battery at a competitive price. A strong choice if raw generation matters most to you.
+          </p>
+          <p className="text-sm font-semibold text-slate-800 mb-3">Rating: 4.0/5 across 5 sources &middot; ~£899</p>
+          <a
+            href="https://www.amazon.co.uk/dp/B0D1X82HDL?tag=balconysolar-21"
+            target="_blank"
+            rel="nofollow sponsored noopener noreferrer"
+            className="inline-block bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+          >
+            View on Amazon →
+          </a>
+        </div>
 
         <InfoBox variant="info" title="Aggregator model">
           This page curates third-party reviews — we link to the original sources so you can read everything in full.
@@ -163,26 +186,14 @@ export default function AnkerSOLIXReviewPage() {
           <p className="text-slate-600 mb-6 text-sm">Independent video reviews from YouTube creators who have tested the Anker SOLIX Solarbank 2.</p>
           <div className="space-y-8">
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/aYMB87349Oo"
-                  title="Anker SOLIX Solarbank 2 AC Review: Home Battery for Solar Panels + Home Assistant Support!"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="aYMB87349Oo" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Smart Home Junkie — Hands-on review of the Solarbank 2 AC covering real-world solar storage performance, app setup, and Home Assistant integration</p>
             </div>
             <div>
-              <div className="relative aspect-video rounded-xl overflow-hidden bg-slate-100">
-                <iframe
-                  src="https://www.youtube.com/embed/b_6oMqgh5Fs"
-                  title="Anker Solix Solarbank 2 E1600 Plus and BP1600 and FS20 and Smart Plug balcony solar system video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full border-0"
-                />
+              <div className="rounded-xl overflow-hidden">
+                <YouTubeEmbed videoid="b_6oMqgh5Fs" style="border-radius: 12px;" />
               </div>
               <p className="mt-2 text-sm text-slate-500">Funkyhome — Full system video covering the Solarbank 2 E1600 Plus with expansion battery, flexible FS20 solar panels, and Smart Plugs in a complete balcony solar setup</p>
             </div>
@@ -194,25 +205,10 @@ export default function AnkerSOLIXReviewPage() {
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Where to Buy the Anker SOLIX Solarbank 2</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="border border-slate-200 rounded-xl p-5">
-              <h3 className="font-semibold text-slate-900 mb-1">Anker SOLIX UK Official Store</h3>
-              <p className="text-sm text-slate-600 mb-3">
-                Direct from Anker — full warranty, UK customer support, and the official SOLIX accessories range
-                including railing mounts and additional panels.
-              </p>
-              <a
-                href="https://www.ankersolix.com/uk/products/solarbank-2-pro"
-                target="_blank"
-                rel="nofollow sponsored noopener noreferrer"
-                className="inline-block bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
-              >
-                Visit Anker SOLIX UK →
-              </a>
-            </div>
-            <div className="border border-slate-200 rounded-xl p-5">
               <h3 className="font-semibold text-slate-900 mb-1">Amazon UK</h3>
               <p className="text-sm text-slate-600 mb-3">
                 Available on Amazon UK with Prime delivery. The Solarbank 2 Pro appears on Amazon deal events and has
-                received significant price cuts during Prime Day and Black Friday.
+                received significant price cuts during Prime Day and Black Friday. Full Anker warranty applies.
               </p>
               <a
                 href="https://www.amazon.co.uk/dp/B0D1X82HDL?tag=balconysolar-21"

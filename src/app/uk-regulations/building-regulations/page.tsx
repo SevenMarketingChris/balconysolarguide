@@ -3,18 +3,30 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Building Regulations and BS 7671 for Balcony Solar UK | Balcony Solar Guide",
-  description: "Plug-in solar and UK wiring regulations explained clearly. Understand the grey area around BS 7671, why modern homes with RCBOs are well-protected, and what the BSI working group is developing.",
+  title: "Building Regulations and BS 7671 for Balcony Solar UK",
+  description: "Plug-in solar and UK wiring regulations explained. The BS 7671 grey area, why modern homes with RCBOs are protected, and what the BSI is developing.",
 };
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Building Regulations and BS 7671 for Balcony Solar",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export default function BuildingRegulationsPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="UK Regulations"
         title="Building Regulations and BS 7671 for Balcony Solar"
+        badge="Updated March 2026"
         subtitle="Plug-in solar occupies a grey area in UK wiring regulations — but it's a well-understood grey area. Here's what the regulations actually say and why most modern UK homes are well-protected."
       />
 
@@ -63,7 +75,7 @@ export default function BuildingRegulationsPage() {
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="border border-red-200 bg-red-50 rounded-lg p-4">
-              <h3 className="font-semibold text-red-800 mb-2">Older consumer units (pre-2016)</h3>
+              <h3 className="font-semibold text-red-800 mb-2">Older consumer units (pre-2019)</h3>
               <p className="text-sm text-red-700">
                 Consumer units with a single whole-board RCD and MCBs (miniature circuit breakers) have RCD
                 protection only on certain circuits. Reverse current from plug-in solar could theoretically feed
@@ -72,9 +84,9 @@ export default function BuildingRegulationsPage() {
               </p>
             </div>
             <div className="border border-green-200 bg-green-50 rounded-lg p-4">
-              <h3 className="font-semibold text-green-800 mb-2">Modern consumer units (post-2016)</h3>
+              <h3 className="font-semibold text-green-800 mb-2">Modern consumer units (since January 2019)</h3>
               <p className="text-sm text-green-700">
-                Modern consumer units installed since the 2016 amendments to Part P must use RCBOs (Residual Current
+                Consumer units installed since January 2019 (BS 7671:2018 Amendment 3) must use RCBOs (Residual Current
                 Breaker with Overload protection) — individual protective devices on each circuit that provide
                 full bidirectional protection. These handle reverse current flow from plug-in solar effectively.
               </p>
@@ -155,11 +167,12 @@ export default function BuildingRegulationsPage() {
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">What the BSI Working Group Is Doing</h2>
           <p className="text-slate-600 mb-4">
-            In September 2025, the British Standards Institution formally constituted a working group to develop the
+            In September 2025, the British Standards Institution was commissioned to develop the
             UK equivalent of Germany's VDE 0100-551-1 — the technical standard for plug-in solar that Germany adopted
-            when it legalised Balkonkraftwerk installations.
+            when it legalised Balkonkraftwerk installations. The working group is expected to be formally constituted
+            in Q2 2026.
           </p>
-          <p className="text-slate-600 mb-4">The working group includes:</p>
+          <p className="text-slate-600 mb-4">The working group is expected to include:</p>
           <ul className="space-y-1 text-sm text-slate-600 mb-4 list-disc list-inside ml-4">
             <li>Representatives from the Institution of Engineering and Technology (IET)</li>
             <li>BEAMA — the electrical equipment manufacturers' trade association</li>
@@ -171,8 +184,9 @@ export default function BuildingRegulationsPage() {
           <p className="text-slate-600">
             The expected output is a BSI Publicly Available Specification (PAS) or a new section of BS 7671 covering
             plug-in solar installations. This would give electricians, installers, and homeowners clear guidance and
-            move the technology firmly out of the grey area. Publication is expected in 2026, aligned with the
-            government's commitment to create a full regulatory framework.
+            move the technology firmly out of the grey area. Publication is expected in late 2027 at the earliest, given the
+            time needed for the working group to be formally constituted, develop the standard, and complete the public
+            consultation process.
           </p>
         </section>
 
@@ -184,7 +198,7 @@ export default function BuildingRegulationsPage() {
         </InfoBox>
 
         <div className="border-t border-slate-200 pt-6 mt-6">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-500 mb-2">
             Related guides:{" "}
             <Link href="/uk-regulations/dno-g98-explained" className="text-solar-600 underline">
               G98 DNO notification
@@ -196,6 +210,24 @@ export default function BuildingRegulationsPage() {
             {" · "}
             <Link href="/uk-regulations/timeline" className="text-solar-600 underline">
               Legalisation timeline
+            </Link>
+            {" · "}
+            <Link href="/uk-regulations/leasehold-balcony-solar" className="text-solar-600 underline">
+              Leasehold considerations
+            </Link>
+          </p>
+          <p className="text-sm text-slate-500">
+            Tools & reviews:{" "}
+            <Link href="/calculator" className="text-solar-600 underline">
+              Savings calculator
+            </Link>
+            {" · "}
+            <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline">
+              Best balcony solar kits
+            </Link>
+            {" · "}
+            <Link href="/guides/is-balcony-solar-legal-uk" className="text-solar-600 underline">
+              Is balcony solar legal?
             </Link>
           </p>
         </div>

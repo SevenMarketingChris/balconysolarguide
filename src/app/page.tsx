@@ -2,9 +2,11 @@ import Link from 'next/link'
 import InfoBox from '@/components/ui/InfoBox'
 
 export const metadata = {
-  title: 'Balcony Solar Panels UK 2026 — Reviews, Savings Calculator & Buying Guide',
+  title: {
+    absolute: 'Balcony Solar Panels UK 2026 — Reviews, Savings Calculator & Buying Guide',
+  },
   description:
-    "The UK's independent guide to balcony solar panels. Compare kits, calculate savings, understand the regulations, and find the best system whether you rent or own.",
+    "The UK's independent guide to balcony solar panels. Compare kits, calculate savings, understand regulations, and find the best system for renters and homeowners.",
 }
 
 const featuredGuides = [
@@ -73,7 +75,7 @@ const reviewCards = [
 const newsItems = [
   {
     date: '15 Mar 2026',
-    headline: 'Plug-in solar is now legal in the UK: everything that changes',
+    headline: 'UK moves to legalise plug-in solar: everything that changes',
     href: '/news/plug-in-solar-now-legal-uk-2026',
   },
   {
@@ -90,7 +92,7 @@ const newsItems = [
 
 export default function HomePage() {
   return (
-    <main>
+    <div>
       {/* ── Hero ── */}
       <section className="relative bg-[#0c1f3d] text-white min-h-[85vh] flex flex-col justify-center px-4 overflow-hidden">
         {/* Large decorative sun geometry - top right */}
@@ -193,6 +195,12 @@ export default function HomePage() {
               className="inline-flex items-center justify-center gap-2 bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 text-white font-medium px-7 py-3.5 rounded-xl text-base transition-all"
             >
               Read the beginner&rsquo;s guide
+            </Link>
+            <Link
+              href="/deals"
+              className="inline-flex items-center justify-center gap-2 bg-white/[0.08] hover:bg-white/[0.14] border border-white/15 text-white font-medium px-7 py-3.5 rounded-xl text-base transition-all"
+            >
+              See deals &amp; prices
             </Link>
           </div>
         </div>
@@ -693,8 +701,17 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/about"
+              className="text-[#607899] hover:text-solar-500 text-sm font-medium transition-colors"
+            >
+              About Balcony Solar Guide &rarr;
+            </Link>
+          </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

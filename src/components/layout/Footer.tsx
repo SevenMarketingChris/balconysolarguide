@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-solar-500 flex-shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-solar-500 flex-shrink-0" aria-hidden="true">
                 <circle cx="12" cy="12" r="5" fill="currentColor" />
                 <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                 <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -55,10 +55,10 @@ export default function Footer() {
                 Balcony Solar<span className="text-solar-400">Guide</span>
               </span>
             </Link>
-            <p className="text-sm text-[#6a8aaa] leading-relaxed">
+            <p className="text-sm text-[#8fa8c4] leading-relaxed">
               The UK&apos;s independent guide to balcony solar panels. Helping renters and homeowners harness the sun.
             </p>
-            <p className="text-xs text-[#6a8aaa] mt-4">balconysolarguide.co.uk</p>
+            <p className="text-xs text-[#8fa8c4] mt-4">balconysolarguide.co.uk</p>
           </div>
 
           {/* Guides */}
@@ -71,7 +71,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-[#6a8aaa] hover:text-solar-400 transition-colors"
+                    className="text-sm text-[#8fa8c4] hover:text-solar-400 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-[#6a8aaa] hover:text-solar-400 transition-colors"
+                    className="text-sm text-[#8fa8c4] hover:text-solar-400 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -109,7 +109,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-[#6a8aaa] hover:text-solar-400 transition-colors"
+                    className="text-sm text-[#8fa8c4] hover:text-solar-400 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -128,7 +128,7 @@ export default function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-[#6a8aaa] hover:text-solar-400 transition-colors"
+                    className="text-sm text-[#8fa8c4] hover:text-solar-400 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -139,10 +139,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[#0d1f38] mt-12 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p className="text-xs text-[#6a8aaa]">
+          <p className="text-xs text-[#8fa8c4]">
             &copy; {new Date().getFullYear()} Balcony Solar Guide. All rights reserved.
           </p>
-          <div className="flex flex-wrap gap-5 text-xs text-[#6a8aaa]">
+          <div className="flex flex-wrap gap-5 text-xs text-[#8fa8c4]">
             <Link href="/about" className="hover:text-solar-400 transition-colors">
               About
             </Link>
@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="text-xs text-[#6a8aaa] mt-5 leading-relaxed">
+        <p className="text-xs text-[#8fa8c4] mt-5 leading-relaxed">
           <strong className="text-[#a8c5f0]">Affiliate disclosure:</strong> Some links on this site are affiliate links. If you purchase through them, we may earn a small commission at no extra cost to you. This helps us keep the site free and independent. We only link to products we&apos;d recommend regardless.
         </p>
       </div>

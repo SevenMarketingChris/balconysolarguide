@@ -6,16 +6,31 @@ import PageHero from "@/components/ui/PageHero";
 export const metadata = {
   title: "The UK Solar Roadmap Explained: What It Means for Balcony Solar",
   description:
-    "The UK Government's Solar Roadmap targets 70GW by 2035. We break down the specific provisions for plug-in solar, residential rooftop, and what the roadmap means for balcony solar owners and renters.",
+    "The UK Solar Roadmap targets 70GW by 2035. What it says about plug-in solar, residential rooftop, and what it means for you.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "The UK Solar Roadmap Explained: What It Means for Balcony Solar",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
 };
 
 export default function UKSolarRoadmapPage() {
   return (
     <div className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow="Analysis · 1 June 2025"
         title="The UK Solar Roadmap Explained: What It Means for Balcony Solar"
         subtitle="The Government's Solar Roadmap sets the UK on a path to 70GW of solar by 2035. But what does it actually say about plug-in solar for flats and balconies — and what comes next?"
+        badge="Updated March 2026"
       />
 
       <div className="max-w-3xl mx-auto px-4 py-10">
@@ -216,6 +231,21 @@ export default function UKSolarRoadmapPage() {
             whether it will happen, but how quickly the standards bodies and government departments
             can move.
           </p>
+
+          <h2>Further Reading</h2>
+          <ul>
+            <li><Link href="/uk-regulations/timeline" className="underline">UK balcony solar regulation timeline</Link> — all the key dates and milestones in one place.</li>
+            <li><Link href="/news/plug-in-solar-now-legal-uk-2026" className="underline">UK Government moves to legalise plug-in solar</Link> — the March 2026 announcement that followed this roadmap.</li>
+          </ul>
+
+          <div className="mt-10 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to buy a balcony solar kit?</h3>
+            <p className="text-sm text-slate-600 mb-4">See our top-rated systems and current UK deals.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+              <Link href="/deals" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">View current deals</Link>
+            </div>
+          </div>
         </article>
       </div>
     </div>

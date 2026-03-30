@@ -4,19 +4,31 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar for Housing Association and Council Tenants",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Balcony Solar for Housing Association and Council Tenants",
   description:
-    "A practical guide for social housing tenants wanting to install balcony solar. How to approach your housing association, what your rights are, and what systems are most likely to get approval.",
+    "A practical guide for social housing tenants wanting to install balcony solar. How to approach your housing association and what systems get approval.",
 };
 
 export default function HousingAssociationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Renters Guide"
         title="Balcony Solar for Housing Association and Council Tenants"
         subtitle="Around 4 million households in England live in social housing — housing association and council properties. Here is a practical guide to navigating balcony solar as a social housing tenant."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -281,6 +293,31 @@ export default function HousingAssociationPage() {
             respond better to "it is essentially a temporary fitting" than to "I want to install
             a solar electricity generation system."
           </InfoBox>
+
+          <h2>Useful Resources</h2>
+          <ul>
+            <li>
+              <Link href="/for-renters/landlord-letter-template" className="text-solar-600 hover:text-solar-700 font-medium">
+                Landlord letter template
+              </Link>{" "}
+              — a ready-to-use letter you can adapt for your housing association
+            </li>
+            <li>
+              <Link href="/for-renters/renters-rights-act-solar" className="text-solar-600 hover:text-solar-700 font-medium">
+                Renters' Rights Act and solar
+              </Link>{" "}
+              — understand your legal position as a tenant
+            </li>
+          </ul>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>

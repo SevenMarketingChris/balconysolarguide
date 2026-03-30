@@ -62,6 +62,7 @@ export default function DealsPage() {
         eyebrow="Deals & Offers"
         title="Balcony Solar Deals UK"
         subtitle="Curated prices on the best balcony solar systems available in the UK right now. We track prices so you can buy at the right time."
+        badge="Updated March 2026"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-10">
@@ -136,7 +137,7 @@ export default function DealsPage() {
                 <a
                   href={deal.url}
                   target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  rel="noopener noreferrer nofollow sponsored"
                   className="inline-flex items-center gap-2 bg-solar-500 hover:bg-solar-600 text-white font-semibold rounded-lg px-5 py-2.5 text-sm transition-colors"
                 >
                   Check price on {deal.source} →
@@ -151,6 +152,15 @@ export default function DealsPage() {
           <Link href="/reviews/ecoflow-stream" className="text-solar-600 underline font-medium">EcoFlow STREAM review</Link>,{" "}
           <Link href="/reviews/anker-solix" className="text-solar-600 underline font-medium">Anker SOLIX review</Link>, or see the{" "}
           <Link href="/reviews/best-balcony-solar-kits-uk" className="text-solar-600 underline font-medium">full comparison</Link>.
+        </p>
+
+        <p className="text-sm text-slate-600 mt-3">
+          Want to estimate your savings before buying? Try our{" "}
+          <Link href="/calculator" className="text-solar-600 underline font-medium">free savings calculator</Link>.
+          You can also read our{" "}
+          <Link href="/guides/beginners-guide-to-balcony-solar" className="text-solar-600 underline font-medium">beginner&apos;s guide to balcony solar</Link>{" "}
+          or find out{" "}
+          <Link href="/guides/how-much-does-balcony-solar-cost-uk" className="text-solar-600 underline font-medium">how much balcony solar costs in the UK</Link>.
         </p>
 
         {/* Price alert */}

@@ -4,19 +4,31 @@ import PageHero from "@/components/ui/PageHero";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import InfoBox from "@/components/ui/InfoBox";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Balcony Solar Self-Consumption: Why Your Payback Period Is Probably Longer Than You Think",
+  datePublished: "2026-03-15",
+  dateModified: "2026-03-30",
+  author: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+  publisher: { "@type": "Organization", name: "Balcony Solar Guide", url: "https://www.balconysolarguide.co.uk" },
+};
+
 export const metadata: Metadata = {
   title: "Balcony Solar Self-Consumption: Why Your Payback Period Is Probably Longer Than You Think",
   description:
-    "The honest guide to balcony solar self-consumption that no manufacturer tells you. Worked examples by household type, the maths on payback periods, and practical ways to increase your self-consumption.",
+    "Honest guide to balcony solar self-consumption. Worked examples by household type, payback maths, and practical ways to boost self-consumption.",
 };
 
 export default function SelfConsumptionGuidePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <PageHero
         eyebrow="Savings Guide"
         title="Balcony Solar Self-Consumption: Why Your Payback Period Is Probably Longer Than You Think"
         subtitle="Manufacturer payback claims often assume 100% self-consumption. Real households — especially those out at work all day — consume far less. Here is what the numbers actually look like, and what to do about it."
+        badge="Updated March 2026"
       />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Breadcrumb
@@ -310,6 +322,31 @@ export default function SelfConsumptionGuidePage() {
             your primary consideration, be honest with yourself about how much time you actually
             spend at home during daylight hours.
           </p>
+
+          <h2>Related Guides</h2>
+          <ul>
+            <li>
+              <Link href="/guides/balcony-solar-battery-storage" className="text-solar-600 hover:text-solar-700 font-medium">
+                Battery storage for balcony solar
+              </Link>{" "}
+              — how adding a battery transforms self-consumption for commuter households
+            </li>
+            <li>
+              <Link href="/reviews/ecoflow-stream" className="text-solar-600 hover:text-solar-700 font-medium">
+                EcoFlow STREAM review
+              </Link>{" "}
+              — a plug-in battery designed specifically for balcony solar systems
+            </li>
+          </ul>
+
+          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-6">
+            <h3 className="font-semibold text-slate-900 mb-2">Ready to get started?</h3>
+            <p className="text-sm text-slate-600 mb-4">Find out how much you could save, or see our top-rated systems.</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/calculator" className="inline-flex items-center justify-center bg-solar-500 hover:bg-solar-600 text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors">Calculate your savings</Link>
+              <Link href="/reviews/best-balcony-solar-kits-uk" className="inline-flex items-center justify-center bg-white border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-sm px-5 py-3 rounded-lg transition-colors">See top-rated kits</Link>
+            </div>
+          </div>
         </article>
       </div>
     </>
