@@ -91,7 +91,38 @@ const newsItems = [
 ]
 
 export default function HomePage() {
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Balcony Solar Guide',
+    url: 'https://www.balconysolarguide.co.uk',
+    logo: 'https://www.balconysolarguide.co.uk/icon.svg',
+    description: "The UK's independent guide to balcony solar panels for renters and homeowners.",
+    sameAs: [],
+  }
+
+  const siteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Balcony Solar Guide',
+    url: 'https://www.balconysolarguide.co.uk',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://www.balconysolarguide.co.uk/?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
     <div>
       {/* ── Hero ── */}
       <section className="relative bg-[#0c1f3d] text-white min-h-[85vh] flex flex-col justify-center px-4 overflow-hidden">
@@ -713,5 +744,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
